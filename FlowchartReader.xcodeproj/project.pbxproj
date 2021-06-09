@@ -24,6 +24,12 @@
 		B4F76C0926709D9800F6FAD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F76C0826709D9800F6FAD9 /* README.md */; };
 		B4F76C0D26709DE300F6FAD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F76C0C26709DE300F6FAD9 /* README.md */; };
 		B4F76C1126709E2200F6FAD9 /* FlowchartReader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76C1026709E2200F6FAD9 /* FlowchartReader.storyboard */; };
+		B4F76C502670A56E00F6FAD9 /* Guidance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76C4F2670A56E00F6FAD9 /* Guidance.storyboard */; };
+		B4F76C532670A58800F6FAD9 /* GuidanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76C522670A58800F6FAD9 /* GuidanceViewController.swift */; };
+		B4F76C562670A5BF00F6FAD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F76C552670A5BF00F6FAD9 /* README.md */; };
+		B4F76C592670A62D00F6FAD9 /* MainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76C582670A62D00F6FAD9 /* MainMenu.storyboard */; };
+		B4F76C5C2670A64B00F6FAD9 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76C5B2670A64B00F6FAD9 /* MainMenuViewController.swift */; };
+		B4F76C5F2670A68200F6FAD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F76C5E2670A68200F6FAD9 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +52,12 @@
 		B4F76C0826709D9800F6FAD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B4F76C0C26709DE300F6FAD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B4F76C1026709E2200F6FAD9 /* FlowchartReader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlowchartReader.storyboard; sourceTree = "<group>"; };
+		B4F76C4F2670A56E00F6FAD9 /* Guidance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Guidance.storyboard; sourceTree = "<group>"; };
+		B4F76C522670A58800F6FAD9 /* GuidanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidanceViewController.swift; sourceTree = "<group>"; };
+		B4F76C552670A5BF00F6FAD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B4F76C582670A62D00F6FAD9 /* MainMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenu.storyboard; sourceTree = "<group>"; };
+		B4F76C5B2670A64B00F6FAD9 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		B4F76C5E2670A68200F6FAD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +247,7 @@
 		B4F76C1526709ECB00F6FAD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B4F76C582670A62D00F6FAD9 /* MainMenu.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,6 +255,7 @@
 		B4F76C1626709ED500F6FAD9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B4F76C5E2670A68200F6FAD9 /* README.md */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +263,7 @@
 		B4F76C1726709EDD00F6FAD9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B4F76C5B2670A64B00F6FAD9 /* MainMenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -265,6 +280,7 @@
 		B4F76C1B26709F5C00F6FAD9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B4F76C552670A5BF00F6FAD9 /* README.md */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +297,7 @@
 		B4F76C1D26709F6D00F6FAD9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B4F76C522670A58800F6FAD9 /* GuidanceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -288,6 +305,7 @@
 		B4F76C1E26709F7800F6FAD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B4F76C4F2670A56E00F6FAD9 /* Guidance.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -353,13 +371,17 @@
 				B4F76BE726709AEA00F6FAD9 /* README.md in Resources */,
 				B4F76BFD26709CCE00F6FAD9 /* README.md in Resources */,
 				B4F76BD0266F7A4600F6FAD9 /* LaunchScreen.storyboard in Resources */,
+				B4F76C592670A62D00F6FAD9 /* MainMenu.storyboard in Resources */,
+				B4F76C502670A56E00F6FAD9 /* Guidance.storyboard in Resources */,
 				B4F76BCD266F7A4600F6FAD9 /* Assets.xcassets in Resources */,
 				B4F76BE426709AA500F6FAD9 /* README.md in Resources */,
 				B4F76C0D26709DE300F6FAD9 /* README.md in Resources */,
 				B4F76BC8266F7A4300F6FAD9 /* Main.storyboard in Resources */,
 				B4F76BF626709C5000F6FAD9 /* README.md in Resources */,
+				B4F76C5F2670A68200F6FAD9 /* README.md in Resources */,
 				B4F76C1126709E2200F6FAD9 /* FlowchartReader.storyboard in Resources */,
 				B4F76BF226709BF800F6FAD9 /* README.md in Resources */,
+				B4F76C562670A5BF00F6FAD9 /* README.md in Resources */,
 				B4F76C0926709D9800F6FAD9 /* README.md in Resources */,
 				B4F76BEE26709B5800F6FAD9 /* README.md in Resources */,
 			);
@@ -372,9 +394,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F76C5C2670A64B00F6FAD9 /* MainMenuViewController.swift in Sources */,
 				B4F76BC5266F7A4300F6FAD9 /* ViewController.swift in Sources */,
 				B4F76BCB266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld in Sources */,
 				B4F76BC1266F7A4300F6FAD9 /* AppDelegate.swift in Sources */,
+				B4F76C532670A58800F6FAD9 /* GuidanceViewController.swift in Sources */,
 				B4F76BC3266F7A4300F6FAD9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

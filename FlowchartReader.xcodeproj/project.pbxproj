@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		B4F76BC1266F7A4300F6FAD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */; };
 		B4F76BC3266F7A4300F6FAD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */; };
-		B4F76BC5266F7A4300F6FAD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC4266F7A4300F6FAD9 /* ViewController.swift */; };
+		B4F76BC5266F7A4300F6FAD9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC4266F7A4300F6FAD9 /* MainViewController.swift */; };
 		B4F76BC8266F7A4300F6FAD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BC6266F7A4300F6FAD9 /* Main.storyboard */; };
 		B4F76BCB266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC9266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld */; };
 		B4F76BCD266F7A4600F6FAD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */; };
 		B4F76BD0266F7A4600F6FAD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BCE266F7A4600F6FAD9 /* LaunchScreen.storyboard */; };
+		C07E4B5126707A68008E68CF /* FlowchartRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E4B5026707A68008E68CF /* FlowchartRepository.swift */; };
+		C07E4B5A26708369008E68CF /* MainMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E4B5826708369008E68CF /* MainMenuTableViewCell.swift */; };
+		C07E4B5B26708369008E68CF /* MainMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07E4B5926708369008E68CF /* MainMenuTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B4F76BBD266F7A4200F6FAD9 /* FlowchartReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowchartReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B4F76BC4266F7A4300F6FAD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B4F76BC4266F7A4300F6FAD9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B4F76BC7266F7A4300F6FAD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4F76BCA266F7A4300F6FAD9 /* FlowchartReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlowchartReader.xcdatamodel; sourceTree = "<group>"; };
 		B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4F76BCF266F7A4600F6FAD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4F76BD1266F7A4600F6FAD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C07E4B5026707A68008E68CF /* FlowchartRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartRepository.swift; sourceTree = "<group>"; };
+		C07E4B5826708369008E68CF /* MainMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewCell.swift; sourceTree = "<group>"; };
+		C07E4B5926708369008E68CF /* MainMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,171 @@
 		B4F76BBF266F7A4300F6FAD9 /* FlowchartReader */ = {
 			isa = PBXGroup;
 			children = (
+				C07E4B43267078FE008E68CF /* Feature */,
+				C07E4B462670792B008E68CF /* Helper */,
+				C07E4B452670791F008E68CF /* Utilities */,
+				C07E4B4426707919008E68CF /* Themes */,
 				B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */,
 				B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */,
-				B4F76BC4266F7A4300F6FAD9 /* ViewController.swift */,
+				B4F76BC4266F7A4300F6FAD9 /* MainViewController.swift */,
 				B4F76BC6266F7A4300F6FAD9 /* Main.storyboard */,
+				C07E4B5826708369008E68CF /* MainMenuTableViewCell.swift */,
+				C07E4B5926708369008E68CF /* MainMenuTableViewCell.xib */,
 				B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */,
 				B4F76BCE266F7A4600F6FAD9 /* LaunchScreen.storyboard */,
 				B4F76BD1266F7A4600F6FAD9 /* Info.plist */,
 				B4F76BC9266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld */,
 			);
 			path = FlowchartReader;
+			sourceTree = "<group>";
+		};
+		C07E4B43267078FE008E68CF /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				C07E4B5526707BE1008E68CF /* Guidance */,
+				C07E4B5226707BAA008E68CF /* FlowchartReader */,
+				C07E4B4C267079E9008E68CF /* FlowchartPresentation */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		C07E4B4426707919008E68CF /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				C07E4B4726707941008E68CF /* Colors */,
+				C07E4B492670796C008E68CF /* UI */,
+				C07E4B4826707963008E68CF /* Font */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		C07E4B452670791F008E68CF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C07E4B4A26707995008E68CF /* CoreData */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C07E4B462670792B008E68CF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		C07E4B4726707941008E68CF /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		C07E4B4826707963008E68CF /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		C07E4B492670796C008E68CF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C07E4B4A26707995008E68CF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C07E4B4B267079A1008E68CF /* Model */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C07E4B4B267079A1008E68CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C07E4B4C267079E9008E68CF /* FlowchartPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				C07E4B4E26707A22008E68CF /* Pages */,
+				C07E4B4D26707A18008E68CF /* Model */,
+				C07E4B5026707A68008E68CF /* FlowchartRepository.swift */,
+			);
+			path = FlowchartPresentation;
+			sourceTree = "<group>";
+		};
+		C07E4B4D26707A18008E68CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C07E4B4F26707A2B008E68CF /* DataStore */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C07E4B4E26707A22008E68CF /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		C07E4B4F26707A2B008E68CF /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		C07E4B5226707BAA008E68CF /* FlowchartReader */ = {
+			isa = PBXGroup;
+			children = (
+				C07E4B5326707BBB008E68CF /* Pages */,
+				C07E4B5426707BC4008E68CF /* Model */,
+			);
+			path = FlowchartReader;
+			sourceTree = "<group>";
+		};
+		C07E4B5326707BBB008E68CF /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		C07E4B5426707BC4008E68CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C07E4B5526707BE1008E68CF /* Guidance */ = {
+			isa = PBXGroup;
+			children = (
+				C07E4B5626707BF8008E68CF /* Pages */,
+				C07E4B5726707BFF008E68CF /* Model */,
+			);
+			path = Guidance;
+			sourceTree = "<group>";
+		};
+		C07E4B5626707BF8008E68CF /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		C07E4B5726707BFF008E68CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +291,7 @@
 				B4F76BD0266F7A4600F6FAD9 /* LaunchScreen.storyboard in Resources */,
 				B4F76BCD266F7A4600F6FAD9 /* Assets.xcassets in Resources */,
 				B4F76BC8266F7A4300F6FAD9 /* Main.storyboard in Resources */,
+				C07E4B5B26708369008E68CF /* MainMenuTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,10 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4F76BC5266F7A4300F6FAD9 /* ViewController.swift in Sources */,
+				C07E4B5126707A68008E68CF /* FlowchartRepository.swift in Sources */,
+				B4F76BC5266F7A4300F6FAD9 /* MainViewController.swift in Sources */,
 				B4F76BCB266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld in Sources */,
 				B4F76BC1266F7A4300F6FAD9 /* AppDelegate.swift in Sources */,
 				B4F76BC3266F7A4300F6FAD9 /* SceneDelegate.swift in Sources */,
+				C07E4B5A26708369008E68CF /* MainMenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

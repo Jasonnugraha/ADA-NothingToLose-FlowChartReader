@@ -1,4 +1,4 @@
 NOTES:
-ISI FOLDER INI BERUPA FONTS YANG AKAN DIPAKE UNTUK PROJECT INI
+untuk menyimpan font yang akan dipakai untuk project ini
 
 

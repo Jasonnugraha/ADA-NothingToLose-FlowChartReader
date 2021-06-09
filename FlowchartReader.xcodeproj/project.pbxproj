@@ -89,7 +89,6 @@
 				B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */,
 				B4F76BCE266F7A4600F6FAD9 /* LaunchScreen.storyboard */,
 				B4F76BD1266F7A4600F6FAD9 /* Info.plist */,
-				B4F76BC9266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld */,
 			);
 			path = FlowchartReader;
 			sourceTree = "<group>";
@@ -114,6 +113,7 @@
 		B4F76BDE267099ED00F6FAD9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B4F76BC9266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,9 +164,10 @@
 		B4F76BFB26709CB800F6FAD9 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				B4F76BFC26709CCE00F6FAD9 /* README.md */,
+				B4F76C1A26709F5300F6FAD9 /* Guidance */,
 				B4F76C1326709EAC00F6FAD9 /* Main Menu */,
 				B4F76C0126709D2400F6FAD9 /* Flowchart Reader */,
-				B4F76BFC26709CCE00F6FAD9 /* README.md */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -250,6 +251,45 @@
 			children = (
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4F76C1A26709F5300F6FAD9 /* Guidance */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76C1C26709F6600F6FAD9 /* Pages */,
+				B4F76C1B26709F5C00F6FAD9 /* Model */,
+			);
+			path = Guidance;
+			sourceTree = "<group>";
+		};
+		B4F76C1B26709F5C00F6FAD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4F76C1C26709F6600F6FAD9 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76C1E26709F7800F6FAD9 /* View */,
+				B4F76C1D26709F6D00F6FAD9 /* Controller */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		B4F76C1D26709F6D00F6FAD9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4F76C1E26709F7800F6FAD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

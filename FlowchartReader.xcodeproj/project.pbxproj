@@ -14,6 +14,16 @@
 		B4F76BCB266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC9266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld */; };
 		B4F76BCD266F7A4600F6FAD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */; };
 		B4F76BD0266F7A4600F6FAD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BCE266F7A4600F6FAD9 /* LaunchScreen.storyboard */; };
+		B4F76BE426709AA500F6FAD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BE326709AA500F6FAD9 /* README.md */; };
+		B4F76BE726709AEA00F6FAD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BE626709AEA00F6FAD9 /* README.md */; };
+		B4F76BEA26709B2400F6FAD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BE926709B2400F6FAD9 /* README.md */; };
+		B4F76BEE26709B5800F6FAD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BED26709B5800F6FAD9 /* README.md */; };
+		B4F76BF226709BF800F6FAD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BF126709BF800F6FAD9 /* README.md */; };
+		B4F76BF626709C5000F6FAD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BF526709C5000F6FAD9 /* README.md */; };
+		B4F76BFD26709CCE00F6FAD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BFC26709CCE00F6FAD9 /* README.md */; };
+		B4F76C0926709D9800F6FAD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F76C0826709D9800F6FAD9 /* README.md */; };
+		B4F76C0D26709DE300F6FAD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4F76C0C26709DE300F6FAD9 /* README.md */; };
+		B4F76C1126709E2200F6FAD9 /* FlowchartReader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76C1026709E2200F6FAD9 /* FlowchartReader.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +36,16 @@
 		B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4F76BCF266F7A4600F6FAD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4F76BD1266F7A4600F6FAD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4F76BE326709AA500F6FAD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B4F76BE626709AEA00F6FAD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B4F76BE926709B2400F6FAD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B4F76BED26709B5800F6FAD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B4F76BF126709BF800F6FAD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B4F76BF526709C5000F6FAD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B4F76BFC26709CCE00F6FAD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B4F76C0826709D9800F6FAD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B4F76C0C26709DE300F6FAD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B4F76C1026709E2200F6FAD9 /* FlowchartReader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlowchartReader.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +78,10 @@
 		B4F76BBF266F7A4300F6FAD9 /* FlowchartReader */ = {
 			isa = PBXGroup;
 			children = (
+				B4F76BFB26709CB800F6FAD9 /* Features */,
+				B4F76BF426709C4300F6FAD9 /* Helper */,
+				B4F76BDF26709A5700F6FAD9 /* Themes */,
+				B4F76BDC267099C200F6FAD9 /* Utilities */,
 				B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */,
 				B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */,
 				B4F76BC4266F7A4300F6FAD9 /* ViewController.swift */,
@@ -65,9 +89,207 @@
 				B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */,
 				B4F76BCE266F7A4600F6FAD9 /* LaunchScreen.storyboard */,
 				B4F76BD1266F7A4600F6FAD9 /* Info.plist */,
-				B4F76BC9266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld */,
 			);
 			path = FlowchartReader;
+			sourceTree = "<group>";
+		};
+		B4F76BDC267099C200F6FAD9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76BF126709BF800F6FAD9 /* README.md */,
+				B4F76BDD267099D300F6FAD9 /* Core Data */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B4F76BDD267099D300F6FAD9 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76BDE267099ED00F6FAD9 /* Model */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		B4F76BDE267099ED00F6FAD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76BC9266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4F76BDF26709A5700F6FAD9 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76BED26709B5800F6FAD9 /* README.md */,
+				B4F76BE226709A6D00F6FAD9 /* Colors */,
+				B4F76BE126709A6500F6FAD9 /* Fonts */,
+				B4F76BE026709A5F00F6FAD9 /* UI */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		B4F76BE026709A5F00F6FAD9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76BE326709AA500F6FAD9 /* README.md */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B4F76BE126709A6500F6FAD9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76BE626709AEA00F6FAD9 /* README.md */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B4F76BE226709A6D00F6FAD9 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76BE926709B2400F6FAD9 /* README.md */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		B4F76BF426709C4300F6FAD9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76BF526709C5000F6FAD9 /* README.md */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B4F76BFB26709CB800F6FAD9 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76BFC26709CCE00F6FAD9 /* README.md */,
+				B4F76C1A26709F5300F6FAD9 /* Guidance */,
+				B4F76C1326709EAC00F6FAD9 /* Main Menu */,
+				B4F76C0126709D2400F6FAD9 /* Flowchart Reader */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		B4F76BFF26709D0C00F6FAD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4F76C0026709D1800F6FAD9 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76C0B26709DD200F6FAD9 /* Controller */,
+				B4F76C0226709D5D00F6FAD9 /* View */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		B4F76C0126709D2400F6FAD9 /* Flowchart Reader */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76C0026709D1800F6FAD9 /* Pages */,
+				B4F76BFF26709D0C00F6FAD9 /* Model */,
+			);
+			path = "Flowchart Reader";
+			sourceTree = "<group>";
+		};
+		B4F76C0226709D5D00F6FAD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76C0826709D9800F6FAD9 /* README.md */,
+				B4F76C1026709E2200F6FAD9 /* FlowchartReader.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4F76C0B26709DD200F6FAD9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76C0C26709DE300F6FAD9 /* README.md */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4F76C1326709EAC00F6FAD9 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76C1626709ED500F6FAD9 /* Model */,
+				B4F76C1426709EC500F6FAD9 /* Pages */,
+			);
+			path = "Main Menu";
+			sourceTree = "<group>";
+		};
+		B4F76C1426709EC500F6FAD9 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76C1726709EDD00F6FAD9 /* Controller */,
+				B4F76C1526709ECB00F6FAD9 /* View */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		B4F76C1526709ECB00F6FAD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4F76C1626709ED500F6FAD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4F76C1726709EDD00F6FAD9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4F76C1A26709F5300F6FAD9 /* Guidance */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76C1C26709F6600F6FAD9 /* Pages */,
+				B4F76C1B26709F5C00F6FAD9 /* Model */,
+			);
+			path = Guidance;
+			sourceTree = "<group>";
+		};
+		B4F76C1B26709F5C00F6FAD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4F76C1C26709F6600F6FAD9 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				B4F76C1E26709F7800F6FAD9 /* View */,
+				B4F76C1D26709F6D00F6FAD9 /* Controller */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		B4F76C1D26709F6D00F6FAD9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4F76C1E26709F7800F6FAD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,9 +349,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F76BEA26709B2400F6FAD9 /* README.md in Resources */,
+				B4F76BE726709AEA00F6FAD9 /* README.md in Resources */,
+				B4F76BFD26709CCE00F6FAD9 /* README.md in Resources */,
 				B4F76BD0266F7A4600F6FAD9 /* LaunchScreen.storyboard in Resources */,
 				B4F76BCD266F7A4600F6FAD9 /* Assets.xcassets in Resources */,
+				B4F76BE426709AA500F6FAD9 /* README.md in Resources */,
+				B4F76C0D26709DE300F6FAD9 /* README.md in Resources */,
 				B4F76BC8266F7A4300F6FAD9 /* Main.storyboard in Resources */,
+				B4F76BF626709C5000F6FAD9 /* README.md in Resources */,
+				B4F76C1126709E2200F6FAD9 /* FlowchartReader.storyboard in Resources */,
+				B4F76BF226709BF800F6FAD9 /* README.md in Resources */,
+				B4F76C0926709D9800F6FAD9 /* README.md in Resources */,
+				B4F76BEE26709B5800F6FAD9 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

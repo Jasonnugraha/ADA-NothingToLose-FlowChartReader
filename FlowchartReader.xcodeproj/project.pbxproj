@@ -15,10 +15,7 @@
 		B4F76BCD266F7A4600F6FAD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */; };
 		B4F76BD0266F7A4600F6FAD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BCE266F7A4600F6FAD9 /* LaunchScreen.storyboard */; };
 		C01E8CFE26718AD70054AA28 /* MenuListStaticSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E8CFD26718AD70054AA28 /* MenuListStaticSeeder.swift */; };
-		C01E8D0026720BC50054AA28 /* MainMenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E8CFF26720BC50054AA28 /* MainMenuTableView.swift */; };
 		C07E4B5126707A68008E68CF /* FlowchartRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E4B5026707A68008E68CF /* FlowchartRepository.swift */; };
-		C07E4B5A26708369008E68CF /* MainMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E4B5826708369008E68CF /* MainMenuTableViewCell.swift */; };
-		C07E4B5B26708369008E68CF /* MainMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07E4B5926708369008E68CF /* MainMenuTableViewCell.xib */; };
 		C07E4B6226708F3B008E68CF /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E4B6126708F3B008E68CF /* Menu.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,10 +30,7 @@
 		B4F76BCF266F7A4600F6FAD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4F76BD1266F7A4600F6FAD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C01E8CFD26718AD70054AA28 /* MenuListStaticSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListStaticSeeder.swift; sourceTree = "<group>"; };
-		C01E8CFF26720BC50054AA28 /* MainMenuTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableView.swift; sourceTree = "<group>"; };
 		C07E4B5026707A68008E68CF /* FlowchartRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartRepository.swift; sourceTree = "<group>"; };
-		C07E4B5826708369008E68CF /* MainMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewCell.swift; sourceTree = "<group>"; };
-		C07E4B5926708369008E68CF /* MainMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuTableViewCell.xib; sourceTree = "<group>"; };
 		C07E4B6126708F3B008E68CF /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,11 +72,8 @@
 				B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */,
 				B4F76BC6266F7A4300F6FAD9 /* Main.storyboard */,
 				B4F76BC4266F7A4300F6FAD9 /* MainViewController.swift */,
-				C01E8CFF26720BC50054AA28 /* MainMenuTableView.swift */,
 				C07E4B6126708F3B008E68CF /* Menu.swift */,
 				C01E8CFD26718AD70054AA28 /* MenuListStaticSeeder.swift */,
-				C07E4B5826708369008E68CF /* MainMenuTableViewCell.swift */,
-				C07E4B5926708369008E68CF /* MainMenuTableViewCell.xib */,
 				B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */,
 				B4F76BCE266F7A4600F6FAD9 /* LaunchScreen.storyboard */,
 				B4F76BD1266F7A4600F6FAD9 /* Info.plist */,
@@ -332,7 +323,6 @@
 				B4F76BD0266F7A4600F6FAD9 /* LaunchScreen.storyboard in Resources */,
 				B4F76BCD266F7A4600F6FAD9 /* Assets.xcassets in Resources */,
 				B4F76BC8266F7A4300F6FAD9 /* Main.storyboard in Resources */,
-				C07E4B5B26708369008E68CF /* MainMenuTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,8 +339,6 @@
 				B4F76BCB266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld in Sources */,
 				B4F76BC1266F7A4300F6FAD9 /* AppDelegate.swift in Sources */,
 				B4F76BC3266F7A4300F6FAD9 /* SceneDelegate.swift in Sources */,
-				C01E8D0026720BC50054AA28 /* MainMenuTableView.swift in Sources */,
-				C07E4B5A26708369008E68CF /* MainMenuTableViewCell.swift in Sources */,
 				C01E8CFE26718AD70054AA28 /* MenuListStaticSeeder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

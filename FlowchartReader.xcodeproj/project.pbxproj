@@ -14,9 +14,12 @@
 		B4F76BCB266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC9266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld */; };
 		B4F76BCD266F7A4600F6FAD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */; };
 		B4F76BD0266F7A4600F6FAD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BCE266F7A4600F6FAD9 /* LaunchScreen.storyboard */; };
+		C01E8CFE26718AD70054AA28 /* MenuListStaticSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E8CFD26718AD70054AA28 /* MenuListStaticSeeder.swift */; };
+		C01E8D0026720BC50054AA28 /* MainMenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E8CFF26720BC50054AA28 /* MainMenuTableView.swift */; };
 		C07E4B5126707A68008E68CF /* FlowchartRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E4B5026707A68008E68CF /* FlowchartRepository.swift */; };
 		C07E4B5A26708369008E68CF /* MainMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E4B5826708369008E68CF /* MainMenuTableViewCell.swift */; };
 		C07E4B5B26708369008E68CF /* MainMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07E4B5926708369008E68CF /* MainMenuTableViewCell.xib */; };
+		C07E4B6226708F3B008E68CF /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E4B6126708F3B008E68CF /* Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +32,12 @@
 		B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4F76BCF266F7A4600F6FAD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4F76BD1266F7A4600F6FAD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C01E8CFD26718AD70054AA28 /* MenuListStaticSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListStaticSeeder.swift; sourceTree = "<group>"; };
+		C01E8CFF26720BC50054AA28 /* MainMenuTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableView.swift; sourceTree = "<group>"; };
 		C07E4B5026707A68008E68CF /* FlowchartRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartRepository.swift; sourceTree = "<group>"; };
 		C07E4B5826708369008E68CF /* MainMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewCell.swift; sourceTree = "<group>"; };
 		C07E4B5926708369008E68CF /* MainMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuTableViewCell.xib; sourceTree = "<group>"; };
+		C07E4B6126708F3B008E68CF /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +76,11 @@
 				C07E4B4426707919008E68CF /* Themes */,
 				B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */,
 				B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */,
-				B4F76BC4266F7A4300F6FAD9 /* MainViewController.swift */,
 				B4F76BC6266F7A4300F6FAD9 /* Main.storyboard */,
+				B4F76BC4266F7A4300F6FAD9 /* MainViewController.swift */,
+				C01E8CFF26720BC50054AA28 /* MainMenuTableView.swift */,
+				C07E4B6126708F3B008E68CF /* Menu.swift */,
+				C01E8CFD26718AD70054AA28 /* MenuListStaticSeeder.swift */,
 				C07E4B5826708369008E68CF /* MainMenuTableViewCell.swift */,
 				C07E4B5926708369008E68CF /* MainMenuTableViewCell.xib */,
 				B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */,
@@ -85,6 +94,7 @@
 		C07E4B43267078FE008E68CF /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				C07E4B5C26708DB5008E68CF /* Main */,
 				C07E4B5526707BE1008E68CF /* Guidance */,
 				C07E4B5226707BAA008E68CF /* FlowchartReader */,
 				C07E4B4C267079E9008E68CF /* FlowchartPresentation */,
@@ -231,6 +241,37 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C07E4B5C26708DB5008E68CF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C07E4B5D26708DBB008E68CF /* Pages */,
+				C07E4B5E26708DC2008E68CF /* Model */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C07E4B5D26708DBB008E68CF /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		C07E4B5E26708DC2008E68CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C07E4B6026708DFF008E68CF /* DataStores */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C07E4B6026708DFF008E68CF /* DataStores */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataStores;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,10 +345,13 @@
 			files = (
 				C07E4B5126707A68008E68CF /* FlowchartRepository.swift in Sources */,
 				B4F76BC5266F7A4300F6FAD9 /* MainViewController.swift in Sources */,
+				C07E4B6226708F3B008E68CF /* Menu.swift in Sources */,
 				B4F76BCB266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld in Sources */,
 				B4F76BC1266F7A4300F6FAD9 /* AppDelegate.swift in Sources */,
 				B4F76BC3266F7A4300F6FAD9 /* SceneDelegate.swift in Sources */,
+				C01E8D0026720BC50054AA28 /* MainMenuTableView.swift in Sources */,
 				C07E4B5A26708369008E68CF /* MainMenuTableViewCell.swift in Sources */,
+				C01E8CFE26718AD70054AA28 /* MenuListStaticSeeder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

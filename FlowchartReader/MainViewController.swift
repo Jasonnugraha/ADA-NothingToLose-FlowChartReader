@@ -12,10 +12,13 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMenu()
+        setupAccessbility()
         
     }
 
     let cornerMenu = CGFloat(8)  //besar corner radius
+    
+    @IBOutlet weak var logoImage: UIImageView!
     
     @IBOutlet weak var menu1Title1: UILabel!
     @IBOutlet weak var menu1Title2: UILabel!
@@ -46,7 +49,7 @@ class MainViewController: UIViewController {
         menu1Image.image = menuList[0].getImage()
         menu1View.backgroundColor = menuList[0].getColor()
         menu1View.layer.cornerRadius = cornerMenu
-
+        
         menu2Title1.text = menuList[1].title1
         menu2Title2.text = menuList[1].title2
         menu2Description.text = menuList[1].description
@@ -61,6 +64,53 @@ class MainViewController: UIViewController {
         menu3View.backgroundColor = menuList[2].getColor()
         menu3View.layer.cornerRadius = cornerMenu
 
+    }
+    
+    func setupAccessbility() {
+        logoImage.isAccessibilityElement = true
+        logoImage.accessibilityTraits = .none
+        logoImage.accessibilityLabel = "Welcome to Main Page. There are 3 button you can choose."
+        
+        
+        //menu 1
+        menu1Title1.isAccessibilityElement = false
+        menu1Title2.isAccessibilityElement = false
+        menu1Description.isAccessibilityElement = false
+        
+        menu1Image.isAccessibilityElement = true
+        menu1Image.accessibilityTraits = .button
+        menu1Image.accessibilityLabel = (menu1Title1.text!  + " " + menu1Title2.text!)
+        
+        //menu 2
+        menu2Title1.isAccessibilityElement = false
+        menu2Title2.isAccessibilityElement = false
+        menu2Description.isAccessibilityElement = false
+        
+        menu2Image.isAccessibilityElement = true
+        menu2Image.accessibilityTraits = .button
+        menu2Image.accessibilityLabel = (menu2Title1.text!  + " " + menu2Title2.text!)
+        
+        //menu 3
+        menu3Title1.isAccessibilityElement = false
+        menu3Title2.isAccessibilityElement = false
+        menu3Description.isAccessibilityElement = false
+        
+        menu3Image.isAccessibilityElement = true
+        menu3Image.accessibilityTraits = .button
+        menu3Image.accessibilityLabel = (menu3Title1.text!  + " " + menu3Title2.text!)
+        
+    }
+    
+    @IBAction func didTabMenu1(_ sender: Any) {
+        print("Menu 1 Tabbed")
+    }
+    
+    @IBAction func didTabMenu2(_ sender: Any) {
+        print("Menu 2 Tabbed")
+    }
+    
+    @IBAction func didTabMenu3(_ sender: Any) {
+        print("Menu 3 Tabbed")
     }
 }
 

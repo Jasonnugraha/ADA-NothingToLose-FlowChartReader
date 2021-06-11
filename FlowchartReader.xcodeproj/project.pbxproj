@@ -15,7 +15,6 @@
 		B4F76BCD266F7A4600F6FAD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */; };
 		B4F76BD0266F7A4600F6FAD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BCE266F7A4600F6FAD9 /* LaunchScreen.storyboard */; };
 		C01E8CFE26718AD70054AA28 /* MenuListStaticSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E8CFD26718AD70054AA28 /* MenuListStaticSeeder.swift */; };
-		C07E4B5126707A68008E68CF /* FlowchartRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E4B5026707A68008E68CF /* FlowchartRepository.swift */; };
 		C07E4B6226708F3B008E68CF /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E4B6126708F3B008E68CF /* Menu.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		B4F76BCF266F7A4600F6FAD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4F76BD1266F7A4600F6FAD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C01E8CFD26718AD70054AA28 /* MenuListStaticSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListStaticSeeder.swift; sourceTree = "<group>"; };
-		C07E4B5026707A68008E68CF /* FlowchartRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartRepository.swift; sourceTree = "<group>"; };
 		C07E4B6126708F3B008E68CF /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,10 +68,6 @@
 				C07E4B4426707919008E68CF /* Themes */,
 				B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */,
 				B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */,
-				B4F76BC6266F7A4300F6FAD9 /* Main.storyboard */,
-				B4F76BC4266F7A4300F6FAD9 /* MainViewController.swift */,
-				C07E4B6126708F3B008E68CF /* Menu.swift */,
-				C01E8CFD26718AD70054AA28 /* MenuListStaticSeeder.swift */,
 				B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */,
 				B4F76BCE266F7A4600F6FAD9 /* LaunchScreen.storyboard */,
 				B4F76BD1266F7A4600F6FAD9 /* Info.plist */,
@@ -159,7 +153,6 @@
 			children = (
 				C07E4B4E26707A22008E68CF /* Pages */,
 				C07E4B4D26707A18008E68CF /* Model */,
-				C07E4B5026707A68008E68CF /* FlowchartRepository.swift */,
 			);
 			path = FlowchartPresentation;
 			sourceTree = "<group>";
@@ -244,6 +237,8 @@
 		C07E4B5D26708DBB008E68CF /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				B4F76BC6266F7A4300F6FAD9 /* Main.storyboard */,
+				B4F76BC4266F7A4300F6FAD9 /* MainViewController.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -251,6 +246,7 @@
 		C07E4B5E26708DC2008E68CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C07E4B6126708F3B008E68CF /* Menu.swift */,
 				C07E4B6026708DFF008E68CF /* DataStores */,
 			);
 			path = Model;
@@ -259,6 +255,7 @@
 		C07E4B6026708DFF008E68CF /* DataStores */ = {
 			isa = PBXGroup;
 			children = (
+				C01E8CFD26718AD70054AA28 /* MenuListStaticSeeder.swift */,
 			);
 			path = DataStores;
 			sourceTree = "<group>";
@@ -333,7 +330,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C07E4B5126707A68008E68CF /* FlowchartRepository.swift in Sources */,
 				B4F76BC5266F7A4300F6FAD9 /* MainViewController.swift in Sources */,
 				C07E4B6226708F3B008E68CF /* Menu.swift in Sources */,
 				B4F76BCB266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld in Sources */,

@@ -76,28 +76,31 @@ class MainViewController: UIViewController {
         menu1Title1.isAccessibilityElement = false
         menu1Title2.isAccessibilityElement = false
         menu1Description.isAccessibilityElement = false
+        menu1Image.isAccessibilityElement = false
         
-        menu1Image.isAccessibilityElement = true
-        menu1Image.accessibilityTraits = .button
-        menu1Image.accessibilityLabel = (menu1Title1.text!  + " " + menu1Title2.text!)
-        
+        menu1View.isAccessibilityElement = false
+        menu1View.accessibilityTraits = .button
+        menu1View.accessibilityLabel = (menu1Title1.text!  + " " + menu1Title2.text! + " " + menu1Description.text!)
+
         //menu 2
         menu2Title1.isAccessibilityElement = false
         menu2Title2.isAccessibilityElement = false
         menu2Description.isAccessibilityElement = false
+        menu2Image.isAccessibilityElement = false
         
-        menu2Image.isAccessibilityElement = true
-        menu2Image.accessibilityTraits = .button
-        menu2Image.accessibilityLabel = (menu2Title1.text!  + " " + menu2Title2.text!)
-        
+        menu2View.isAccessibilityElement = false
+        menu2View.accessibilityTraits = .button
+        menu2View.accessibilityLabel = (menu2Title1.text!  + " " + menu2Title2.text! + " " + menu2Description.text!)
+
         //menu 3
         menu3Title1.isAccessibilityElement = false
         menu3Title2.isAccessibilityElement = false
         menu3Description.isAccessibilityElement = false
+        menu3Image.isAccessibilityElement = false
         
-        menu3Image.isAccessibilityElement = true
-        menu3Image.accessibilityTraits = .button
-        menu3Image.accessibilityLabel = (menu3Title1.text!  + " " + menu3Title2.text!)
+        menu3View.isAccessibilityElement = false
+        menu3View.accessibilityTraits = .button
+        menu3View.accessibilityLabel = (menu3Title1.text!  + " " + menu3Title2.text! + " " + menu3Description.text!)
         
     }
     

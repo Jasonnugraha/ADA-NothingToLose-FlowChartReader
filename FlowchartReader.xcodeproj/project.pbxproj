@@ -19,11 +19,6 @@
 		031F0A5D2674A66900570B0B /* DetailFlowchart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031F0A5C2674A66900570B0B /* DetailFlowchart.storyboard */; };
 		031F0A5F2674A67900570B0B /* DetailFlowchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A5E2674A67900570B0B /* DetailFlowchartView.swift */; };
 		031F0A612674A68900570B0B /* DetailFlowchartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A602674A68900570B0B /* DetailFlowchartViewController.swift */; };
-		031F0A632674B40D00570B0B /* Blank_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A622674B40D00570B0B /* Blank_1.swift */; };
-		031F0A652674B42300570B0B /* Blank_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A642674B42300570B0B /* Blank_2.swift */; };
-		031F0A672674B43C00570B0B /* Blank_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A662674B43C00570B0B /* Blank_3.swift */; };
-		031F0A692674B45100570B0B /* Blank_4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A682674B45100570B0B /* Blank_4.swift */; };
-		031F0A6B2674B45C00570B0B /* Blank_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A6A2674B45C00570B0B /* Blank_5.swift */; };
 		B4F76BC1266F7A4300F6FAD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */; };
 		B4F76BC3266F7A4300F6FAD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */; };
 		B4F76BC5266F7A4300F6FAD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC4266F7A4300F6FAD9 /* ViewController.swift */; };
@@ -49,6 +44,11 @@
 		5B10B93C2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FlowchartComponentDetector 1.mlmodel"; sourceTree = "<group>"; };
 		5B10B94026731A7500DC721B /* FlowchartComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartComponent.swift; sourceTree = "<group>"; };
 		5B10B94226731C5900DC721B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		B4F76C592670A62D00F6FAD9 /* MainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76C582670A62D00F6FAD9 /* MainMenu.storyboard */; };
+		B4F76C5C2670A64B00F6FAD9 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76C5B2670A64B00F6FAD9 /* MainMenuViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
 		031F0A4A267493CE00570B0B /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
 		031F0A4C2674962700570B0B /* ListProjects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListProjects.storyboard; sourceTree = "<group>"; };
 		031F0A50267496B700570B0B /* ListProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsViewController.swift; sourceTree = "<group>"; };
@@ -56,11 +56,6 @@
 		031F0A5C2674A66900570B0B /* DetailFlowchart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailFlowchart.storyboard; sourceTree = "<group>"; };
 		031F0A5E2674A67900570B0B /* DetailFlowchartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFlowchartView.swift; sourceTree = "<group>"; };
 		031F0A602674A68900570B0B /* DetailFlowchartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFlowchartViewController.swift; sourceTree = "<group>"; };
-		031F0A622674B40D00570B0B /* Blank_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blank_1.swift; sourceTree = SOURCE_ROOT; };
-		031F0A642674B42300570B0B /* Blank_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blank_2.swift; sourceTree = SOURCE_ROOT; };
-		031F0A662674B43C00570B0B /* Blank_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blank_3.swift; sourceTree = SOURCE_ROOT; };
-		031F0A682674B45100570B0B /* Blank_4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blank_4.swift; sourceTree = SOURCE_ROOT; };
-		031F0A6A2674B45C00570B0B /* Blank_5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blank_5.swift; sourceTree = SOURCE_ROOT; };
 		B4F76BBD266F7A4200F6FAD9 /* FlowchartReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowchartReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				5B10B9382673061E00DC721B /* FlowchartComponentReader.swift */,
+				B4F76BDD267099D300F6FAD9 /* Core Data */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -244,7 +240,6 @@
 		B4F76BE026709A5F00F6FAD9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				031F0A6A2674B45C00570B0B /* Blank_5.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -252,7 +247,6 @@
 		B4F76BE126709A6500F6FAD9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				031F0A682674B45100570B0B /* Blank_4.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -260,7 +254,6 @@
 		B4F76BE226709A6D00F6FAD9 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				031F0A662674B43C00570B0B /* Blank_3.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -372,7 +365,6 @@
 		B4F76C1B26709F5C00F6FAD9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				031F0A622674B40D00570B0B /* Blank_1.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -528,10 +520,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				031F0A5F2674A67900570B0B /* DetailFlowchartView.swift in Sources */,
-				031F0A632674B40D00570B0B /* Blank_1.swift in Sources */,
 				031F0A542674972F00570B0B /* ListProjectsView.swift in Sources */,
 				031F0A4B267493CE00570B0B /* Projects.swift in Sources */,
-				031F0A6B2674B45C00570B0B /* Blank_5.swift in Sources */,
 				B4F76C5C2670A64B00F6FAD9 /* MainMenuViewController.swift in Sources */,
 				031F0A612674A68900570B0B /* DetailFlowchartViewController.swift in Sources */,
 				031F0A51267496B700570B0B /* ListProjectsViewController.swift in Sources */,

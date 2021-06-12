@@ -30,7 +30,7 @@ class FlowchartComponentReader {
                 let objectConfidence = firstResult!.confidence
                 let boundingBox = result.boundingBox
                 
-                let flowchartComponent = FlowchartComponent(shape: objectName, minX: Float(boundingBox.minX), minY: Float(boundingBox.minY), maxX: Float(boundingBox.maxX), maxY: Float(boundingBox.maxY))
+                let flowchartComponent = FlowchartComponent(shape: objectName, minX: Float(boundingBox.minX), minY: Float(boundingBox.minY), maxX: Float(boundingBox.maxX), maxY: Float(boundingBox.maxY), noArrow: [], arrowTo: "")
                 
                 flowchartComponents.append(flowchartComponent)
                 

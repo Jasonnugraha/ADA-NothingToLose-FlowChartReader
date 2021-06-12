@@ -20,11 +20,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hs2-5d-pJN">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.88436226880000002" green="0.93299096820000005" blue="0.64112917889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRt-wd-Y48">
                                 <rect key="frame" x="172" y="742" width="70" height="70"/>
                                 <constraints>
@@ -49,13 +44,43 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="outputView" destination="hs2-5d-pJN" id="KOS-qh-09v"/>
                         <outlet property="pireviewView" destination="ENk-fH-lYd" id="Qqz-ki-vIf"/>
+                        <segue destination="PVk-N5-Ty0" kind="show" identifier="CameraToResult" id="dv3-41-xyJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2O-tI-yDM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-301" y="-90"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="sGI-jT-21m">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="PVk-N5-Ty0" customClass="ResultViewController" customModule="FlowchartReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8x7-BE-XTJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yzI-yO-yWe">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F9P-9o-EgC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F9P-9o-EgC" firstAttribute="trailing" secondItem="yzI-yO-yWe" secondAttribute="trailing" id="AGH-sc-jyp"/>
+                            <constraint firstItem="yzI-yO-yWe" firstAttribute="top" secondItem="8x7-BE-XTJ" secondAttribute="top" id="D5f-R9-SMU"/>
+                            <constraint firstItem="yzI-yO-yWe" firstAttribute="leading" secondItem="F9P-9o-EgC" secondAttribute="leading" id="Jgb-RL-njV"/>
+                            <constraint firstAttribute="bottom" secondItem="yzI-yO-yWe" secondAttribute="bottom" id="r0a-Vy-rpW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6ab-sp-cuv"/>
+                    <connections>
+                        <outlet property="resultImageView" destination="yzI-yO-yWe" id="uDO-ol-UDB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zyv-C4-qRL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586" y="-90"/>
         </scene>
     </scenes>
     <resources>

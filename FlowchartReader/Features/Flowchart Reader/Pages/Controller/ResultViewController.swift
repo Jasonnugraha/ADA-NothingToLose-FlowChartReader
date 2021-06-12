@@ -56,7 +56,7 @@ class ResultViewController: UIViewController {
         
         printFlowchartComponents(flowcharts: flowchartComponents)
         
-        
+        print("\n SHAPE IN THIS FLOWCHART : ")
         printFlowchartComponents(flowcharts: sortedFlowchartComponents)
         
         //traceFlowchartShape(component: sortedFlowchartComponents[0], id: 0)

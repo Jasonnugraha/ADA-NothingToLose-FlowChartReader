@@ -12,6 +12,13 @@
 		5B10B93D2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B93C2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel */; };
 		5B10B94126731A7500DC721B /* FlowchartComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B94026731A7500DC721B /* FlowchartComponent.swift */; };
 		5B10B94326731C5900DC721B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B94226731C5900DC721B /* ResultViewController.swift */; };
+		031F0A4B267493CE00570B0B /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A4A267493CE00570B0B /* Projects.swift */; };
+		031F0A4D2674962700570B0B /* ListProjects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031F0A4C2674962700570B0B /* ListProjects.storyboard */; };
+		031F0A51267496B700570B0B /* ListProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A50267496B700570B0B /* ListProjectsViewController.swift */; };
+		031F0A542674972F00570B0B /* ListProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A532674972F00570B0B /* ListProjectsView.swift */; };
+		031F0A5D2674A66900570B0B /* DetailFlowchart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031F0A5C2674A66900570B0B /* DetailFlowchart.storyboard */; };
+		031F0A5F2674A67900570B0B /* DetailFlowchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A5E2674A67900570B0B /* DetailFlowchartView.swift */; };
+		031F0A612674A68900570B0B /* DetailFlowchartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A602674A68900570B0B /* DetailFlowchartViewController.swift */; };
 		B4F76BC1266F7A4300F6FAD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */; };
 		B4F76BC3266F7A4300F6FAD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */; };
 		B4F76BC5266F7A4300F6FAD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC4266F7A4300F6FAD9 /* ViewController.swift */; };
@@ -37,6 +44,13 @@
 		5B10B93C2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FlowchartComponentDetector 1.mlmodel"; sourceTree = "<group>"; };
 		5B10B94026731A7500DC721B /* FlowchartComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartComponent.swift; sourceTree = "<group>"; };
 		5B10B94226731C5900DC721B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		031F0A4A267493CE00570B0B /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
+		031F0A4C2674962700570B0B /* ListProjects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListProjects.storyboard; sourceTree = "<group>"; };
+		031F0A50267496B700570B0B /* ListProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsViewController.swift; sourceTree = "<group>"; };
+		031F0A532674972F00570B0B /* ListProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsView.swift; sourceTree = "<group>"; };
+		031F0A5C2674A66900570B0B /* DetailFlowchart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailFlowchart.storyboard; sourceTree = "<group>"; };
+		031F0A5E2674A67900570B0B /* DetailFlowchartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFlowchartView.swift; sourceTree = "<group>"; };
+		031F0A602674A68900570B0B /* DetailFlowchartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFlowchartViewController.swift; sourceTree = "<group>"; };
 		B4F76BBD266F7A4200F6FAD9 /* FlowchartReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowchartReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +83,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		031F0A452674935900570B0B /* SaveFlowchart */ = {
+			isa = PBXGroup;
+			children = (
+				031F0A572674A60300570B0B /* DetailFlowchart */,
+				031F0A52267496C600570B0B /* ListProjects */,
+			);
+			path = SaveFlowchart;
+			sourceTree = "<group>";
+		};
+		031F0A462674936F00570B0B /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				031F0A492674938E00570B0B /* Controller */,
+				031F0A482674938B00570B0B /* View */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		031F0A472674937500570B0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				031F0A4A267493CE00570B0B /* Projects.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		031F0A482674938B00570B0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				031F0A4C2674962700570B0B /* ListProjects.storyboard */,
+				031F0A532674972F00570B0B /* ListProjectsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		031F0A492674938E00570B0B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				031F0A50267496B700570B0B /* ListProjectsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		031F0A52267496C600570B0B /* ListProjects */ = {
+			isa = PBXGroup;
+			children = (
+				031F0A472674937500570B0B /* Model */,
+				031F0A462674936F00570B0B /* Pages */,
+			);
+			path = ListProjects;
+			sourceTree = "<group>";
+		};
+		031F0A572674A60300570B0B /* DetailFlowchart */ = {
+			isa = PBXGroup;
+			children = (
+				031F0A582674A62F00570B0B /* Pages */,
+			);
+			path = DetailFlowchart;
+			sourceTree = "<group>";
+		};
+		031F0A582674A62F00570B0B /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				031F0A5B2674A64F00570B0B /* Controller */,
+				031F0A5A2674A64B00570B0B /* View */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		031F0A5A2674A64B00570B0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				031F0A5C2674A66900570B0B /* DetailFlowchart.storyboard */,
+				031F0A5E2674A67900570B0B /* DetailFlowchartView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		031F0A5B2674A64F00570B0B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				031F0A602674A68900570B0B /* DetailFlowchartViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		B4F76BB4266F7A4200F6FAD9 = {
 			isa = PBXGroup;
 			children = (
@@ -124,18 +224,12 @@
 		B4F76BFB26709CB800F6FAD9 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				031F0A452674935900570B0B /* SaveFlowchart */,
 				B4F76C1A26709F5300F6FAD9 /* Guidance */,
 				B4F76C1326709EAC00F6FAD9 /* Main Menu */,
 				B4F76C0126709D2400F6FAD9 /* Flowchart Reader */,
 			);
 			path = Features;
-			sourceTree = "<group>";
-		};
-		B4F76BFF26709D0C00F6FAD9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		B4F76C0026709D1800F6FAD9 /* Pages */ = {
@@ -151,7 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				B4F76C0026709D1800F6FAD9 /* Pages */,
-				B4F76BFF26709D0C00F6FAD9 /* Model */,
 			);
 			path = "Flowchart Reader";
 			sourceTree = "<group>";
@@ -367,7 +460,10 @@
 				B4FDFCC42674D2C800D17197 /* Main.storyboard in Resources */,
 				B4F76BD0266F7A4600F6FAD9 /* LaunchScreen.storyboard in Resources */,
 				B4F76C502670A56E00F6FAD9 /* Guidance.storyboard in Resources */,
+				031F0A4D2674962700570B0B /* ListProjects.storyboard in Resources */,
 				B4F76BCD266F7A4600F6FAD9 /* Assets.xcassets in Resources */,
+				B4F76BC8266F7A4300F6FAD9 /* Main.storyboard in Resources */,
+				031F0A5D2674A66900570B0B /* DetailFlowchart.storyboard in Resources */,
 				B4F76C1126709E2200F6FAD9 /* FlowchartReader.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,7 +475,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				031F0A5F2674A67900570B0B /* DetailFlowchartView.swift in Sources */,
+				031F0A542674972F00570B0B /* ListProjectsView.swift in Sources */,
+				031F0A4B267493CE00570B0B /* Projects.swift in Sources */,
 				B4F76C5C2670A64B00F6FAD9 /* MainMenuViewController.swift in Sources */,
+				031F0A612674A68900570B0B /* DetailFlowchartViewController.swift in Sources */,
+				031F0A51267496B700570B0B /* ListProjectsViewController.swift in Sources */,
 				B4F76BC5266F7A4300F6FAD9 /* ViewController.swift in Sources */,
 				B4FE9D3A2675ECC70027128A /* PlaceHolderColors.swift in Sources */,
 				B4FDFCC92674D33400D17197 /* Menu.swift in Sources */,

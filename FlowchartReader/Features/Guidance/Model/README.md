@@ -1,2 +1,0 @@
-Folder untuk Guidance Model
-

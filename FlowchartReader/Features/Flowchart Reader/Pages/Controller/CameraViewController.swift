@@ -7,21 +7,25 @@
 
 import UIKit
 import AVFoundation
+import Accessibility
 
 class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     
-    @IBOutlet weak var outputView: UIImageView!
     @IBOutlet weak var pireviewView: UIView!
     private var previewLayer: AVCaptureVideoPreviewLayer! = nil
+    
     
     var rootLayer: CALayer! = nil
     let captureSession = AVCaptureSession()
     private let photoOutput = AVCapturePhotoOutput()
     
+    var flowchartComponents : [FlowchartComponent]?
+    var resultImage : UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        outputView.isHidden = true
+        
         configureAVCapture()
         captureSession.startRunning()
     }
@@ -66,13 +70,24 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         guard let imageData = photo.fileDataRepresentation() else { return }
         let previewImage = UIImage(data: imageData)
         
-        outputView.isHidden = false
         let scannedImage = getScannedImage(inputImage: previewImage!)?.rotate(radians: .pi/2)
-        outputView.image = scannedImage
+        resultImage = scannedImage
+        
         
         captureSession.stopRunning()
         
-        FlowchartComponentReader().detect(image: CIImage(image: scannedImage!)!)
+        flowchartComponents = FlowchartComponentReader().detect(image: CIImage(image: scannedImage!)!)
+        
+        performSegue(withIdentifier: "CameraToResult", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CameraToResult" {
+            if let destinationVC = segue.destination as? ResultViewController {
+                destinationVC.flowchartComponents = flowchartComponents
+                destinationVC.resultImage = resultImage
+            }
+        }
     }
     
     func getScannedImage(inputImage: UIImage) -> UIImage? {

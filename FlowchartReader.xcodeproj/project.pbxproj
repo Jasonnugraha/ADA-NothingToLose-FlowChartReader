@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B10B9352672E76700DC721B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B9342672E76700DC721B /* CameraViewController.swift */; };
+		5B10B9392673061E00DC721B /* FlowchartComponentReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B9382673061E00DC721B /* FlowchartComponentReader.swift */; };
+		5B10B93D2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B93C2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel */; };
+		5B10B94126731A7500DC721B /* FlowchartComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B94026731A7500DC721B /* FlowchartComponent.swift */; };
+		5B10B94326731C5900DC721B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B94226731C5900DC721B /* ResultViewController.swift */; };
 		B4F76BC1266F7A4300F6FAD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */; };
 		B4F76BC3266F7A4300F6FAD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */; };
 		B4F76BC5266F7A4300F6FAD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC4266F7A4300F6FAD9 /* ViewController.swift */; };
@@ -20,9 +25,18 @@
 		B4FDFCC42674D2C800D17197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4FDFCC32674D2C800D17197 /* Main.storyboard */; };
 		B4FDFCC92674D33400D17197 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDFCC82674D33400D17197 /* Menu.swift */; };
 		B4FDFCD12674D3B600D17197 /* MenuListStaticSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDFCD02674D3B600D17197 /* MenuListStaticSeeder.swift */; };
+		B4FE9D352675ECA50027128A /* PlaceholderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE9D342675ECA50027128A /* PlaceholderHelper.swift */; };
+		B4FE9D3A2675ECC70027128A /* PlaceHolderColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE9D392675ECC70027128A /* PlaceHolderColors.swift */; };
+		B4FE9D3E2675ECE20027128A /* PlaceholderFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE9D3D2675ECE20027128A /* PlaceholderFonts.swift */; };
+		B4FE9D422675ECFC0027128A /* PlaceholderUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE9D412675ECFC0027128A /* PlaceholderUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B10B9342672E76700DC721B /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		5B10B9382673061E00DC721B /* FlowchartComponentReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartComponentReader.swift; sourceTree = "<group>"; };
+		5B10B93C2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FlowchartComponentDetector 1.mlmodel"; sourceTree = "<group>"; };
+		5B10B94026731A7500DC721B /* FlowchartComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartComponent.swift; sourceTree = "<group>"; };
+		5B10B94226731C5900DC721B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		B4F76BBD266F7A4200F6FAD9 /* FlowchartReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowchartReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +52,10 @@
 		B4FDFCC32674D2C800D17197 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B4FDFCC82674D33400D17197 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		B4FDFCD02674D3B600D17197 /* MenuListStaticSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListStaticSeeder.swift; sourceTree = "<group>"; };
+		B4FE9D342675ECA50027128A /* PlaceholderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaceholderHelper.swift; path = "FlowchartReader/Features/Flowchart Reader/Model/PlaceholderHelper.swift"; sourceTree = SOURCE_ROOT; };
+		B4FE9D392675ECC70027128A /* PlaceHolderColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderColors.swift; sourceTree = "<group>"; };
+		B4FE9D3D2675ECE20027128A /* PlaceholderFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderFonts.swift; sourceTree = "<group>"; };
+		B4FE9D412675ECFC0027128A /* PlaceholderUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +88,10 @@
 		B4F76BBF266F7A4300F6FAD9 /* FlowchartReader */ = {
 			isa = PBXGroup;
 			children = (
+				B4FE9D372675ECAE0027128A /* Themes */,
+				B4FE9D332675EC8E0027128A /* Helper */,
 				B4F76BFB26709CB800F6FAD9 /* Features */,
-				B4F76BF426709C4300F6FAD9 /* Helper */,
-				B4F76BDF26709A5700F6FAD9 /* Themes */,
+				B4F76BDE267099ED00F6FAD9 /* Model */,
 				B4F76BDC267099C200F6FAD9 /* Utilities */,
 				B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */,
 				B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */,
@@ -87,63 +106,19 @@
 		B4F76BDC267099C200F6FAD9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				B4F76BDD267099D300F6FAD9 /* Core Data */,
+				5B10B9382673061E00DC721B /* FlowchartComponentReader.swift */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		B4F76BDD267099D300F6FAD9 /* Core Data */ = {
-			isa = PBXGroup;
-			children = (
-				B4F76BDE267099ED00F6FAD9 /* Model */,
-			);
-			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		B4F76BDE267099ED00F6FAD9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				B4F76BC9266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld */,
+				5B10B93C2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel */,
+				5B10B94026731A7500DC721B /* FlowchartComponent.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		B4F76BDF26709A5700F6FAD9 /* Themes */ = {
-			isa = PBXGroup;
-			children = (
-				B4F76BE226709A6D00F6FAD9 /* Colors */,
-				B4F76BE126709A6500F6FAD9 /* Fonts */,
-				B4F76BE026709A5F00F6FAD9 /* UI */,
-			);
-			path = Themes;
-			sourceTree = "<group>";
-		};
-		B4F76BE026709A5F00F6FAD9 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		B4F76BE126709A6500F6FAD9 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		B4F76BE226709A6D00F6FAD9 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Colors;
-			sourceTree = "<group>";
-		};
-		B4F76BF426709C4300F6FAD9 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		B4F76BFB26709CB800F6FAD9 /* Features */ = {
@@ -192,6 +167,8 @@
 		B4F76C0B26709DD200F6FAD9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5B10B94226731C5900DC721B /* ResultViewController.swift */,
+				5B10B9342672E76700DC721B /* CameraViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -288,6 +265,48 @@
 			path = DataStores;
 			sourceTree = "<group>";
 		};
+		B4FE9D332675EC8E0027128A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B4FE9D342675ECA50027128A /* PlaceholderHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B4FE9D372675ECAE0027128A /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				B4FE9D402675ECE90027128A /* UI */,
+				B4FE9D3C2675ECCF0027128A /* Fonts */,
+				B4FE9D382675ECB60027128A /* Colors */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		B4FE9D382675ECB60027128A /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				B4FE9D392675ECC70027128A /* PlaceHolderColors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		B4FE9D3C2675ECCF0027128A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B4FE9D3D2675ECE20027128A /* PlaceholderFonts.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B4FE9D402675ECE90027128A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B4FE9D412675ECFC0027128A /* PlaceholderUI.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -362,12 +381,21 @@
 			files = (
 				B4F76C5C2670A64B00F6FAD9 /* MainMenuViewController.swift in Sources */,
 				B4F76BC5266F7A4300F6FAD9 /* ViewController.swift in Sources */,
+				B4FE9D3A2675ECC70027128A /* PlaceHolderColors.swift in Sources */,
 				B4FDFCC92674D33400D17197 /* Menu.swift in Sources */,
 				B4F76BCB266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld in Sources */,
 				B4F76BC1266F7A4300F6FAD9 /* AppDelegate.swift in Sources */,
+				B4FE9D422675ECFC0027128A /* PlaceholderUI.swift in Sources */,
+				5B10B94126731A7500DC721B /* FlowchartComponent.swift in Sources */,
+				5B10B9352672E76700DC721B /* CameraViewController.swift in Sources */,
 				B4F76C532670A58800F6FAD9 /* GuidanceViewController.swift in Sources */,
 				B4FDFCD12674D3B600D17197 /* MenuListStaticSeeder.swift in Sources */,
+				5B10B93D2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel in Sources */,
 				B4F76BC3266F7A4300F6FAD9 /* SceneDelegate.swift in Sources */,
+				B4FE9D352675ECA50027128A /* PlaceholderHelper.swift in Sources */,
+				5B10B9392673061E00DC721B /* FlowchartComponentReader.swift in Sources */,
+				B4FE9D3E2675ECE20027128A /* PlaceholderFonts.swift in Sources */,
+				5B10B94326731C5900DC721B /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -491,7 +519,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -507,7 +535,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 95KTG3M5L3;
+				COREML_CODEGEN_LANGUAGE = Swift;
+				COREML_CODEGEN_SWIFT_GLOBAL_MODULE = YES;
+				DEVELOPMENT_TEAM = 2FT28A9D5B;
 				INFOPLIST_FILE = FlowchartReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -526,7 +556,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 95KTG3M5L3;
+				COREML_CODEGEN_LANGUAGE = Swift;
+				COREML_CODEGEN_SWIFT_GLOBAL_MODULE = YES;
+				DEVELOPMENT_TEAM = 2FT28A9D5B;
 				INFOPLIST_FILE = FlowchartReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

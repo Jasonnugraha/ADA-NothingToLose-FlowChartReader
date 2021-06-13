@@ -319,16 +319,8 @@
 			children = (
 				B4FE9D4B2675FB680027128A /* Model */,
 				B4F76C1C26709F6600F6FAD9 /* Pages */,
-				B4F76C1B26709F5C00F6FAD9 /* Model */,
 			);
 			path = Guidance;
-			sourceTree = "<group>";
-		};
-		B4F76C1B26709F5C00F6FAD9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		B4F76C1C26709F6600F6FAD9 /* Pages */ = {

@@ -14,7 +14,7 @@
 		031F0A5D2674A66900570B0B /* DetailFlowchart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031F0A5C2674A66900570B0B /* DetailFlowchart.storyboard */; };
 		031F0A5F2674A67900570B0B /* DetailFlowchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A5E2674A67900570B0B /* DetailFlowchartView.swift */; };
 		031F0A612674A68900570B0B /* DetailFlowchartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A602674A68900570B0B /* DetailFlowchartViewController.swift */; };
-		031F0A632674B40D00570B0B /* Blank_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A622674B40D00570B0B /* Blank_1.swift */; };
+		031F0A632674B40D00570B0B /* PlaceholderGuidanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A622674B40D00570B0B /* PlaceholderGuidanceModel.swift */; };
 		031F0A6B2674B45C00570B0B /* Blank_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A6A2674B45C00570B0B /* Blank_5.swift */; };
 		5B10B9352672E76700DC721B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B9342672E76700DC721B /* CameraViewController.swift */; };
 		5B10B9392673061E00DC721B /* FlowchartComponentReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B9382673061E00DC721B /* FlowchartComponentReader.swift */; };
@@ -48,7 +48,7 @@
 		031F0A5C2674A66900570B0B /* DetailFlowchart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailFlowchart.storyboard; sourceTree = "<group>"; };
 		031F0A5E2674A67900570B0B /* DetailFlowchartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFlowchartView.swift; sourceTree = "<group>"; };
 		031F0A602674A68900570B0B /* DetailFlowchartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFlowchartViewController.swift; sourceTree = "<group>"; };
-		031F0A622674B40D00570B0B /* Blank_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blank_1.swift; sourceTree = SOURCE_ROOT; };
+		031F0A622674B40D00570B0B /* PlaceholderGuidanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaceholderGuidanceModel.swift; path = FlowchartReader/Features/Guidance/Model/PlaceholderGuidanceModel.swift; sourceTree = SOURCE_ROOT; };
 		031F0A6A2674B45C00570B0B /* Blank_5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blank_5.swift; sourceTree = SOURCE_ROOT; };
 		5B10B9342672E76700DC721B /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		5B10B9382673061E00DC721B /* FlowchartComponentReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartComponentReader.swift; sourceTree = "<group>"; };
@@ -317,6 +317,7 @@
 		B4F76C1A26709F5300F6FAD9 /* Guidance */ = {
 			isa = PBXGroup;
 			children = (
+				B4FE9D4B2675FB680027128A /* Model */,
 				B4F76C1C26709F6600F6FAD9 /* Pages */,
 				B4F76C1B26709F5C00F6FAD9 /* Model */,
 			);
@@ -326,7 +327,6 @@
 		B4F76C1B26709F5C00F6FAD9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				031F0A622674B40D00570B0B /* Blank_1.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -414,6 +414,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		B4FE9D4B2675FB680027128A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				031F0A622674B40D00570B0B /* PlaceholderGuidanceModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -489,7 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				031F0A5F2674A67900570B0B /* DetailFlowchartView.swift in Sources */,
-				031F0A632674B40D00570B0B /* Blank_1.swift in Sources */,
+				031F0A632674B40D00570B0B /* PlaceholderGuidanceModel.swift in Sources */,
 				031F0A542674972F00570B0B /* ListProjectsView.swift in Sources */,
 				031F0A4B267493CE00570B0B /* Projects.swift in Sources */,
 				031F0A6B2674B45C00570B0B /* Blank_5.swift in Sources */,

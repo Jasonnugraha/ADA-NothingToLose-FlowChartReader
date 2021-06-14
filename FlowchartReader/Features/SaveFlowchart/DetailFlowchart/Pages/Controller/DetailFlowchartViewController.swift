@@ -11,16 +11,16 @@ class DetailFlowchartViewController: UIViewController {
     
     @IBOutlet var detailFlowchartView: DetailFlowchartView!
     
-    var idProject: String?
-    var titleProject: String?
+    var idFlowchart: String?
+    var titleFlowchart: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let dataId = idProject as? String {
+        if let dataId = idFlowchart as? String {
             detailFlowchartView.setId(dataId)
         }
         
-        self.title = titleProject!
+        self.title = titleFlowchart!
         // Do any additional setup after loading the view.
     }
 

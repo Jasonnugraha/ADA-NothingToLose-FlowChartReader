@@ -18,22 +18,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cE9-dy-1Pe">
-                                <rect key="frame" x="15" y="126.5" width="384" height="204.5"/>
+                                <rect key="frame" x="15" y="143" width="384" height="193.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan" translatesAutoresizingMaskIntoConstraints="NO" id="W0u-Ae-qlH">
-                                        <rect key="frame" x="231" y="5" width="150" height="194.5"/>
+                                        <rect key="frame" x="231" y="5" width="150" height="183.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="TBg-5c-T8B"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk3-j9-mQl">
-                                        <rect key="frame" x="10" y="61.5" width="211" height="29"/>
+                                        <rect key="frame" x="10" y="56" width="211" height="29"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flowchart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcz-F9-0gX">
-                                        <rect key="frame" x="10" y="87.5" width="211" height="29"/>
+                                        <rect key="frame" x="10" y="82" width="211" height="29"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -66,22 +66,22 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z78-K6-U1h">
-                                <rect key="frame" x="15" y="346" width="384" height="204.5"/>
+                                <rect key="frame" x="15" y="351.5" width="384" height="193.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan" translatesAutoresizingMaskIntoConstraints="NO" id="LIk-Pn-HMf">
-                                        <rect key="frame" x="231" y="5" width="150" height="194.5"/>
+                                        <rect key="frame" x="231" y="5" width="150" height="183.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="eVK-DN-242"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhK-OT-fus">
-                                        <rect key="frame" x="10" y="61.5" width="211" height="29"/>
+                                        <rect key="frame" x="10" y="56" width="211" height="29"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flowchart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFF-Oi-g1o">
-                                        <rect key="frame" x="10" y="87.5" width="211" height="29"/>
+                                        <rect key="frame" x="10" y="82" width="211" height="29"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -114,22 +114,22 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4x-ex-iCX">
-                                <rect key="frame" x="15" y="565.5" width="384" height="204.5"/>
+                                <rect key="frame" x="15" y="560" width="384" height="193.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan" translatesAutoresizingMaskIntoConstraints="NO" id="XuS-VK-KDm">
-                                        <rect key="frame" x="231" y="5" width="150" height="194.5"/>
+                                        <rect key="frame" x="231" y="5" width="150" height="183.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="Xzq-6y-fS4"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZp-Ah-VGb">
-                                        <rect key="frame" x="10" y="61.5" width="211" height="29"/>
+                                        <rect key="frame" x="10" y="56" width="211" height="29"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flowchart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nci-Y8-PzD">
-                                        <rect key="frame" x="10" y="87.5" width="211" height="29"/>
+                                        <rect key="frame" x="10" y="82" width="211" height="29"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -188,6 +188,7 @@
                             <constraint firstItem="E4x-ex-iCX" firstAttribute="top" secondItem="z78-K6-U1h" secondAttribute="bottom" constant="15" id="xbB-UD-yZg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Main Menu" id="Gzq-SK-rb4"/>
                     <connections>
                         <outlet property="menu1Description" destination="aFa-Dg-M1o" id="Y33-VX-iSa"/>
                         <outlet property="menu1Image" destination="W0u-Ae-qlH" id="xgn-pe-Zxr"/>
@@ -224,6 +225,44 @@
                         <action selector="didTabMenu3:" destination="BYZ-38-t0r" id="m4d-lP-clD"/>
                     </connections>
                 </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="891" y="116"/>
+        </scene>
+        <!--ScanFlowchart-->
+        <scene sceneID="GSw-C6-6Gl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ScanFlowchart" id="kbG-7f-kMg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="oQK-ga-JrB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ov7-S2-J3O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1479" y="70"/>
+        </scene>
+        <!--ListFlowchart-->
+        <scene sceneID="pOq-rd-7l8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ListFlowchart" id="QG5-71-o6a" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="u40-zi-mD3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sc5-en-g18" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509" y="116"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Xz-Ro-mOc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0zU-gI-ciP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hdm-gT-Qw9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZNj-i0-yyf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VhT-gw-XgX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
         </scene>

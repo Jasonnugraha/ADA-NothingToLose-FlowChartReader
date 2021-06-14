@@ -21,26 +21,21 @@ class GuidanceViewController: UIViewController {
         guidanceView.guidanceList = guidanceList
         guidanceView.setup(pDelegate: self)
         
-        // Do any additional setup after loading the view.
-    }
+        guidanceView.setupAccessbility()
+        
+    }   
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func unwindToGuidance(_ unwindSegue: UIStoryboardSegue) {
+        // Use data from the view controller which initiated the unwind segue
     }
-    */
-
 }
 
 extension GuidanceViewController: GuidanceTableDelegate {
+    
     func guidanceBackDidTab() {
-        print ("back")
+        performSegue(withIdentifier: "unwindToMain", sender: self)
     }
+    
     func guidanceTitleDidTab(journalID: Int) {
         self.journalID = journalID
         performSegue(withIdentifier: "segueToDetail", sender: self)

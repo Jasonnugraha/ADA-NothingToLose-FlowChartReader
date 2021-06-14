@@ -11,12 +11,22 @@ class GuidanceDetailUIView: UIView {
 
     @IBOutlet weak var navigationTitle : UINavigationItem!
     @IBOutlet weak var textView : UITextView!
+    @IBOutlet weak var backButton : UIButton!
     
     var delegate : GuidanceDetailDelegate?
     
     func setup(pDelegate : GuidanceDetailDelegate)
     {
         self.delegate = pDelegate
+    }
+    
+    func  setupAccessbility() {
+        backButton.accessibilityLabel = "Back"
+        textView.accessibilityTraits = .staticText
+    }
+    
+    func setupAccessbilityOrder() {
+        UIAccessibility.post(notification: .layoutChanged, argument: textView)
     }
     
     func setTitle(pTitle: String) {

@@ -19,6 +19,16 @@ class GuidanceDetailViewController: UIViewController {
         guidanceDetailView.setup(pDelegate: self)
         //isi detail guidance
         setupDetail()
+        
+        //accessbility harus dipanggil setelah setupDetail
+        guidanceDetailView.setupAccessbility()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //ganti focus ke isi guidance
+        
+        guidanceDetailView.setupAccessbilityOrder()
+        
     }
     
     func setupDetail() {
@@ -27,22 +37,12 @@ class GuidanceDetailViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension GuidanceDetailViewController : GuidanceDetailDelegate
 {
     func detailBackDidTab() {
-        print("back")
+            performSegue(withIdentifier: "unwindToGuidance", sender: self)
     }
     
     

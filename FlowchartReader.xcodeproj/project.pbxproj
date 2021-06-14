@@ -349,8 +349,8 @@
 		B4F76C1D26709F6D00F6FAD9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C0E2526E267745AA0023C3AE /* GuidanceDetailViewController.swift */,
 				C0E2526F267745AA0023C3AE /* GuidanceViewController.swift */,
+				C0E2526E267745AA0023C3AE /* GuidanceDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -358,9 +358,9 @@
 		B4F76C1E26709F7800F6FAD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C0E25282267745EC0023C3AE /* GuidanceDetail */,
-				C0E25288267745EC0023C3AE /* GuidanceList */,
 				C0E2526C2677458F0023C3AE /* Guidance.storyboard */,
+				C0E25288267745EC0023C3AE /* GuidanceList */,
+				C0E25282267745EC0023C3AE /* GuidanceDetail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -443,8 +443,8 @@
 		C0E25282267745EC0023C3AE /* GuidanceDetail */ = {
 			isa = PBXGroup;
 			children = (
-				C0E25283267745EC0023C3AE /* GuidanceDetailDelegate.swift */,
 				C0E25284267745EC0023C3AE /* GuidanceDetailUIView.swift */,
+				C0E25283267745EC0023C3AE /* GuidanceDetailDelegate.swift */,
 			);
 			path = GuidanceDetail;
 			sourceTree = "<group>";
@@ -452,9 +452,9 @@
 		C0E25288267745EC0023C3AE /* GuidanceList */ = {
 			isa = PBXGroup;
 			children = (
+				C0E2528B267745EC0023C3AE /* GuidanceUIView.swift */,
 				C0E25289267745EC0023C3AE /* GuidanceTableViewCell.swift */,
 				C0E2528A267745EC0023C3AE /* GuidanceTableDelegate.swift */,
-				C0E2528B267745EC0023C3AE /* GuidanceUIView.swift */,
 			);
 			path = GuidanceList;
 			sourceTree = "<group>";

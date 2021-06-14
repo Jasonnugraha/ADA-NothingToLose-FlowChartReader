@@ -10,6 +10,8 @@ import UIKit
 class GuidanceUIView: UIView {
 
     @IBOutlet weak var guidanceTable : UITableView!
+    @IBOutlet weak var guidanceBackButton : UIButton!
+    @IBOutlet weak var guidanceNavigator : UINavigationItem!
     
     var guidanceList = [Guidance]()
     var delegate : GuidanceTableDelegate?
@@ -19,6 +21,15 @@ class GuidanceUIView: UIView {
 
         guidanceTable.delegate = self
         guidanceTable.dataSource = self
+    }
+    
+    
+    @IBAction func guidanceBackTab(_ sender: Any) {
+        delegate?.guidanceBackDidTab()
+    }
+    
+    func  setupAccessbility() {
+        guidanceBackButton.accessibilityLabel = "Back"
     }
 }
 
@@ -33,7 +44,11 @@ extension GuidanceUIView : UITableViewDataSource {
         cell.journalTitle.text = guidanceList[indexPath.row].title
         
         cell.journalTitle.isAccessibilityElement = true
+        cell.journalTitle.accessibilityTraits = .link
         cell.journalTitle.accessibilityLabel = cell.journalTitle.text
+        
+        //kedengaran ke tunet tp tidak ke normal. normal ke screen berikutnya
+        //cell.journalTitle.accessibilityHint = guidanceList[indexPath.row].description
         
         return cell
     }
@@ -48,3 +63,4 @@ extension GuidanceUIView : UITableViewDelegate {
     
     
 }
+

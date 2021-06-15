@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		031F0A4B267493CE00570B0B /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A4A267493CE00570B0B /* Projects.swift */; };
-		031F0A4D2674962700570B0B /* ListProjects.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031F0A4C2674962700570B0B /* ListProjects.storyboard */; };
-		031F0A51267496B700570B0B /* ListProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A50267496B700570B0B /* ListProjectsViewController.swift */; };
-		031F0A542674972F00570B0B /* ListProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A532674972F00570B0B /* ListProjectsView.swift */; };
+		031F0A4B267493CE00570B0B /* Flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A4A267493CE00570B0B /* Flowchart.swift */; };
+		031F0A4D2674962700570B0B /* ListFlowchart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031F0A4C2674962700570B0B /* ListFlowchart.storyboard */; };
+		031F0A51267496B700570B0B /* ListFlowchartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A50267496B700570B0B /* ListFlowchartViewController.swift */; };
+		031F0A542674972F00570B0B /* ListFlowchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A532674972F00570B0B /* ListFlowchartView.swift */; };
 		031F0A5D2674A66900570B0B /* DetailFlowchart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031F0A5C2674A66900570B0B /* DetailFlowchart.storyboard */; };
 		031F0A5F2674A67900570B0B /* DetailFlowchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A5E2674A67900570B0B /* DetailFlowchartView.swift */; };
 		031F0A612674A68900570B0B /* DetailFlowchartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A602674A68900570B0B /* DetailFlowchartViewController.swift */; };
 		031F0A6B2674B45C00570B0B /* Blank_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A6A2674B45C00570B0B /* Blank_5.swift */; };
+		0337075E2677AEDE0016DADC /* FlowchartGesture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0337075D2677AEDE0016DADC /* FlowchartGesture.storyboard */; };
+		033707602677AEFB0016DADC /* FlowchartGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0337075F2677AEFB0016DADC /* FlowchartGestureViewController.swift */; };
+		033C587D26774A13000189E3 /* ScanFlowchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033C587C26774A13000189E3 /* ScanFlowchartView.swift */; };
+		035DCEDF26770E290026B542 /* ScanFlowchart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 035DCEDE26770E290026B542 /* ScanFlowchart.storyboard */; };
+		035DCEE126770EC70026B542 /* ScanFlowchartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035DCEE026770EC70026B542 /* ScanFlowchartViewController.swift */; };
+		035DCEE326770F0C0026B542 /* CameraVisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035DCEE226770F0C0026B542 /* CameraVisionViewController.swift */; };
+		035DCEE6267710170026B542 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035DCEE5267710170026B542 /* SecondViewController.swift */; };
+		035DCEE8267710250026B542 /* SecondView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 035DCEE7267710250026B542 /* SecondView.storyboard */; };
+		035DCEEA267710D60026B542 /* LockScreenOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035DCEE9267710D60026B542 /* LockScreenOrientation.swift */; };
+		035DCEED267714F20026B542 /* FlowchartObjectsBeta.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 035DCEEC267714F20026B542 /* FlowchartObjectsBeta.mlmodel */; };
 		5B10B9352672E76700DC721B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B9342672E76700DC721B /* CameraViewController.swift */; };
 		5B10B9392673061E00DC721B /* FlowchartComponentReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B9382673061E00DC721B /* FlowchartComponentReader.swift */; };
 		5B10B93D2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B93C2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel */; };
@@ -50,14 +60,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		031F0A4A267493CE00570B0B /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
-		031F0A4C2674962700570B0B /* ListProjects.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListProjects.storyboard; sourceTree = "<group>"; };
-		031F0A50267496B700570B0B /* ListProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsViewController.swift; sourceTree = "<group>"; };
-		031F0A532674972F00570B0B /* ListProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProjectsView.swift; sourceTree = "<group>"; };
+		031F0A4A267493CE00570B0B /* Flowchart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flowchart.swift; sourceTree = "<group>"; };
+		031F0A4C2674962700570B0B /* ListFlowchart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListFlowchart.storyboard; sourceTree = "<group>"; };
+		031F0A50267496B700570B0B /* ListFlowchartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFlowchartViewController.swift; sourceTree = "<group>"; };
+		031F0A532674972F00570B0B /* ListFlowchartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFlowchartView.swift; sourceTree = "<group>"; };
 		031F0A5C2674A66900570B0B /* DetailFlowchart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailFlowchart.storyboard; sourceTree = "<group>"; };
 		031F0A5E2674A67900570B0B /* DetailFlowchartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFlowchartView.swift; sourceTree = "<group>"; };
 		031F0A602674A68900570B0B /* DetailFlowchartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFlowchartViewController.swift; sourceTree = "<group>"; };
 		031F0A6A2674B45C00570B0B /* Blank_5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blank_5.swift; sourceTree = SOURCE_ROOT; };
+		0337075D2677AEDE0016DADC /* FlowchartGesture.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlowchartGesture.storyboard; sourceTree = "<group>"; };
+		0337075F2677AEFB0016DADC /* FlowchartGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartGestureViewController.swift; sourceTree = "<group>"; };
+		033C587C26774A13000189E3 /* ScanFlowchartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanFlowchartView.swift; sourceTree = "<group>"; };
+		035DCEDE26770E290026B542 /* ScanFlowchart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScanFlowchart.storyboard; sourceTree = "<group>"; };
+		035DCEE026770EC70026B542 /* ScanFlowchartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanFlowchartViewController.swift; sourceTree = "<group>"; };
+		035DCEE226770F0C0026B542 /* CameraVisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVisionViewController.swift; sourceTree = "<group>"; };
+		035DCEE5267710170026B542 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		035DCEE7267710250026B542 /* SecondView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondView.storyboard; sourceTree = "<group>"; };
+		035DCEE9267710D60026B542 /* LockScreenOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenOrientation.swift; sourceTree = "<group>"; };
+		035DCEEC267714F20026B542 /* FlowchartObjectsBeta.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowchartObjectsBeta.mlmodel; sourceTree = "<group>"; };
 		5B10B9342672E76700DC721B /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		5B10B9382673061E00DC721B /* FlowchartComponentReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartComponentReader.swift; sourceTree = "<group>"; };
 		5B10B93C2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FlowchartComponentDetector 1.mlmodel"; sourceTree = "<group>"; };
@@ -109,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				031F0A572674A60300570B0B /* DetailFlowchart */,
-				031F0A52267496C600570B0B /* ListProjects */,
+				031F0A52267496C600570B0B /* ListFlowchart */,
 			);
 			path = SaveFlowchart;
 			sourceTree = "<group>";
@@ -126,7 +146,7 @@
 		031F0A472674937500570B0B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				031F0A4A267493CE00570B0B /* Projects.swift */,
+				031F0A4A267493CE00570B0B /* Flowchart.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,8 +154,8 @@
 		031F0A482674938B00570B0B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				031F0A4C2674962700570B0B /* ListProjects.storyboard */,
-				031F0A532674972F00570B0B /* ListProjectsView.swift */,
+				031F0A4C2674962700570B0B /* ListFlowchart.storyboard */,
+				031F0A532674972F00570B0B /* ListFlowchartView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -143,18 +163,18 @@
 		031F0A492674938E00570B0B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				031F0A50267496B700570B0B /* ListProjectsViewController.swift */,
+				031F0A50267496B700570B0B /* ListFlowchartViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		031F0A52267496C600570B0B /* ListProjects */ = {
+		031F0A52267496C600570B0B /* ListFlowchart */ = {
 			isa = PBXGroup;
 			children = (
 				031F0A472674937500570B0B /* Model */,
 				031F0A462674936F00570B0B /* Pages */,
 			);
-			path = ListProjects;
+			path = ListFlowchart;
 			sourceTree = "<group>";
 		};
 		031F0A572674A60300570B0B /* DetailFlowchart */ = {
@@ -189,6 +209,109 @@
 				031F0A602674A68900570B0B /* DetailFlowchartViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		033707582677AD500016DADC /* FlowchartGesture */ = {
+			isa = PBXGroup;
+			children = (
+				0337075A2677AE730016DADC /* Pages */,
+				033707592677AE6A0016DADC /* Model */,
+			);
+			path = FlowchartGesture;
+			sourceTree = "<group>";
+		};
+		033707592677AE6A0016DADC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0337075A2677AE730016DADC /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				0337075C2677AEAB0016DADC /* View */,
+				0337075B2677AEA60016DADC /* Controller */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		0337075B2677AEA60016DADC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0337075F2677AEFB0016DADC /* FlowchartGestureViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0337075C2677AEAB0016DADC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0337075D2677AEDE0016DADC /* FlowchartGesture.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		035DCED926770D980026B542 /* ScanFlowchart */ = {
+			isa = PBXGroup;
+			children = (
+				035DCEEB267714D50026B542 /* Model */,
+				035DCEE426770FFF0026B542 /* TemporarySegueForVision */,
+				035DCEDB26770DD00026B542 /* Extention */,
+				035DCEDA26770DB60026B542 /* Pages */,
+			);
+			path = ScanFlowchart;
+			sourceTree = "<group>";
+		};
+		035DCEDA26770DB60026B542 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				035DCEDD26770DEA0026B542 /* Controller */,
+				035DCEDC26770DE40026B542 /* View */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		035DCEDB26770DD00026B542 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				035DCEE226770F0C0026B542 /* CameraVisionViewController.swift */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
+		035DCEDC26770DE40026B542 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				035DCEDE26770E290026B542 /* ScanFlowchart.storyboard */,
+				033C587C26774A13000189E3 /* ScanFlowchartView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		035DCEDD26770DEA0026B542 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				035DCEE026770EC70026B542 /* ScanFlowchartViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		035DCEE426770FFF0026B542 /* TemporarySegueForVision */ = {
+			isa = PBXGroup;
+			children = (
+				035DCEE5267710170026B542 /* SecondViewController.swift */,
+				035DCEE7267710250026B542 /* SecondView.storyboard */,
+			);
+			path = TemporarySegueForVision;
+			sourceTree = "<group>";
+		};
+		035DCEEB267714D50026B542 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				035DCEEC267714F20026B542 /* FlowchartObjectsBeta.mlmodel */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B4F76BB4266F7A4200F6FAD9 = {
@@ -231,6 +354,7 @@
 			children = (
 				5B10B9382673061E00DC721B /* FlowchartComponentReader.swift */,
 				B416B80126773B8A00BD226B /* TextComponentReader.swift */,
+				035DCEE9267710D60026B542 /* LockScreenOrientation.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -249,6 +373,8 @@
 		B4F76BFB26709CB800F6FAD9 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				033707582677AD500016DADC /* FlowchartGesture */,
+				035DCED926770D980026B542 /* ScanFlowchart */,
 				031F0A452674935900570B0B /* SaveFlowchart */,
 				B4F76C1A26709F5300F6FAD9 /* Guidance */,
 				B4F76C1326709EAC00F6FAD9 /* Main Menu */,
@@ -525,9 +651,14 @@
 				C0E25297267746F90023C3AE /* Main.storyboard in Resources */,
 				B4F76BD0266F7A4600F6FAD9 /* LaunchScreen.storyboard in Resources */,
 				031F0A4D2674962700570B0B /* ListProjects.storyboard in Resources */,
+				035DCEE8267710250026B542 /* SecondView.storyboard in Resources */,
+				0337075E2677AEDE0016DADC /* FlowchartGesture.storyboard in Resources */,
+				B4F76C502670A56E00F6FAD9 /* Guidance.storyboard in Resources */,
+				031F0A4D2674962700570B0B /* ListFlowchart.storyboard in Resources */,
 				B4F76BCD266F7A4600F6FAD9 /* Assets.xcassets in Resources */,
 				C0E2526D2677458F0023C3AE /* Guidance.storyboard in Resources */,
 				031F0A5D2674A66900570B0B /* DetailFlowchart.storyboard in Resources */,
+				035DCEDF26770E290026B542 /* ScanFlowchart.storyboard in Resources */,
 				B4F76C1126709E2200F6FAD9 /* FlowchartReader.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,11 +675,16 @@
 				031F0A542674972F00570B0B /* ListProjectsView.swift in Sources */,
 				031F0A4B267493CE00570B0B /* Projects.swift in Sources */,
 				C0E25271267745AA0023C3AE /* GuidanceViewController.swift in Sources */,
+				031F0A632674B40D00570B0B /* PlaceholderGuidanceModel.swift in Sources */,
+				035DCEE126770EC70026B542 /* ScanFlowchartViewController.swift in Sources */,
+				035DCEEA267710D60026B542 /* LockScreenOrientation.swift in Sources */,
+				031F0A542674972F00570B0B /* ListFlowchartView.swift in Sources */,
+				031F0A4B267493CE00570B0B /* Flowchart.swift in Sources */,
 				031F0A6B2674B45C00570B0B /* Blank_5.swift in Sources */,
 				B4F76C5C2670A64B00F6FAD9 /* MainMenuViewController.swift in Sources */,
 				C0E2528F267745EC0023C3AE /* GuidanceDetailUIView.swift in Sources */,
 				031F0A612674A68900570B0B /* DetailFlowchartViewController.swift in Sources */,
-				031F0A51267496B700570B0B /* ListProjectsViewController.swift in Sources */,
+				031F0A51267496B700570B0B /* ListFlowchartViewController.swift in Sources */,
 				B4F76BC5266F7A4300F6FAD9 /* ViewController.swift in Sources */,
 				C0E25294267745EC0023C3AE /* GuidanceTableDelegate.swift in Sources */,
 				B4FE9D3A2675ECC70027128A /* PlaceHolderColors.swift in Sources */,
@@ -564,6 +700,14 @@
 				5B10B93D2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel in Sources */,
 				C0E2528E267745EC0023C3AE /* GuidanceDetailDelegate.swift in Sources */,
 				B416B80726774CD500BD226B /* TextComponent.swift in Sources */,
+				035DCEE326770F0C0026B542 /* CameraVisionViewController.swift in Sources */,
+				033707602677AEFB0016DADC /* FlowchartGestureViewController.swift in Sources */,
+				B4F76C532670A58800F6FAD9 /* GuidanceViewController.swift in Sources */,
+				B4FDFCD12674D3B600D17197 /* MenuListStaticSeeder.swift in Sources */,
+				5B10B93D2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel in Sources */,
+				035DCEED267714F20026B542 /* FlowchartObjectsBeta.mlmodel in Sources */,
+				035DCEE6267710170026B542 /* SecondViewController.swift in Sources */,
+				033C587D26774A13000189E3 /* ScanFlowchartView.swift in Sources */,
 				B4F76BC3266F7A4300F6FAD9 /* SceneDelegate.swift in Sources */,
 				B4FE9D352675ECA50027128A /* PlaceholderHelper.swift in Sources */,
 				C0E25269267745610023C3AE /* GuidanceStaticSeeder.swift in Sources */,

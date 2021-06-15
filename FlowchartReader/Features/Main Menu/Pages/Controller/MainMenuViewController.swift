@@ -13,7 +13,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         setupMenu()
         setupAccessbility()
-        
     }
 
     let cornerMenu = CGFloat(8)  //besar corner radius
@@ -93,11 +92,11 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func didTabMenu1(_ sender: Any) {
-        print("Menu 1 Tabbed")
+        performSegue(withIdentifier: "scanFlowchartSegue", sender: self)
     }
     
     @IBAction func didTabMenu2(_ sender: Any) {
-        print("Menu 2 Tabbed")
+        performSegue(withIdentifier: "listProjectSegue", sender: self)
     }
     
     @IBAction func didTabMenu3(_ sender: Any) {

@@ -650,10 +650,9 @@
 			files = (
 				C0E25297267746F90023C3AE /* Main.storyboard in Resources */,
 				B4F76BD0266F7A4600F6FAD9 /* LaunchScreen.storyboard in Resources */,
-				031F0A4D2674962700570B0B /* ListProjects.storyboard in Resources */,
+				031F0A4D2674962700570B0B /* ListFlowchart.storyboard in Resources */,
 				035DCEE8267710250026B542 /* SecondView.storyboard in Resources */,
 				0337075E2677AEDE0016DADC /* FlowchartGesture.storyboard in Resources */,
-				B4F76C502670A56E00F6FAD9 /* Guidance.storyboard in Resources */,
 				031F0A4D2674962700570B0B /* ListFlowchart.storyboard in Resources */,
 				B4F76BCD266F7A4600F6FAD9 /* Assets.xcassets in Resources */,
 				C0E2526D2677458F0023C3AE /* Guidance.storyboard in Resources */,
@@ -672,10 +671,9 @@
 			files = (
 				031F0A5F2674A67900570B0B /* DetailFlowchartView.swift in Sources */,
 				C0E25270267745AA0023C3AE /* GuidanceDetailViewController.swift in Sources */,
-				031F0A542674972F00570B0B /* ListProjectsView.swift in Sources */,
-				031F0A4B267493CE00570B0B /* Projects.swift in Sources */,
+				031F0A542674972F00570B0B /* ListFlowchartView.swift in Sources */,
+				031F0A4B267493CE00570B0B /* Flowchart.swift in Sources */,
 				C0E25271267745AA0023C3AE /* GuidanceViewController.swift in Sources */,
-				031F0A632674B40D00570B0B /* PlaceholderGuidanceModel.swift in Sources */,
 				035DCEE126770EC70026B542 /* ScanFlowchartViewController.swift in Sources */,
 				035DCEEA267710D60026B542 /* LockScreenOrientation.swift in Sources */,
 				031F0A542674972F00570B0B /* ListFlowchartView.swift in Sources */,
@@ -702,7 +700,6 @@
 				B416B80726774CD500BD226B /* TextComponent.swift in Sources */,
 				035DCEE326770F0C0026B542 /* CameraVisionViewController.swift in Sources */,
 				033707602677AEFB0016DADC /* FlowchartGestureViewController.swift in Sources */,
-				B4F76C532670A58800F6FAD9 /* GuidanceViewController.swift in Sources */,
 				B4FDFCD12674D3B600D17197 /* MenuListStaticSeeder.swift in Sources */,
 				5B10B93D2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel in Sources */,
 				035DCEED267714F20026B542 /* FlowchartObjectsBeta.mlmodel in Sources */,
@@ -857,7 +854,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COREML_CODEGEN_LANGUAGE = Swift;
 				COREML_CODEGEN_SWIFT_GLOBAL_MODULE = YES;
-				DEVELOPMENT_TEAM = R496FA673D;
+				DEVELOPMENT_TEAM = 2FT28A9D5B;
 				INFOPLIST_FILE = FlowchartReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -878,7 +875,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COREML_CODEGEN_LANGUAGE = Swift;
 				COREML_CODEGEN_SWIFT_GLOBAL_MODULE = YES;
-				DEVELOPMENT_TEAM = R496FA673D;
+				DEVELOPMENT_TEAM = 2FT28A9D5B;
 				INFOPLIST_FILE = FlowchartReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

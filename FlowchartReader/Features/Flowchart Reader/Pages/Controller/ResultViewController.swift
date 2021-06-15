@@ -99,6 +99,8 @@ class ResultViewController: UIViewController {
                 closestLineOrArrowTwo = closestLineOrArrowFromComponent[1]
                 
                 if closestLineOrArrowOne?.arrowTo == closestLineOrArrowTwo?.arrowTo {
+                    closestLineOrArrowOne = nil
+                    closestLineOrArrowTwo = nil
                     print("Detection false, same line detected for 2 decision answer")
                 } else {
                     for _ in 0...5{
@@ -138,7 +140,6 @@ class ResultViewController: UIViewController {
                     }
                 }
             }
-            
             ///ceritanya yang ONE itu yes, yang TWO itu no
             if let loa1 = closestLineOrArrowOne, let loa2 = closestLineOrArrowTwo, let fs1 = closestFlowchartShapeFromLineOrArrow(lineOrArrow: loa1), let fs2 = closestFlowchartShapeFromLineOrArrow(lineOrArrow: loa2){
                 
@@ -148,16 +149,42 @@ class ResultViewController: UIViewController {
                 fs1.noArrow.append(noArrowConfiguration(arrowTo: loa1.arrowTo))
                 fs2.noArrow.append(noArrowConfiguration(arrowTo: loa2.arrowTo))
                 
+                fs1.fromIndex.append(id)
+                fs2.fromIndex.append(id)
+                
                 let flowchartDetail = FlowchartDetail(id: id, shape: componentName, text: "percobaan bunda", down: -1, right: right, left: left)
                 flowchartDetails.append(flowchartDetail)
                 
-                doneIndex.append(id)
-                
             } else {
-                let flowchartDetail = FlowchartDetail(id: id, shape: componentName, text: "percobaan bunda", down: -1, right: -2, left: -2)
-                flowchartDetails.append(flowchartDetail)
-                print("Flowchart Shape after decision not detected")
+                ///cek apakah ada shape terdekatkah?
+                
+                if ((closestShape.count >= 2) && (closestShape[0].arrowTo != closestShape[1].arrowTo)) {
+                    let fs1 = closestShape[0]
+                    let fs2 = closestShape[1]
+                    
+                    let right = sortedFlowchartComponents!.firstIndex(of: fs1)!
+                    let left = sortedFlowchartComponents!.firstIndex(of: fs2)!
+                    
+                    fs1.noArrow.append(noArrowConfiguration(arrowTo: component.arrowTo))
+                    fs2.noArrow.append(noArrowConfiguration(arrowTo: component.arrowTo))
+                    
+                    fs1.fromIndex.append(id)
+                    fs2.fromIndex.append(id)
+                    
+                    let flowchartDetail = FlowchartDetail(id: id, shape: componentName, text: "percobaan bunda", down: -1, right: right, left: left)
+                    flowchartDetails.append(flowchartDetail)
+                    
+                } else {
+                    
+                    let flowchartDetail = FlowchartDetail(id: id, shape: componentName, text: "percobaan bunda", down: -1, right: -2, left: -2)
+                    flowchartDetails.append(flowchartDetail)
+                    print("Flowchart Shape after decision not detected")
+                    
+                }
             }
+            
+            
+            
             
         } else {
             //            if componentName == "terminator" && text == "END" {}
@@ -196,6 +223,7 @@ class ResultViewController: UIViewController {
                 let down = sortedFlowchartComponents!.firstIndex(of: fs)!
                 
                 fs.noArrow.append(noArrowConfiguration(arrowTo: loa.arrowTo))
+                fs.fromIndex.append(id)
                 
                 let flowchartDetail = FlowchartDetail(id: id, shape: componentName, text: "percobaan bunda", down: down, right: -1, left: -1)
                 flowchartDetails.append(flowchartDetail)
@@ -205,6 +233,7 @@ class ResultViewController: UIViewController {
                     let down = sortedFlowchartComponents!.firstIndex(of: closestShape[0])!
                     
                     closestShape[0].noArrow.append(noArrowConfiguration(arrowTo: closestShape[0].arrowTo))
+                    closestShape[0].fromIndex.append(id)
                     
                     let flowchartDetail = FlowchartDetail(id: id, shape: componentName, text: "percobaan bunda", down: down, right: -1, left: -1)
                     flowchartDetails.append(flowchartDetail)
@@ -218,7 +247,6 @@ class ResultViewController: UIViewController {
             
             
         }
-        
         
         print(flowchartDetails)
     }
@@ -255,7 +283,15 @@ class ResultViewController: UIViewController {
         let maxY = component.maxY
         let maxX = component.maxX
         
-        let tempFlowchartComponents = flowchartComponents?.filter({$0 != tempShape})
+        var tempFlowchartComponents = flowchartComponents
+        
+        let indicesSorted = component.fromIndex.sorted(by: { $0 > $1 })
+
+        for index in indicesSorted {
+            tempFlowchartComponents?.remove(at: index)
+        }
+        
+        tempFlowchartComponents = tempFlowchartComponents!.filter({$0 != tempShape})
         
         var tempComponent : [FlowchartComponent] = []
         var tempDistance : [Float] = []
@@ -316,13 +352,22 @@ class ResultViewController: UIViewController {
         let maxY = component.maxY
         let maxX = component.maxX
         
-        var tempFlowchartComponents = flowchartComponents?.filter({$0 != tempShape})
+        var tempFlowchartComponents = flowchartComponents
+        
+        let indicesSorted = component.fromIndex.sorted(by: { $0 > $1 })
+
+        for index in indicesSorted
+        {
+            tempFlowchartComponents?.remove(at: index)
+        }
+        
+        tempFlowchartComponents = tempFlowchartComponents!.filter({$0 != tempShape})
         
         var tempComponent : [FlowchartComponent] = []
         var tempDistance : [Float] = []
         
         ///from up
-        if !(component.noArrow.contains("Up")){
+        if (component.arrowTo != "Bottom"){
             let fromUp = tempFlowchartComponents!.filter({($0.minX - 0.1 < minX && $0.maxX + 0.1 > maxX && $0.maxY - 0.1 < minY && minY - $0.maxY <= 0.1) && ($0.shape == "arrow_up" || !(arrow.contains($0.shape)))}).sorted(by: {$0.maxY > $1.maxY})
             tempComponent.append(contentsOf: fromUp)
             print("fromUp :")
@@ -333,7 +378,7 @@ class ResultViewController: UIViewController {
             }
         }
         ///from right
-        if !(component.noArrow.contains("Right")){
+        if (component.arrowTo != "Left"){
             let fromRight = tempFlowchartComponents!.filter({($0.maxY + 0.1 > maxY && $0.minY - 0.1 < minY && $0.minX + 0.1 > maxX && $0.minX - maxX <= 0.1) && ($0.shape == "arrow_right" || !(arrow.contains($0.shape)))}).sorted(by: {$0.minX < $1.minX})
             tempComponent.append(contentsOf: fromRight)
             print("fromRight :")
@@ -344,7 +389,7 @@ class ResultViewController: UIViewController {
             }
         }
         ///from left
-        if !(component.noArrow.contains("Left")){
+        if (component.arrowTo != "Right"){
             let fromLeft = tempFlowchartComponents!.filter({($0.maxY + 0.1 > maxY && $0.minY - 0.1 < minY && $0.maxX - 0.1 < minX && minX - $0.maxX <= 0.1) && ($0.shape == "arrowleft" || !(arrow.contains($0.shape)))}).sorted(by: {$0.maxX > $1.maxX})
             tempComponent.append(contentsOf: fromLeft)
             print("fromLeft :")
@@ -355,7 +400,7 @@ class ResultViewController: UIViewController {
             }
         }
         ///from bottom
-        if !(component.noArrow.contains("Bottom")){
+        if (component.arrowTo != "Up"){
             let fromBottom = tempFlowchartComponents!.filter({($0.minX - 0.1 < minX && $0.maxX + 0.1 > maxX && $0.minY + 0.1 > maxY && $0.minY - maxY <= 0.1) && ($0.shape == "arrow_down" || !(arrow.contains($0.shape)))}).sorted(by: {$0.minY < $1.minY})
             tempComponent.append(contentsOf: fromBottom)
             print("fromBottom :")
@@ -371,9 +416,10 @@ class ResultViewController: UIViewController {
     
     
     func sortByXandY(arrayFlowchartComponent : [FlowchartComponent]) -> [FlowchartComponent]{
-        let sortedByX = arrayFlowchartComponent.sorted(by: {$0.minX < $1.minX})
-        
-        return sortedByX.sorted(by: {$0.minY < $1.minY})
+//        let sortedByX = arrayFlowchartComponent.sorted(by: {$0.minX < $1.minX})
+//
+//        return sortedByX.sorted(by: {$0.minY < $1.minY})
+        return arrayFlowchartComponent.sorted(by: {($0.minX < $1.minX) && ($0.minY < $1.minY)})
     }
     
     func sortByDistance(arrayFC : [FlowchartComponent], distance : [Float]) -> [FlowchartComponent]{

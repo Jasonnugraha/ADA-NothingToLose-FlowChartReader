@@ -45,6 +45,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         guard captureSession.canAddOutput(photoOutput) else { return }
         captureSession.sessionPreset = .photo
         captureSession.addOutput(photoOutput)
+        
         captureSession.commitConfiguration()
         
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
@@ -52,6 +53,9 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         rootLayer = pireviewView.layer
         previewLayer.frame = rootLayer.bounds
         rootLayer.addSublayer(previewLayer)
+        
+        
+        
         
     }
     
@@ -71,11 +75,10 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         guard let imageData = photo.fileDataRepresentation() else { return }
         let previewImage = UIImage(data: imageData)
         
-        let scannedImage = getScannedImage(inputImage: previewImage!)?.rotate(radians: .pi/2)
-        resultImage = scannedImage
-        
-        
         captureSession.stopRunning()
+        let scannedImage = getScannedImage(inputImage: previewImage!)?.rotate(radians: .pi/2)
+        let monochormedImage = getMonochromeImage(inputImage: scannedImage!)?.rotate(radians: .pi/2)
+        resultImage = monochormedImage
         
         flowchartComponents = FlowchartComponentReader().detect(image: CIImage(image: scannedImage!)!)
         textComponents = TextComponentReader().createVisionRequest(image: scannedImage!)
@@ -95,8 +98,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     
     func getScannedImage(inputImage: UIImage) -> UIImage? {
 
-        let openGLContext = EAGLContext(api: .openGLES2)
-        let context = CIContext(eaglContext: openGLContext!)
+        let context = CIContext()
 
         let filter = CIFilter(name: "CIColorControls")
         let coreImage = CIImage(image: inputImage)
@@ -113,6 +115,26 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         }
         return nil
     }
+    
+    func getMonochromeImage(inputImage : UIImage) -> UIImage? {
+        let filterMonochrome = CIFilter(name: "CIColorMonochrome")
+        let coreImage = CIImage(image: inputImage)
+        
+        filterMonochrome?.setValue(coreImage, forKey: "inputImage")
+        filterMonochrome?.setValue(CIColor(red: 0.7, green: 0.7, blue: 0.7), forKey: "inputColor")
+        filterMonochrome?.setValue(1.0, forKey: "inputIntensity")
+        
+        guard let outputImage = filterMonochrome?.outputImage else { return nil }
+
+        let context = CIContext()
+
+        if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
+            return UIImage(cgImage: cgimg)
+        }
+        
+        return nil
+    }
+    
 }
 
 extension UIImage {

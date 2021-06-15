@@ -9,7 +9,7 @@ import Foundation
 
 class FlowchartComponent : Equatable {
     static func == (lhs: FlowchartComponent, rhs: FlowchartComponent) -> Bool {
-        return lhs.shape == rhs.shape && lhs.minX == rhs.minX && lhs.minY == rhs.minY && lhs.maxX == rhs.maxX && lhs.maxY == rhs.maxY && lhs.noArrow == rhs.noArrow && lhs.arrowTo == rhs.arrowTo
+        return lhs.shape == rhs.shape && lhs.minX == rhs.minX && lhs.minY == rhs.minY && lhs.maxX == rhs.maxX && lhs.maxY == rhs.maxY && lhs.noArrow == rhs.noArrow && lhs.arrowTo == rhs.arrowTo && lhs.fromIndex == rhs.fromIndex
     }
     
     let shape : String
@@ -19,8 +19,9 @@ class FlowchartComponent : Equatable {
     let maxY : Float
     var noArrow : [String]
     var arrowTo : String
+    var fromIndex : [Int]
     
-    init(shape : String, minX : Float, minY : Float, maxX : Float, maxY : Float,noArrow : [String], arrowTo : String) {
+    init(shape : String, minX : Float, minY : Float, maxX : Float, maxY : Float,noArrow : [String], arrowTo : String, fromIndex : [Int]) {
         self.shape = shape
         self.minX = minX
         self.minY = minY
@@ -28,6 +29,7 @@ class FlowchartComponent : Equatable {
         self.maxY = maxY
         self.noArrow = noArrow
         self.arrowTo = arrowTo
+        self.fromIndex = fromIndex
     }
 }
 

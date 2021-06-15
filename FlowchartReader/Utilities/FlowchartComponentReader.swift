@@ -14,7 +14,7 @@ class FlowchartComponentReader {
     var flowchartComponents : [FlowchartComponent] = []
 
     func detect(image: CIImage) -> [FlowchartComponent]? {
-        guard let model = try? VNCoreMLModel(for: FlowchartComponentDetector_1().model ) else {
+        guard let model = try? VNCoreMLModel(for: FlowchartComponentDetectorRev_1().model ) else {
             fatalError("loading coreML model failed")
         }
 
@@ -30,7 +30,7 @@ class FlowchartComponentReader {
                 let objectConfidence = firstResult!.confidence
                 let boundingBox = result.boundingBox
                 
-                let flowchartComponent = FlowchartComponent(shape: objectName, minX: Float(boundingBox.minX), minY: Float(boundingBox.minY), maxX: Float(boundingBox.maxX), maxY: Float(boundingBox.maxY), noArrow: [], arrowTo: "")
+                let flowchartComponent = FlowchartComponent(shape: objectName, minX: Float(boundingBox.minX), minY: Float(boundingBox.minY), maxX: Float(boundingBox.maxX), maxY: Float(boundingBox.maxY), noArrow: [], arrowTo: "", fromIndex: [])
                 
                 flowchartComponents.append(flowchartComponent)
                 

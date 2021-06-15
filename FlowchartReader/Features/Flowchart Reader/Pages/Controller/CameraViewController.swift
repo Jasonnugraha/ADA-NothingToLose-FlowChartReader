@@ -79,9 +79,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         
         flowchartComponents = FlowchartComponentReader().detect(image: CIImage(image: scannedImage!)!)
         textComponents = TextComponentReader().createVisionRequest(image: scannedImage!)
-//        let textcomponents = TextComponentReader().createVisionRequest(image:scannedImage!)
         
-//        print(textcomponents)
         performSegue(withIdentifier: "CameraToResult", sender: self)
     }
     
@@ -90,6 +88,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
             if let destinationVC = segue.destination as? ResultViewController {
                 destinationVC.flowchartComponents = flowchartComponents
                 destinationVC.resultImage = resultImage
+                destinationVC.textComponents = textComponents
             }
         }
     }

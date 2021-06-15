@@ -414,10 +414,9 @@ class ResultViewController: UIViewController {
     
     
     func sortByXandY(arrayFlowchartComponent : [FlowchartComponent]) -> [FlowchartComponent]{
-//        let sortedByX = arrayFlowchartComponent.sorted(by: {$0.minX < $1.minX})
-//
-//        return sortedByX.sorted(by: {$0.minY < $1.minY})
-        return arrayFlowchartComponent.sorted(by: {($0.minX < $1.minX) && ($0.minY < $1.minY)})
+        let sortedByX = arrayFlowchartComponent.sorted(by: {$0.minY < $1.minY})
+
+        return sortedByX.sorted(by: {$0.minX < $1.minX && $0.minY < $1.minY})
     }
     
     func sortByDistance(arrayFC : [FlowchartComponent], distance : [Float]) -> [FlowchartComponent]{

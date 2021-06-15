@@ -76,7 +76,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         
         captureSession.stopRunning()
         let scannedImage = getScannedImage(inputImage: previewImage!)?.rotate(radians: .pi/2)
-        let monochormedImage = getMonochromeImage(inputImage: scannedImage!)?.rotate(radians: .pi/2)
+        let monochormedImage = getMonochromeImage(inputImage: scannedImage!)
         resultImage = monochormedImage
         
         flowchartComponents = FlowchartComponentReader().detect(image: CIImage(image: scannedImage!)!)
@@ -103,7 +103,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         filter?.setValue(coreImage, forKey: kCIInputImageKey)
         //Key value are changable according to your need.
         filter?.setValue(7, forKey: kCIInputContrastKey)
-        filter?.setValue(1, forKey: kCIInputSaturationKey)
+        filter?.setValue(0, forKey: kCIInputSaturationKey)
         filter?.setValue(1.2, forKey: kCIInputBrightnessKey)
 
         if let outputImage = filter?.value(forKey: kCIOutputImageKey) as? CIImage {
@@ -118,7 +118,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         let coreImage = CIImage(image: inputImage)
         
         filterMonochrome?.setValue(coreImage, forKey: "inputImage")
-        filterMonochrome?.setValue(CIColor(red: 0.7, green: 0.7, blue: 0.7), forKey: "inputColor")
+        filterMonochrome?.setValue(CIColor(red: 1.0, green: 1.0, blue: 1.0), forKey: "inputColor")
         filterMonochrome?.setValue(1.0, forKey: "inputIntensity")
         
         guard let outputImage = filterMonochrome?.outputImage else { return nil }

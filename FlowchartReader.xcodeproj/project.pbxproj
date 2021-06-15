@@ -21,6 +21,7 @@
 		5B10B93D2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B93C2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel */; };
 		5B10B94126731A7500DC721B /* FlowchartComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B94026731A7500DC721B /* FlowchartComponent.swift */; };
 		5B10B94326731C5900DC721B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B94226731C5900DC721B /* ResultViewController.swift */; };
+		5B2A13392677211B008AB41F /* FlowchartComponentDetectorRev 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5B2A13382677211B008AB41F /* FlowchartComponentDetectorRev 1.mlmodel */; };
 		B4F76BC1266F7A4300F6FAD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */; };
 		B4F76BC3266F7A4300F6FAD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */; };
 		B4F76BC5266F7A4300F6FAD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC4266F7A4300F6FAD9 /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		5B10B93C2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FlowchartComponentDetector 1.mlmodel"; sourceTree = "<group>"; };
 		5B10B94026731A7500DC721B /* FlowchartComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartComponent.swift; sourceTree = "<group>"; };
 		5B10B94226731C5900DC721B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		5B2A13382677211B008AB41F /* FlowchartComponentDetectorRev 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FlowchartComponentDetectorRev 1.mlmodel"; sourceTree = "<group>"; };
 		B4F76BBD266F7A4200F6FAD9 /* FlowchartReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowchartReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			children = (
 				B4F76BC9266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld */,
 				5B10B93C2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel */,
+				5B2A13382677211B008AB41F /* FlowchartComponentDetectorRev 1.mlmodel */,
 				5B10B94026731A7500DC721B /* FlowchartComponent.swift */,
 			);
 			path = Model;
@@ -492,6 +495,7 @@
 				031F0A632674B40D00570B0B /* PlaceholderGuidanceModel.swift in Sources */,
 				031F0A542674972F00570B0B /* ListProjectsView.swift in Sources */,
 				031F0A4B267493CE00570B0B /* Projects.swift in Sources */,
+				5B2A13392677211B008AB41F /* FlowchartComponentDetectorRev 1.mlmodel in Sources */,
 				031F0A6B2674B45C00570B0B /* Blank_5.swift in Sources */,
 				B4F76C5C2670A64B00F6FAD9 /* MainMenuViewController.swift in Sources */,
 				031F0A612674A68900570B0B /* DetailFlowchartViewController.swift in Sources */,
@@ -653,7 +657,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COREML_CODEGEN_LANGUAGE = Swift;
 				COREML_CODEGEN_SWIFT_GLOBAL_MODULE = YES;
-				DEVELOPMENT_TEAM = 2FT28A9D5B;
+				DEVELOPMENT_TEAM = UK7GU49NFY;
 				INFOPLIST_FILE = FlowchartReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -674,7 +678,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COREML_CODEGEN_LANGUAGE = Swift;
 				COREML_CODEGEN_SWIFT_GLOBAL_MODULE = YES;
-				DEVELOPMENT_TEAM = 2FT28A9D5B;
+				DEVELOPMENT_TEAM = UK7GU49NFY;
 				INFOPLIST_FILE = FlowchartReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

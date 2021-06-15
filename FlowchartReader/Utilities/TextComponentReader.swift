@@ -68,6 +68,7 @@ class TextComponentReader {
                                                       maxX: Float(boundingBox.maxX),
                                                       maxY: Float(1 -  boundingBox.minY + boundingBox.maxY - boundingBox.minY))
                     self.textComponents.append(textComponent)
+                    print(textComponent)
                     
                 }
             }

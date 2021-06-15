@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0zU-gI-ciP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Diagram Reader-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="FlowchartReader" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,7 +39,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-Dg-M1o">
-                                        <rect key="frame" x="10" y="119.5" width="211" height="14.5"/>
+                                        <rect key="frame" x="10" y="114" width="211" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -87,7 +87,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnN-MY-agy">
-                                        <rect key="frame" x="10" y="119.5" width="211" height="14.5"/>
+                                        <rect key="frame" x="10" y="114" width="211" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -135,7 +135,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9z-RO-hjC">
-                                        <rect key="frame" x="10" y="119.5" width="211" height="14.5"/>
+                                        <rect key="frame" x="10" y="114" width="211" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -162,10 +162,7 @@
                                 </connections>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yja-SL-mAq">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Diagram Reader" id="vHJ-4t-jT6"/>
-                                </items>
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                             </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -188,7 +185,7 @@
                             <constraint firstItem="E4x-ex-iCX" firstAttribute="top" secondItem="z78-K6-U1h" secondAttribute="bottom" constant="15" id="xbB-UD-yZg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Main Menu" id="Gzq-SK-rb4"/>
+                    <navigationItem key="navigationItem" title="Diagram Reader" id="Gzq-SK-rb4"/>
                     <connections>
                         <outlet property="menu1Description" destination="aFa-Dg-M1o" id="Y33-VX-iSa"/>
                         <outlet property="menu1Image" destination="W0u-Ae-qlH" id="xgn-pe-Zxr"/>
@@ -205,8 +202,10 @@
                         <outlet property="menu3Title1" destination="TZp-Ah-VGb" id="aZv-x2-paO"/>
                         <outlet property="menu3Title2" destination="Nci-Y8-PzD" id="MLZ-NH-Xf9"/>
                         <outlet property="menu3View" destination="E4x-ex-iCX" id="5Vo-ap-grH"/>
-                        <outlet property="navigationTitle" destination="vHJ-4t-jT6" id="BMj-kP-HJV"/>
+                        <outlet property="navigationTitle" destination="Gzq-SK-rb4" id="AOZ-hu-oD4"/>
                         <segue destination="SfR-of-u6k" kind="presentation" identifier="segueToGuidance" modalPresentationStyle="fullScreen" id="1XR-hq-YXZ"/>
+                        <segue destination="kbG-7f-kMg" kind="show" identifier="scanFlowchartSegue" id="mTH-rt-KbD"/>
+                        <segue destination="QG5-71-o6a" kind="show" identifier="listProjectSegue" id="rJr-Ag-JI3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -226,7 +225,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="891" y="116"/>
+            <point key="canvasLocation" x="842" y="116"/>
         </scene>
         <!--ScanFlowchart-->
         <scene sceneID="GSw-C6-6Gl">
@@ -272,7 +271,7 @@
                 <viewControllerPlaceholder storyboardName="Guidance" id="SfR-of-u6k" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4E-Ag-DCU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="197"/>
+            <point key="canvasLocation" x="1614" y="200"/>
         </scene>
     </scenes>
     <resources>

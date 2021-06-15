@@ -44,15 +44,14 @@ class TextComponentReader {
                 for observation in observations {
                     let text = observation.topCandidates(1).first?.string
                     guard let unwrapped = text else {return}
-                    print (unwrapped)
                     let boundingBox = observation.boundingBox
-                    print(boundingBox)
                     let textComponent = TextComponent(text: unwrapped,
                                                       minX: Float(boundingBox.minX),
-                                                      minY: Float(boundingBox.minY),
+                                                      minY: Float(1 - boundingBox.minY),
                                                       maxX: Float(boundingBox.maxX),
-                                                      maxY: Float(boundingBox.maxY))
+                                                      maxY: Float(1 -  boundingBox.minY + boundingBox.maxY - boundingBox.minY))
                     self.textComponents.append(textComponent)
+                    print(textComponent)
                     
                 }
             }

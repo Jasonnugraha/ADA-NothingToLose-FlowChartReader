@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		031F0A4B267493CE00570B0B /* Flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A4A267493CE00570B0B /* Flowchart.swift */; };
 		031F0A4D2674962700570B0B /* ListFlowchart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031F0A4C2674962700570B0B /* ListFlowchart.storyboard */; };
 		031F0A51267496B700570B0B /* ListFlowchartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A50267496B700570B0B /* ListFlowchartViewController.swift */; };
-		031F0A542674972F00570B0B /* ListFlowchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A532674972F00570B0B /* ListFlowchartView.swift */; };
 		031F0A5D2674A66900570B0B /* DetailFlowchart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031F0A5C2674A66900570B0B /* DetailFlowchart.storyboard */; };
 		031F0A5F2674A67900570B0B /* DetailFlowchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A5E2674A67900570B0B /* DetailFlowchartView.swift */; };
 		031F0A612674A68900570B0B /* DetailFlowchartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A602674A68900570B0B /* DetailFlowchartViewController.swift */; };
@@ -27,12 +25,15 @@
 		035DCEED267714F20026B542 /* FlowchartObjectsBeta.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 035DCEEC267714F20026B542 /* FlowchartObjectsBeta.mlmodel */; };
 		5B10B9352672E76700DC721B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B9342672E76700DC721B /* CameraViewController.swift */; };
 		5B10B9392673061E00DC721B /* FlowchartComponentReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B9382673061E00DC721B /* FlowchartComponentReader.swift */; };
-		5B10B93D2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B93C2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel */; };
 		5B10B94126731A7500DC721B /* FlowchartComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B94026731A7500DC721B /* FlowchartComponent.swift */; };
 		5B10B94326731C5900DC721B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B94226731C5900DC721B /* ResultViewController.swift */; };
+		5B2A13392677211B008AB41F /* FlowchartComponentDetectorRev 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5B2A13382677211B008AB41F /* FlowchartComponentDetectorRev 1.mlmodel */; };
+		5B2BBB462679055400774DA3 /* FlowchartComponentReaderRevisiLagi 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BBB452679055400774DA3 /* FlowchartComponentReaderRevisiLagi 1.mlmodel */; };
+		5B2BBB47267906FB00774DA3 /* Flowchart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A4A267493CE00570B0B /* Flowchart.swift */; };
+		5B2BBB482679070D00774DA3 /* MenuListStaticSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDFCD02674D3B600D17197 /* MenuListStaticSeeder.swift */; };
+		5B2BBB492679071400774DA3 /* ListFlowchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A532674972F00570B0B /* ListFlowchartView.swift */; };
 		B416B80226773B8A00BD226B /* TextComponentReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416B80126773B8A00BD226B /* TextComponentReader.swift */; };
 		B416B80726774CD500BD226B /* TextComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416B80626774CD500BD226B /* TextComponent.swift */; };
-		5B2A13392677211B008AB41F /* FlowchartComponentDetectorRev 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5B2A13382677211B008AB41F /* FlowchartComponentDetectorRev 1.mlmodel */; };
 		B4F76BC1266F7A4300F6FAD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */; };
 		B4F76BC3266F7A4300F6FAD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */; };
 		B4F76BC5266F7A4300F6FAD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC4266F7A4300F6FAD9 /* ViewController.swift */; };
@@ -42,7 +43,6 @@
 		B4F76C1126709E2200F6FAD9 /* FlowchartReader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76C1026709E2200F6FAD9 /* FlowchartReader.storyboard */; };
 		B4F76C5C2670A64B00F6FAD9 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76C5B2670A64B00F6FAD9 /* MainMenuViewController.swift */; };
 		B4FDFCC92674D33400D17197 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDFCC82674D33400D17197 /* Menu.swift */; };
-		B4FDFCD12674D3B600D17197 /* MenuListStaticSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDFCD02674D3B600D17197 /* MenuListStaticSeeder.swift */; };
 		B4FE9D352675ECA50027128A /* PlaceholderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE9D342675ECA50027128A /* PlaceholderHelper.swift */; };
 		B4FE9D3A2675ECC70027128A /* PlaceHolderColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE9D392675ECC70027128A /* PlaceHolderColors.swift */; };
 		B4FE9D3E2675ECE20027128A /* PlaceholderFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE9D3D2675ECE20027128A /* PlaceholderFonts.swift */; };
@@ -81,12 +81,12 @@
 		035DCEEC267714F20026B542 /* FlowchartObjectsBeta.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowchartObjectsBeta.mlmodel; sourceTree = "<group>"; };
 		5B10B9342672E76700DC721B /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		5B10B9382673061E00DC721B /* FlowchartComponentReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartComponentReader.swift; sourceTree = "<group>"; };
-		5B10B93C2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FlowchartComponentDetector 1.mlmodel"; sourceTree = "<group>"; };
 		5B10B94026731A7500DC721B /* FlowchartComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartComponent.swift; sourceTree = "<group>"; };
 		5B10B94226731C5900DC721B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		5B2A13382677211B008AB41F /* FlowchartComponentDetectorRev 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FlowchartComponentDetectorRev 1.mlmodel"; sourceTree = "<group>"; };
+		5B2BBB452679055400774DA3 /* FlowchartComponentReaderRevisiLagi 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FlowchartComponentReaderRevisiLagi 1.mlmodel"; sourceTree = "<group>"; };
 		B416B80126773B8A00BD226B /* TextComponentReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextComponentReader.swift; sourceTree = "<group>"; };
 		B416B80626774CD500BD226B /* TextComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextComponent.swift; sourceTree = "<group>"; };
-		5B2A13382677211B008AB41F /* FlowchartComponentDetectorRev 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FlowchartComponentDetectorRev 1.mlmodel"; sourceTree = "<group>"; };
 		B4F76BBD266F7A4200F6FAD9 /* FlowchartReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowchartReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -365,7 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				B4F76BC9266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld */,
-				5B10B93C2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel */,
+				5B2BBB452679055400774DA3 /* FlowchartComponentReaderRevisiLagi 1.mlmodel */,
 				5B2A13382677211B008AB41F /* FlowchartComponentDetectorRev 1.mlmodel */,
 				5B10B94026731A7500DC721B /* FlowchartComponent.swift */,
 				B416B80626774CD500BD226B /* TextComponent.swift */,
@@ -672,15 +672,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B2BBB492679071400774DA3 /* ListFlowchartView.swift in Sources */,
+				5B2BBB482679070D00774DA3 /* MenuListStaticSeeder.swift in Sources */,
+				5B2BBB47267906FB00774DA3 /* Flowchart.swift in Sources */,
 				031F0A5F2674A67900570B0B /* DetailFlowchartView.swift in Sources */,
 				C0E25270267745AA0023C3AE /* GuidanceDetailViewController.swift in Sources */,
-				031F0A542674972F00570B0B /* ListFlowchartView.swift in Sources */,
-				031F0A4B267493CE00570B0B /* Flowchart.swift in Sources */,
 				C0E25271267745AA0023C3AE /* GuidanceViewController.swift in Sources */,
 				035DCEE126770EC70026B542 /* ScanFlowchartViewController.swift in Sources */,
 				035DCEEA267710D60026B542 /* LockScreenOrientation.swift in Sources */,
-				031F0A542674972F00570B0B /* ListFlowchartView.swift in Sources */,
-				031F0A4B267493CE00570B0B /* Flowchart.swift in Sources */,
 				5B2A13392677211B008AB41F /* FlowchartComponentDetectorRev 1.mlmodel in Sources */,
 				031F0A6B2674B45C00570B0B /* Blank_5.swift in Sources */,
 				B4F76C5C2670A64B00F6FAD9 /* MainMenuViewController.swift in Sources */,
@@ -688,6 +687,7 @@
 				031F0A612674A68900570B0B /* DetailFlowchartViewController.swift in Sources */,
 				031F0A51267496B700570B0B /* ListFlowchartViewController.swift in Sources */,
 				B4F76BC5266F7A4300F6FAD9 /* ViewController.swift in Sources */,
+				5B2BBB462679055400774DA3 /* FlowchartComponentReaderRevisiLagi 1.mlmodel in Sources */,
 				C0E25294267745EC0023C3AE /* GuidanceTableDelegate.swift in Sources */,
 				B4FE9D3A2675ECC70027128A /* PlaceHolderColors.swift in Sources */,
 				B4FDFCC92674D33400D17197 /* Menu.swift in Sources */,
@@ -698,14 +698,10 @@
 				5B10B94126731A7500DC721B /* FlowchartComponent.swift in Sources */,
 				5B10B9352672E76700DC721B /* CameraViewController.swift in Sources */,
 				C0E25293267745EC0023C3AE /* GuidanceTableViewCell.swift in Sources */,
-				B4FDFCD12674D3B600D17197 /* MenuListStaticSeeder.swift in Sources */,
-				5B10B93D2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel in Sources */,
 				C0E2528E267745EC0023C3AE /* GuidanceDetailDelegate.swift in Sources */,
 				B416B80726774CD500BD226B /* TextComponent.swift in Sources */,
 				035DCEE326770F0C0026B542 /* CameraVisionViewController.swift in Sources */,
 				033707602677AEFB0016DADC /* FlowchartGestureViewController.swift in Sources */,
-				B4FDFCD12674D3B600D17197 /* MenuListStaticSeeder.swift in Sources */,
-				5B10B93D2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel in Sources */,
 				035DCEED267714F20026B542 /* FlowchartObjectsBeta.mlmodel in Sources */,
 				035DCEE6267710170026B542 /* SecondViewController.swift in Sources */,
 				033C587D26774A13000189E3 /* ScanFlowchartView.swift in Sources */,
@@ -858,7 +854,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COREML_CODEGEN_LANGUAGE = Swift;
 				COREML_CODEGEN_SWIFT_GLOBAL_MODULE = YES;
-				DEVELOPMENT_TEAM = 2FT28A9D5B;
+				DEVELOPMENT_TEAM = UK7GU49NFY;
 				INFOPLIST_FILE = FlowchartReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

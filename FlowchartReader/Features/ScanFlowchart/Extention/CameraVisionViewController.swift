@@ -21,6 +21,10 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
     
     private let photoOutput = AVCapturePhotoOutput()
     
+    var flowchartComponents : [FlowchartComponent]?
+    var textComponents: [TextComponent]?
+    var resultImage : UIImage?
+
     private let videoDataOutputQueue = DispatchQueue(label: "VideoDataOutput", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
@@ -112,35 +116,67 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
     }
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        guard error == nil else {
-            print("Error")
-            return
-        }
+        guard let imageData = photo.fileDataRepresentation() else { return }
+        let previewImage = UIImage(data: imageData)
         
-        if let dataImage = photo.fileDataRepresentation() {
-            print(UIImage(data: dataImage)?.size as Any)
-            
-            let dataProvider = CGDataProvider(data: dataImage as CFData)
-            let cgImageRef: CGImage! = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: .defaultIntent)
-            let imageOrientation = UIImage.Orientation.right
-            let image = UIImage.init(cgImage: cgImageRef, scale: 1.0, orientation: imageOrientation)
-            
-            // Do whatever you need to do with the image
-            performSegue(withIdentifier: "capturePage", sender: image)
-        } else {
-            print("Error")
-            return
-        }
+//        session.stopRunning()
+        let scannedImage = getScannedImage(inputImage: previewImage!)?.rotate(radians: .pi/2)
+        let monochormedImage = getMonochromeImage(inputImage: scannedImage!)
+        resultImage = monochormedImage
         
+        flowchartComponents = FlowchartComponentReader().detect(image: CIImage(image: scannedImage!)!)
+        textComponents = TextComponentReader().createVisionRequest(image: scannedImage!)
+        
+        performSegue(withIdentifier: "CameraToResult", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! SecondViewController
-        guard let originalImage = sender as? UIImage else {
-            return
+        if segue.identifier == "CameraToResult" {
+            if let destinationVC = segue.destination as? ResultViewController {
+                destinationVC.flowchartComponents = flowchartComponents
+                destinationVC.resultImage = resultImage
+                destinationVC.textComponents = textComponents
+            }
         }
+    }
+    
+    func getScannedImage(inputImage: UIImage) -> UIImage? {
 
-        destinationVC.imageData = originalImage
+        let context = CIContext()
+
+        let filter = CIFilter(name: "CIColorControls")
+        let coreImage = CIImage(image: inputImage)
+
+        filter?.setValue(coreImage, forKey: kCIInputImageKey)
+        //Key value are changable according to your need.
+        filter?.setValue(7, forKey: kCIInputContrastKey)
+        filter?.setValue(0, forKey: kCIInputSaturationKey)
+        filter?.setValue(1.2, forKey: kCIInputBrightnessKey)
+
+        if let outputImage = filter?.value(forKey: kCIOutputImageKey) as? CIImage {
+        let output = context.createCGImage(outputImage, from: outputImage.extent)
+            return UIImage(cgImage: output!)
+        }
+        return nil
+    }
+    
+    func getMonochromeImage(inputImage : UIImage) -> UIImage? {
+        let filterMonochrome = CIFilter(name: "CIColorMonochrome")
+        let coreImage = CIImage(image: inputImage)
+        
+        filterMonochrome?.setValue(coreImage, forKey: "inputImage")
+        filterMonochrome?.setValue(CIColor(red: 1.0, green: 1.0, blue: 1.0), forKey: "inputColor")
+        filterMonochrome?.setValue(1.0, forKey: "inputIntensity")
+        
+        guard let outputImage = filterMonochrome?.outputImage else { return nil }
+
+        let context = CIContext()
+
+        if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
+            return UIImage(cgImage: cgimg)
+        }
+        
+        return nil
     }
     
     func startCaptureSession() {
@@ -181,5 +217,30 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
+    }
+}
+
+
+extension UIImage {
+    
+    func rotate(radians: CGFloat) -> UIImage {
+        let rotatedSize = CGRect(origin: .zero, size: size)
+            .applying(CGAffineTransform(rotationAngle: CGFloat(radians)))
+            .integral.size
+        UIGraphicsBeginImageContext(rotatedSize)
+        if let context = UIGraphicsGetCurrentContext() {
+            let origin = CGPoint(x: rotatedSize.width / 2.0,
+                                 y: rotatedSize.height / 2.0)
+            context.translateBy(x: origin.x, y: origin.y)
+            context.rotate(by: radians)
+            draw(in: CGRect(x: -origin.y, y: -origin.x,
+                            width: size.width, height: size.height))
+            let rotatedImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+
+            return rotatedImage ?? self
+        }
+
+        return self
     }
 }

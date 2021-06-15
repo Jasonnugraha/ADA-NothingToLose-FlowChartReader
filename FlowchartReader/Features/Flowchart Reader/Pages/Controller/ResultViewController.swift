@@ -13,6 +13,7 @@ class ResultViewController: UIViewController {
     var resultImage : UIImage?
     
     var flowchartComponents : [FlowchartComponent]?
+    var textComponents: [TextComponent]?
     
     var lineComponents : [FlowchartComponent] = []
     var arrowComponents : [FlowchartComponent] = []
@@ -22,6 +23,7 @@ class ResultViewController: UIViewController {
     //    var shapeDictionary: [FlowchartComponent : Int] = [FlowchartComponent : Int]()
     
     var flowchartDetails : [FlowchartDetail] = []
+    
     var tempShape : FlowchartComponent?
     
     var doneIndex : [Int] = []
@@ -401,3 +403,4 @@ class ResultViewController: UIViewController {
         }
     }
 }
+

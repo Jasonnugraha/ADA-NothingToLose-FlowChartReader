@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="juI-HE-w4s">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,19 +12,153 @@
         <scene sceneID="Pu9-mo-S4v">
             <objects>
                 <viewController id="juI-HE-w4s" customClass="GuidanceViewController" customModule="FlowchartReader" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Acr-EY-Qns">
+                    <view key="view" contentMode="scaleToFill" id="Acr-EY-Qns" customClass="GuidanceUIView" customModule="FlowchartReader" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amA-a4-3rn">
+                                <rect key="frame" x="0.0" y="37" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Guidance" id="agB-dq-fZK">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="H4a-ig-JJl">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6MO-4S-Bbv">
+                                                <rect key="frame" x="20" y="0.0" width="167" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Main" image="chevron.left" catalog="system"/>
+                                                <connections>
+                                                    <action selector="guidanceBackTab:" destination="Acr-EY-Qns" eventType="touchUpInside" id="FrY-fU-NAl"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cB6-JL-Qv0">
+                                <rect key="frame" x="0.0" y="91" width="414" height="761"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="guidanceCell" id="bOE-9P-9iZ" customClass="GuidanceTableViewCell" customModule="FlowchartReader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bOE-9P-9iZ" id="ImI-uI-3F3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxX-YA-EDy">
+                                                    <rect key="frame" x="10" y="19.5" width="41.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YxX-YA-EDy" firstAttribute="leading" secondItem="ImI-uI-3F3" secondAttribute="leading" constant="10" id="3P6-Nw-SMp"/>
+                                                <constraint firstItem="YxX-YA-EDy" firstAttribute="centerY" secondItem="ImI-uI-3F3" secondAttribute="centerY" id="qE9-ho-7JH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="journalTitle" destination="YxX-YA-EDy" id="Hcd-xg-EMJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="t2K-ZF-7Le"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cB6-JL-Qv0" firstAttribute="top" secondItem="amA-a4-3rn" secondAttribute="bottom" constant="10" id="MDn-6O-VqE"/>
+                            <constraint firstItem="amA-a4-3rn" firstAttribute="trailing" secondItem="t2K-ZF-7Le" secondAttribute="trailing" id="Nbp-g4-p86"/>
+                            <constraint firstItem="t2K-ZF-7Le" firstAttribute="trailing" secondItem="cB6-JL-Qv0" secondAttribute="trailing" id="WMx-bN-p8M"/>
+                            <constraint firstItem="t2K-ZF-7Le" firstAttribute="bottom" secondItem="cB6-JL-Qv0" secondAttribute="bottom" constant="10" id="ZNM-VD-ZBb"/>
+                            <constraint firstItem="cB6-JL-Qv0" firstAttribute="leading" secondItem="t2K-ZF-7Le" secondAttribute="leading" id="dKh-EY-NOq"/>
+                            <constraint firstItem="amA-a4-3rn" firstAttribute="leading" secondItem="t2K-ZF-7Le" secondAttribute="leading" id="sRB-qg-K0y"/>
+                            <constraint firstItem="amA-a4-3rn" firstAttribute="top" secondItem="Acr-EY-Qns" secondAttribute="top" constant="37" id="vkY-aL-fgv"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="guidanceBackButton" destination="6MO-4S-Bbv" id="qFw-6f-NU6"/>
+                            <outlet property="guidanceNavigator" destination="agB-dq-fZK" id="MBH-bC-df2"/>
+                            <outlet property="guidanceTable" destination="cB6-JL-Qv0" id="hgD-Nd-BgE"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="guidanceView" destination="Acr-EY-Qns" id="EV5-8t-DAP"/>
+                        <segue destination="2Ss-ke-9x2" kind="show" identifier="segueToDetail" id="Zvm-Jo-9g3"/>
+                        <segue destination="fJE-NU-TYy" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMain:" id="B2F-bg-pwq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ch7-Dz-AYY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fJE-NU-TYy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1657" y="-253"/>
+            <point key="canvasLocation" x="-1657.9710144927537" y="-253.125"/>
+        </scene>
+        <!--Guidance Detail View Controller-->
+        <scene sceneID="VLm-5y-dcs">
+            <objects>
+                <viewController id="2Ss-ke-9x2" customClass="GuidanceDetailViewController" customModule="FlowchartReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qCc-5S-qyo" customClass="GuidanceDetailUIView" customModule="FlowchartReader" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEp-bq-zX6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="Title" id="cys-5I-yER">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="HUf-R2-x8e">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="1pj-5E-THU">
+                                                <rect key="frame" x="20" y="17" width="89.5" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Guidance" image="chevron.left" catalog="system"/>
+                                                <connections>
+                                                    <action selector="backDidTab:" destination="qCc-5S-qyo" eventType="touchUpInside" id="SB4-Zs-rZj"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KcR-ar-b9j">
+                                <rect key="frame" x="10" y="66" width="394" height="732"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jjq-xJ-zXZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NEp-bq-zX6" firstAttribute="top" secondItem="Jjq-xJ-zXZ" secondAttribute="top" id="9gI-G1-EwY"/>
+                            <constraint firstItem="NEp-bq-zX6" firstAttribute="trailing" secondItem="Jjq-xJ-zXZ" secondAttribute="trailing" id="TpS-0N-YLU"/>
+                            <constraint firstItem="Jjq-xJ-zXZ" firstAttribute="bottom" secondItem="KcR-ar-b9j" secondAttribute="bottom" constant="10" id="fic-aw-ugL"/>
+                            <constraint firstItem="NEp-bq-zX6" firstAttribute="leading" secondItem="Jjq-xJ-zXZ" secondAttribute="leading" id="n4n-s0-t6v"/>
+                            <constraint firstItem="KcR-ar-b9j" firstAttribute="leading" secondItem="Jjq-xJ-zXZ" secondAttribute="leading" constant="10" id="nzV-wV-6al"/>
+                            <constraint firstItem="KcR-ar-b9j" firstAttribute="top" secondItem="NEp-bq-zX6" secondAttribute="bottom" constant="10" id="wYq-TT-bAp"/>
+                            <constraint firstItem="Jjq-xJ-zXZ" firstAttribute="trailing" secondItem="KcR-ar-b9j" secondAttribute="trailing" constant="10" id="wcf-Of-cDY"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="backButton" destination="1pj-5E-THU" id="hU8-kM-vc5"/>
+                            <outlet property="navigationTitle" destination="cys-5I-yER" id="GHk-Mf-E54"/>
+                            <outlet property="textView" destination="KcR-ar-b9j" id="Hrp-e1-vNU"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="fca-bW-e9r"/>
+                    <connections>
+                        <outlet property="guidanceDetailView" destination="qCc-5S-qyo" id="dbe-Pc-ZMT"/>
+                        <segue destination="hQR-SL-JHQ" kind="unwind" identifier="unwindToGuidance" unwindAction="unwindToGuidance:" id="bt4-dG-GG6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgS-GV-led" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="hQR-SL-JHQ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-807.24637681159425" y="-242.41071428571428"/>
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

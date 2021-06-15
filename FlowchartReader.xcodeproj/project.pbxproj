@@ -14,7 +14,6 @@
 		031F0A5D2674A66900570B0B /* DetailFlowchart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031F0A5C2674A66900570B0B /* DetailFlowchart.storyboard */; };
 		031F0A5F2674A67900570B0B /* DetailFlowchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A5E2674A67900570B0B /* DetailFlowchartView.swift */; };
 		031F0A612674A68900570B0B /* DetailFlowchartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A602674A68900570B0B /* DetailFlowchartViewController.swift */; };
-		031F0A632674B40D00570B0B /* PlaceholderGuidanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A622674B40D00570B0B /* PlaceholderGuidanceModel.swift */; };
 		031F0A6B2674B45C00570B0B /* Blank_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A6A2674B45C00570B0B /* Blank_5.swift */; };
 		5B10B9352672E76700DC721B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B9342672E76700DC721B /* CameraViewController.swift */; };
 		5B10B9392673061E00DC721B /* FlowchartComponentReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10B9382673061E00DC721B /* FlowchartComponentReader.swift */; };
@@ -28,16 +27,24 @@
 		B4F76BCD266F7A4600F6FAD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */; };
 		B4F76BD0266F7A4600F6FAD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BCE266F7A4600F6FAD9 /* LaunchScreen.storyboard */; };
 		B4F76C1126709E2200F6FAD9 /* FlowchartReader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76C1026709E2200F6FAD9 /* FlowchartReader.storyboard */; };
-		B4F76C502670A56E00F6FAD9 /* Guidance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76C4F2670A56E00F6FAD9 /* Guidance.storyboard */; };
-		B4F76C532670A58800F6FAD9 /* GuidanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76C522670A58800F6FAD9 /* GuidanceViewController.swift */; };
 		B4F76C5C2670A64B00F6FAD9 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76C5B2670A64B00F6FAD9 /* MainMenuViewController.swift */; };
-		B4FDFCC42674D2C800D17197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4FDFCC32674D2C800D17197 /* Main.storyboard */; };
 		B4FDFCC92674D33400D17197 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDFCC82674D33400D17197 /* Menu.swift */; };
 		B4FDFCD12674D3B600D17197 /* MenuListStaticSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDFCD02674D3B600D17197 /* MenuListStaticSeeder.swift */; };
 		B4FE9D352675ECA50027128A /* PlaceholderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE9D342675ECA50027128A /* PlaceholderHelper.swift */; };
 		B4FE9D3A2675ECC70027128A /* PlaceHolderColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE9D392675ECC70027128A /* PlaceHolderColors.swift */; };
 		B4FE9D3E2675ECE20027128A /* PlaceholderFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE9D3D2675ECE20027128A /* PlaceholderFonts.swift */; };
 		B4FE9D422675ECFC0027128A /* PlaceholderUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE9D412675ECFC0027128A /* PlaceholderUI.swift */; };
+		C0E25269267745610023C3AE /* GuidanceStaticSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E25268267745610023C3AE /* GuidanceStaticSeeder.swift */; };
+		C0E2526B2677456B0023C3AE /* Guidance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E2526A2677456B0023C3AE /* Guidance.swift */; };
+		C0E2526D2677458F0023C3AE /* Guidance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0E2526C2677458F0023C3AE /* Guidance.storyboard */; };
+		C0E25270267745AA0023C3AE /* GuidanceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E2526E267745AA0023C3AE /* GuidanceDetailViewController.swift */; };
+		C0E25271267745AA0023C3AE /* GuidanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E2526F267745AA0023C3AE /* GuidanceViewController.swift */; };
+		C0E2528E267745EC0023C3AE /* GuidanceDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E25283267745EC0023C3AE /* GuidanceDetailDelegate.swift */; };
+		C0E2528F267745EC0023C3AE /* GuidanceDetailUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E25284267745EC0023C3AE /* GuidanceDetailUIView.swift */; };
+		C0E25293267745EC0023C3AE /* GuidanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E25289267745EC0023C3AE /* GuidanceTableViewCell.swift */; };
+		C0E25294267745EC0023C3AE /* GuidanceTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E2528A267745EC0023C3AE /* GuidanceTableDelegate.swift */; };
+		C0E25295267745EC0023C3AE /* GuidanceUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E2528B267745EC0023C3AE /* GuidanceUIView.swift */; };
+		C0E25297267746F90023C3AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0E25296267746F90023C3AE /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +55,6 @@
 		031F0A5C2674A66900570B0B /* DetailFlowchart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailFlowchart.storyboard; sourceTree = "<group>"; };
 		031F0A5E2674A67900570B0B /* DetailFlowchartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFlowchartView.swift; sourceTree = "<group>"; };
 		031F0A602674A68900570B0B /* DetailFlowchartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFlowchartViewController.swift; sourceTree = "<group>"; };
-		031F0A622674B40D00570B0B /* PlaceholderGuidanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaceholderGuidanceModel.swift; path = FlowchartReader/Features/Guidance/Model/PlaceholderGuidanceModel.swift; sourceTree = SOURCE_ROOT; };
 		031F0A6A2674B45C00570B0B /* Blank_5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blank_5.swift; sourceTree = SOURCE_ROOT; };
 		5B10B9342672E76700DC721B /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		5B10B9382673061E00DC721B /* FlowchartComponentReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartComponentReader.swift; sourceTree = "<group>"; };
@@ -64,16 +70,24 @@
 		B4F76BCF266F7A4600F6FAD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4F76BD1266F7A4600F6FAD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4F76C1026709E2200F6FAD9 /* FlowchartReader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlowchartReader.storyboard; sourceTree = "<group>"; };
-		B4F76C4F2670A56E00F6FAD9 /* Guidance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Guidance.storyboard; sourceTree = "<group>"; };
-		B4F76C522670A58800F6FAD9 /* GuidanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidanceViewController.swift; sourceTree = "<group>"; };
 		B4F76C5B2670A64B00F6FAD9 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
-		B4FDFCC32674D2C800D17197 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B4FDFCC82674D33400D17197 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		B4FDFCD02674D3B600D17197 /* MenuListStaticSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListStaticSeeder.swift; sourceTree = "<group>"; };
 		B4FE9D342675ECA50027128A /* PlaceholderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaceholderHelper.swift; path = FlowchartReader/Helper/PlaceholderHelper.swift; sourceTree = SOURCE_ROOT; };
 		B4FE9D392675ECC70027128A /* PlaceHolderColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderColors.swift; sourceTree = "<group>"; };
 		B4FE9D3D2675ECE20027128A /* PlaceholderFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderFonts.swift; sourceTree = "<group>"; };
 		B4FE9D412675ECFC0027128A /* PlaceholderUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderUI.swift; sourceTree = "<group>"; };
+		C0E25268267745610023C3AE /* GuidanceStaticSeeder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidanceStaticSeeder.swift; sourceTree = "<group>"; };
+		C0E2526A2677456B0023C3AE /* Guidance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guidance.swift; sourceTree = "<group>"; };
+		C0E2526C2677458F0023C3AE /* Guidance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Guidance.storyboard; sourceTree = "<group>"; };
+		C0E2526E267745AA0023C3AE /* GuidanceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidanceDetailViewController.swift; sourceTree = "<group>"; };
+		C0E2526F267745AA0023C3AE /* GuidanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidanceViewController.swift; sourceTree = "<group>"; };
+		C0E25283267745EC0023C3AE /* GuidanceDetailDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidanceDetailDelegate.swift; sourceTree = "<group>"; };
+		C0E25284267745EC0023C3AE /* GuidanceDetailUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidanceDetailUIView.swift; sourceTree = "<group>"; };
+		C0E25289267745EC0023C3AE /* GuidanceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidanceTableViewCell.swift; sourceTree = "<group>"; };
+		C0E2528A267745EC0023C3AE /* GuidanceTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidanceTableDelegate.swift; sourceTree = "<group>"; };
+		C0E2528B267745EC0023C3AE /* GuidanceUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuidanceUIView.swift; sourceTree = "<group>"; };
+		C0E25296267746F90023C3AE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,7 +306,7 @@
 		B4F76C1526709ECB00F6FAD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B4FDFCC32674D2C800D17197 /* Main.storyboard */,
+				C0E25296267746F90023C3AE /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,7 +349,8 @@
 		B4F76C1D26709F6D00F6FAD9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B4F76C522670A58800F6FAD9 /* GuidanceViewController.swift */,
+				C0E2526F267745AA0023C3AE /* GuidanceViewController.swift */,
+				C0E2526E267745AA0023C3AE /* GuidanceDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -343,7 +358,9 @@
 		B4F76C1E26709F7800F6FAD9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B4F76C4F2670A56E00F6FAD9 /* Guidance.storyboard */,
+				C0E2526C2677458F0023C3AE /* Guidance.storyboard */,
+				C0E25288267745EC0023C3AE /* GuidanceList */,
+				C0E25282267745EC0023C3AE /* GuidanceDetail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -409,9 +426,37 @@
 		B4FE9D4B2675FB680027128A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				031F0A622674B40D00570B0B /* PlaceholderGuidanceModel.swift */,
+				C0E2526A2677456B0023C3AE /* Guidance.swift */,
+				C0E25267267745250023C3AE /* DataStores */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C0E25267267745250023C3AE /* DataStores */ = {
+			isa = PBXGroup;
+			children = (
+				C0E25268267745610023C3AE /* GuidanceStaticSeeder.swift */,
+			);
+			path = DataStores;
+			sourceTree = "<group>";
+		};
+		C0E25282267745EC0023C3AE /* GuidanceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C0E25284267745EC0023C3AE /* GuidanceDetailUIView.swift */,
+				C0E25283267745EC0023C3AE /* GuidanceDetailDelegate.swift */,
+			);
+			path = GuidanceDetail;
+			sourceTree = "<group>";
+		};
+		C0E25288267745EC0023C3AE /* GuidanceList */ = {
+			isa = PBXGroup;
+			children = (
+				C0E2528B267745EC0023C3AE /* GuidanceUIView.swift */,
+				C0E25289267745EC0023C3AE /* GuidanceTableViewCell.swift */,
+				C0E2528A267745EC0023C3AE /* GuidanceTableDelegate.swift */,
+			);
+			path = GuidanceList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,11 +516,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4FDFCC42674D2C800D17197 /* Main.storyboard in Resources */,
+				C0E25297267746F90023C3AE /* Main.storyboard in Resources */,
 				B4F76BD0266F7A4600F6FAD9 /* LaunchScreen.storyboard in Resources */,
-				B4F76C502670A56E00F6FAD9 /* Guidance.storyboard in Resources */,
 				031F0A4D2674962700570B0B /* ListProjects.storyboard in Resources */,
 				B4F76BCD266F7A4600F6FAD9 /* Assets.xcassets in Resources */,
+				C0E2526D2677458F0023C3AE /* Guidance.storyboard in Resources */,
 				031F0A5D2674A66900570B0B /* DetailFlowchart.storyboard in Resources */,
 				B4F76C1126709E2200F6FAD9 /* FlowchartReader.storyboard in Resources */,
 			);
@@ -489,14 +534,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				031F0A5F2674A67900570B0B /* DetailFlowchartView.swift in Sources */,
-				031F0A632674B40D00570B0B /* PlaceholderGuidanceModel.swift in Sources */,
+				C0E25270267745AA0023C3AE /* GuidanceDetailViewController.swift in Sources */,
 				031F0A542674972F00570B0B /* ListProjectsView.swift in Sources */,
 				031F0A4B267493CE00570B0B /* Projects.swift in Sources */,
+				C0E25271267745AA0023C3AE /* GuidanceViewController.swift in Sources */,
 				031F0A6B2674B45C00570B0B /* Blank_5.swift in Sources */,
 				B4F76C5C2670A64B00F6FAD9 /* MainMenuViewController.swift in Sources */,
+				C0E2528F267745EC0023C3AE /* GuidanceDetailUIView.swift in Sources */,
 				031F0A612674A68900570B0B /* DetailFlowchartViewController.swift in Sources */,
 				031F0A51267496B700570B0B /* ListProjectsViewController.swift in Sources */,
 				B4F76BC5266F7A4300F6FAD9 /* ViewController.swift in Sources */,
+				C0E25294267745EC0023C3AE /* GuidanceTableDelegate.swift in Sources */,
 				B4FE9D3A2675ECC70027128A /* PlaceHolderColors.swift in Sources */,
 				B4FDFCC92674D33400D17197 /* Menu.swift in Sources */,
 				B4F76BCB266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld in Sources */,
@@ -504,12 +552,16 @@
 				B4FE9D422675ECFC0027128A /* PlaceholderUI.swift in Sources */,
 				5B10B94126731A7500DC721B /* FlowchartComponent.swift in Sources */,
 				5B10B9352672E76700DC721B /* CameraViewController.swift in Sources */,
-				B4F76C532670A58800F6FAD9 /* GuidanceViewController.swift in Sources */,
+				C0E25293267745EC0023C3AE /* GuidanceTableViewCell.swift in Sources */,
 				B4FDFCD12674D3B600D17197 /* MenuListStaticSeeder.swift in Sources */,
 				5B10B93D2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel in Sources */,
+				C0E2528E267745EC0023C3AE /* GuidanceDetailDelegate.swift in Sources */,
 				B4F76BC3266F7A4300F6FAD9 /* SceneDelegate.swift in Sources */,
 				B4FE9D352675ECA50027128A /* PlaceholderHelper.swift in Sources */,
+				C0E25269267745610023C3AE /* GuidanceStaticSeeder.swift in Sources */,
 				5B10B9392673061E00DC721B /* FlowchartComponentReader.swift in Sources */,
+				C0E25295267745EC0023C3AE /* GuidanceUIView.swift in Sources */,
+				C0E2526B2677456B0023C3AE /* Guidance.swift in Sources */,
 				B4FE9D3E2675ECE20027128A /* PlaceholderFonts.swift in Sources */,
 				5B10B94326731C5900DC721B /* ResultViewController.swift in Sources */,
 			);
@@ -653,7 +705,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COREML_CODEGEN_LANGUAGE = Swift;
 				COREML_CODEGEN_SWIFT_GLOBAL_MODULE = YES;
-				DEVELOPMENT_TEAM = 2FT28A9D5B;
+				DEVELOPMENT_TEAM = R496FA673D;
 				INFOPLIST_FILE = FlowchartReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -674,7 +726,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COREML_CODEGEN_LANGUAGE = Swift;
 				COREML_CODEGEN_SWIFT_GLOBAL_MODULE = YES;
-				DEVELOPMENT_TEAM = 2FT28A9D5B;
+				DEVELOPMENT_TEAM = R496FA673D;
 				INFOPLIST_FILE = FlowchartReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

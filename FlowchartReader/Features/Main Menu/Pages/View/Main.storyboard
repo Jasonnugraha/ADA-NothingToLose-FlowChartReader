@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Menu View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainMenuViewController" customModule="FlowchartReader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="FlowchartReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,9 +38,9 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-Dg-M1o">
-                                        <rect key="frame" x="10" y="119.5" width="211" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-Dg-M1o">
+                                        <rect key="frame" x="10" y="119.5" width="211" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -86,9 +86,9 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnN-MY-agy">
-                                        <rect key="frame" x="10" y="119.5" width="211" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnN-MY-agy">
+                                        <rect key="frame" x="10" y="119.5" width="211" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -134,9 +134,9 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9z-RO-hjC">
-                                        <rect key="frame" x="10" y="119.5" width="211" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9z-RO-hjC">
+                                        <rect key="frame" x="10" y="119.5" width="211" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -161,34 +161,34 @@
                                     <outletCollection property="gestureRecognizers" destination="XtI-XM-0iV" appends="YES" id="mct-xS-yr2"/>
                                 </connections>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan" translatesAutoresizingMaskIntoConstraints="NO" id="8Zx-H5-1xP">
-                                <rect key="frame" x="15" y="59" width="384" height="52.5"/>
-                                <color key="backgroundColor" name="clPurple"/>
-                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yja-SL-mAq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Diagram Reader" id="vHJ-4t-jT6"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Zx-H5-1xP" secondAttribute="trailing" constant="15" id="0k2-q6-MSC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z78-K6-U1h" secondAttribute="trailing" constant="15" id="2Ut-4M-UIf"/>
                             <constraint firstItem="E4x-ex-iCX" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.25" id="2Ys-h4-YXI"/>
                             <constraint firstItem="E4x-ex-iCX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="45s-5S-DLZ"/>
-                            <constraint firstItem="8Zx-H5-1xP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="F9H-Y1-jRo"/>
                             <constraint firstItem="cE9-dy-1Pe" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.25" id="NEY-af-NGH"/>
                             <constraint firstItem="z78-K6-U1h" firstAttribute="top" secondItem="cE9-dy-1Pe" secondAttribute="bottom" constant="15" id="Qh9-F0-cOv"/>
-                            <constraint firstItem="8Zx-H5-1xP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="YVw-CT-vCf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yja-SL-mAq" secondAttribute="trailing" id="Un3-sC-kHE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="yja-SL-mAq" secondAttribute="top" id="Vq4-X7-Yqk"/>
                             <constraint firstItem="z78-K6-U1h" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fBP-Xv-Ow5"/>
-                            <constraint firstItem="cE9-dy-1Pe" firstAttribute="top" secondItem="8Zx-H5-1xP" secondAttribute="bottom" constant="15" id="ggv-ZX-nPb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E4x-ex-iCX" secondAttribute="trailing" constant="15" id="hrT-rd-ehX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cE9-dy-1Pe" secondAttribute="trailing" constant="15" id="lBF-RR-0vG"/>
                             <constraint firstItem="z78-K6-U1h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="n95-Oh-h1D"/>
                             <constraint firstItem="cE9-dy-1Pe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="oeC-wN-OHH"/>
                             <constraint firstItem="z78-K6-U1h" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.25" id="rIA-fN-kzX"/>
+                            <constraint firstItem="yja-SL-mAq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sfT-di-jML"/>
                             <constraint firstItem="E4x-ex-iCX" firstAttribute="top" secondItem="z78-K6-U1h" secondAttribute="bottom" constant="15" id="xbB-UD-yZg"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="logoImage" destination="8Zx-H5-1xP" id="SMF-DV-iyC"/>
                         <outlet property="menu1Description" destination="aFa-Dg-M1o" id="Y33-VX-iSa"/>
                         <outlet property="menu1Image" destination="W0u-Ae-qlH" id="xgn-pe-Zxr"/>
                         <outlet property="menu1Title1" destination="Dk3-j9-mQl" id="eQl-7C-rKD"/>
@@ -204,6 +204,8 @@
                         <outlet property="menu3Title1" destination="TZp-Ah-VGb" id="aZv-x2-paO"/>
                         <outlet property="menu3Title2" destination="Nci-Y8-PzD" id="MLZ-NH-Xf9"/>
                         <outlet property="menu3View" destination="E4x-ex-iCX" id="5Vo-ap-grH"/>
+                        <outlet property="navigationTitle" destination="vHJ-4t-jT6" id="BMj-kP-HJV"/>
+                        <segue destination="SfR-of-u6k" kind="presentation" identifier="segueToGuidance" modalPresentationStyle="fullScreen" id="1XR-hq-YXZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -225,12 +227,17 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
         </scene>
+        <!--Guidance-->
+        <scene sceneID="va9-dp-GXw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Guidance" id="SfR-of-u6k" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H4E-Ag-DCU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="197"/>
+        </scene>
     </scenes>
     <resources>
         <image name="scan" width="500" height="539"/>
-        <namedColor name="clPurple">
-            <color red="0.76499998569488525" green="0.72899997234344482" blue="0.88200002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="clYellow">
             <color red="1" green="0.74099999666213989" blue="0.071000002324581146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

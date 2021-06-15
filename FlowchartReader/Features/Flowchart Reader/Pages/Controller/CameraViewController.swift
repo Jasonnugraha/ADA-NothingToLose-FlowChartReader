@@ -20,6 +20,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     private let photoOutput = AVCapturePhotoOutput()
     
     var flowchartComponents : [FlowchartComponent]?
+    var textComponents: [TextComponent]?
     var resultImage : UIImage?
     
     override func viewDidLoad() {
@@ -77,7 +78,10 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         captureSession.stopRunning()
         
         flowchartComponents = FlowchartComponentReader().detect(image: CIImage(image: scannedImage!)!)
+        textComponents = TextComponentReader().createVisionRequest(image: scannedImage!)
+//        let textcomponents = TextComponentReader().createVisionRequest(image:scannedImage!)
         
+//        print(textcomponents)
         performSegue(withIdentifier: "CameraToResult", sender: self)
     }
     

@@ -31,14 +31,13 @@ class CDFlowchart {
         connect()
         var data = [CDFlowchartFile] ()
         let arrData = NSFetchRequest<CDFlowchartFile>(entityName: "CDFlowchartFile")
-        let sortBy = NSSortDescriptor.init(key: "tanggal", ascending: true)
+        let sortBy = NSSortDescriptor.init(key: "tanggal", ascending: false)
         arrData.sortDescriptors = [sortBy]
         
         do {
             data = try (manageObjectContext?.fetch(arrData))!
-            
-            print(data.count)
-            
+//
+//            print(data.count)
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
@@ -65,6 +64,7 @@ class CDFlowchart {
     
     func deleteFlowchartFile(pID: String) {
         //delete flowchart file based on id
+        
     }
     
     func getAllFlowchartDetail(pFlowchartID : UUID) -> [CDFlowchartDetail] {

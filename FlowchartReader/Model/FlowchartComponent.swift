@@ -41,13 +41,3 @@ struct FlowchartDetail {
     var right : Int
     var left : Int
 }
-
-struct FlowchartDetailwithID {
-    var id : Int?
-    var flowchartID: UUID?
-    var shape : String?
-    var text : String?
-    var down : Int?
-    var right : Int?
-    var left : Int?
-}

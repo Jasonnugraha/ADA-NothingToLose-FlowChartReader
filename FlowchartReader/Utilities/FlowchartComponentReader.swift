@@ -30,13 +30,9 @@ class FlowchartComponentReader {
                 let objectConfidence = firstResult!.confidence
 //                let boundingBox = result.boundingBox
                 
-<<<<<<< HEAD
                 let boundingBox = VNImageRectForNormalizedRect(result.boundingBox, Int(bufferSize.width), Int(bufferSize.height))
                 let minY = Float(bufferSize.height) - Float(boundingBox.minY)
                 let maxY = minY + Float(boundingBox.height)
-=======
-                let flowchartComponent = FlowchartComponent(shape: objectName, minX: Float(boundingBox.minX), minY: Float(1 - boundingBox.minY), maxX:  Float(boundingBox.maxX), maxY: Float(1 - boundingBox.minY + boundingBox.maxY - boundingBox.minY), noArrow: [], arrowTo: "", fromIndex: [])
->>>>>>> 9200d87 (merge from scanner, fixing coordinate)
                 
                 let flowchartComponent = FlowchartComponent(shape: objectName, minX: Float(boundingBox.minX), minY: minY, maxX:  Float(boundingBox.maxX), maxY: maxY , noArrow: [], arrowTo: "", fromIndex: [])
                 flowchartComponents.append(flowchartComponent)

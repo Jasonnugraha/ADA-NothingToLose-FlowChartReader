@@ -46,7 +46,7 @@ class TextComponentReader {
                 for observation in observations {
                     let text = observation.topCandidates(1).first?.string
                     guard let unwrapped = text else {return}
-<<<<<<< HEAD
+                    
 //                    let boundingBox = observation.boundingBox
                     
                     let boundingBox = VNImageRectForNormalizedRect(observation.boundingBox, Int(self.bufferSize.width), Int(self.bufferSize.height))
@@ -60,16 +60,14 @@ class TextComponentReader {
 //                                                      minY: Float(1 - boundingBox.minY),
 //                                                      maxX: Float(boundingBox.maxX),
 //                                                      maxY: Float(1 -  boundingBox.minY + boundingBox.maxY - boundingBox.minY))
-=======
+
                     let boundingBox = observation.boundingBox
                     let textComponent = TextComponent(text: unwrapped,
                                                       minX: Float(boundingBox.minX),
                                                       minY: Float(1 - boundingBox.minY),
                                                       maxX: Float(boundingBox.maxX),
                                                       maxY: Float(1 -  boundingBox.minY + boundingBox.maxY - boundingBox.minY))
->>>>>>> 9200d87 (merge from scanner, fixing coordinate)
                     self.textComponents.append(textComponent)
-                    print(textComponent)
                     
                 }
             }

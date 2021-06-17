@@ -124,11 +124,15 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
         let monochormedImage = getMonochromeImage(inputImage: scannedImage!)
         resultImage = monochormedImage
         
-        flowchartComponents = FlowchartComponentReader().detect(image: CIImage(image: scannedImage!)!)
-        textComponents = TextComponentReader().createVisionRequest(image: scannedImage!)
+        flowchartComponents = FlowchartComponentReader().detect(image: CIImage(image: scannedImage!)!, bufferSize: bufferSize)
+        textComponents = TextComponentReader().createVisionRequest(image: scannedImage!, bufferSizeLocal: bufferSize)
         
         performSegue(withIdentifier: "CameraToResult", sender: self)
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        session.startRunning()
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CameraToResult" {

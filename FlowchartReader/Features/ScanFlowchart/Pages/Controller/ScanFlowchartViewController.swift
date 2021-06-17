@@ -148,13 +148,17 @@ class ScanFlowchartViewController: CameraVisionViewController {
             let shapeLayer = self.createRoundedRectLayerWithBounds(objectBounds)
 //            shapeLayer.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
             
+//            print("buffer size width \(Int(bufferSize.width)) buffer size height \(Int(bufferSize.height))")
+//            print("SMALLES OBJECT -> min x - \(objectBounds.minX) min y - \(objectBounds.minY) max X - \(objectBounds.maxX) max Y - \(objectBounds.maxY) ")
+            
+            
             let textLayer = self.createTextSubLayerInBounds(objectBounds,
                                                             identifier: topLabelObservation.identifier,
                                                             confidence: topLabelObservation.confidence)
             shapeLayer.addSublayer(textLayer)
             detectionOverlay.addSublayer(shapeLayer)
         }
-        self.updateLayerGeometry()
+//        self.updateLayerGeometry()
         CATransaction.commit()
     }
     

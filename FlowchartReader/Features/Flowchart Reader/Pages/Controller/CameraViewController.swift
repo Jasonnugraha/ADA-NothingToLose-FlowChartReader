@@ -80,8 +80,9 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         let monochormedImage = getMonochromeImage(inputImage: scannedImage!)
         resultImage = monochormedImage
         
-        flowchartComponents = FlowchartComponentReader().detect(image: CIImage(image: scannedImage!)!)
-        textComponents = TextComponentReader().createVisionRequest(image: scannedImage!)
+        //NOT USED YA GUYS
+        flowchartComponents = FlowchartComponentReader().detect(image: CIImage(image: scannedImage!)!, bufferSize: .zero)
+        textComponents = TextComponentReader().createVisionRequest(image: scannedImage!, bufferSizeLocal: .zero)
         
         performSegue(withIdentifier: "CameraToResult", sender: self)
     }

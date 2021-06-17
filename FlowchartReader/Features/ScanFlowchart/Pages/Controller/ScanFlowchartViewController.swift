@@ -194,19 +194,6 @@ class ScanFlowchartViewController: CameraVisionViewController {
         detectionOverlay.name = "DetectionOverlay"
         // TODO: Cek orientasi sedang portrait atau landscape, if landsacpe jalanin kode sekarang, kalau portrait, x,y harus diganti menyesuaikan screen
         // di cek dl dia potrait atau landscape, nandi CG Rect nya berbeda
-        
-//        if (portraitOrientation){
-//            detectionOverlay.bounds = CGRect(x: 0,
-//                                             y: 0,
-//                                             width: bufferSize.width,
-//                                             height: bufferSize.height)
-//        } else {
-//            detectionOverlay.bounds = CGRect(x: 100,
-//                                             y: 100,
-//                                             width: bufferSize.width,
-//                                             height: bufferSize.height)
-//        }
-        
         detectionOverlay.bounds = CGRect(x: 0,
                                          y: 0,
                                          width: bufferSize.width,

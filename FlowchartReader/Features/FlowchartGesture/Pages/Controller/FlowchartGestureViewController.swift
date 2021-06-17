@@ -20,14 +20,16 @@ class FlowchartGestureViewController: UIViewController {
     
     var saved = false
     
-    var flowchartDetails = [
-        FlowchartDetail(id: 0, shape: "Teriminator", text: "Start", down: 1, right: -1, left: -1),
-        FlowchartDetail(id: 1, shape: "Process", text: "Open a Book", down: 2, right: -1, left: -1),
-        FlowchartDetail(id: 2, shape: "Decision", text: "Favourite Book", down: -1, right: 4, left: 3),
-        FlowchartDetail(id: 3, shape: "Process", text: "Close The Book", down: 5, right: -1, left: -1),
-        FlowchartDetail(id: 4, shape: "Process", text: "Read The Book", down: 3, right: -1, left: -1),
-        FlowchartDetail(id: 5, shape: "Teriminator", text: "End", down: -2, right: -1, left: -1),
-    ]
+//    var flowchartDetails = [
+//        FlowchartDetail(id: 0, shape: "Teriminator", text: "Start", down: 1, right: -1, left: -1),
+//        FlowchartDetail(id: 1, shape: "Process", text: "Open a Book", down: 2, right: -1, left: -1),
+//        FlowchartDetail(id: 2, shape: "Decision", text: "Favourite Book", down: -1, right: 4, left: 3),
+//        FlowchartDetail(id: 3, shape: "Process", text: "Close The Book", down: 5, right: -1, left: -1),
+//        FlowchartDetail(id: 4, shape: "Process", text: "Read The Book", down: 3, right: -1, left: -1),
+//        FlowchartDetail(id: 5, shape: "Teriminator", text: "End", down: -2, right: -1, left: -1),
+//    ]
+    
+    var flowchartDetails: [FlowchartDetail]?
     
     var histories = [FlowchartDetail]()
     
@@ -44,7 +46,7 @@ class FlowchartGestureViewController: UIViewController {
         imageView.image = imageData
 //        imageView.image = service.load(fileName: a!)
         stepId = 0
-        service.initStepSound(flowStep: stepId!, flowchartDetails: flowchartDetails)
+        service.initStepSound(flowStep: stepId!, flowchartDetails: flowchartDetails!)
         accessibilityElInit()
         setupBtnAlpha()
         
@@ -84,25 +86,25 @@ class FlowchartGestureViewController: UIViewController {
     
     func flowchartStep(direction: Direction) {
         
-        let currentFlowchartDetail = flowchartDetails[stepId!]
+        let currentFlowchartDetail = flowchartDetails![stepId!]
         
         var a = service.checkAvailableStep(currentFlow: currentFlowchartDetail, direction: direction, histories: histories)
         
         if direction == Direction.Up {
             if a < 0 {
-                service.currentStepSound(direction: direction, flowchartDetails: flowchartDetails, flowStep: -1, stepId: stepId ?? 0)
+                service.currentStepSound(direction: direction, flowchartDetails: flowchartDetails!, flowStep: -1, stepId: stepId ?? 0)
             } else {
                 histories.removeLast()
                 stepId = a
-                service.currentStepSound(direction: direction, flowchartDetails: flowchartDetails, flowStep: a, stepId: stepId ?? 0)
+                service.currentStepSound(direction: direction, flowchartDetails: flowchartDetails!, flowStep: a, stepId: stepId ?? 0)
             }
         } else {
             if a > -1 {
-                histories.append(flowchartDetails[stepId!])
+                histories.append(flowchartDetails![stepId!])
                 stepId = a
-                service.currentStepSound(direction: direction, flowchartDetails: flowchartDetails, flowStep: a, stepId: stepId ?? 0)
+                service.currentStepSound(direction: direction, flowchartDetails: flowchartDetails!, flowStep: a, stepId: stepId ?? 0)
             } else {
-                service.currentStepSound(direction: direction, flowchartDetails: flowchartDetails, flowStep: a, stepId: stepId ?? 0)
+                service.currentStepSound(direction: direction, flowchartDetails: flowchartDetails!, flowStep: a, stepId: stepId ?? 0)
             }
         }
     }
@@ -173,12 +175,14 @@ class FlowchartGestureViewController: UIViewController {
             
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
                 let textField = alert?.textFields![0].text
-                var fileName = self.service.save(image: UIImage(named: "FavBook")!, fileName: textField!) // For Dev
-                self.modelService.appendFlowchartFile(pFlowchartID: id, pFlowchartName: textField!, pfilePath: fileName!)
-                self.modelService.appendFlowchartDetails(pFlowchartID: id, pFlowchartDetails: self.flowchartDetails)
+                if textField != nil || textField != "" {
+                    var fileName = self.service.save(image: self.imageData!, fileName: "\(textField!)_\(id)") // For Dev
+                    self.modelService.appendFlowchartFile(pFlowchartID: id, pFlowchartName: textField!, pfilePath: "\(textField!)_\(id)")
+                    self.modelService.appendFlowchartDetails(pFlowchartID: id, pFlowchartDetails: self.flowchartDetails!)
+                    self.saved = true
+                }
             }))
             
-            saved = true
         } else {
             alert = UIAlertController(title: "Flowchart Saved!", message: "This Flowchart Has Saved!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

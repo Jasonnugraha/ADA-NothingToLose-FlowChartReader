@@ -9,15 +9,13 @@ import UIKit
 import CoreData
 
 class CDFlowchart {
-    //    var flowchartFile : FlowchartDetailwithID?
-    //    var flowchartDetails : [FlowchartFile]?
     var appDelegate : AppDelegate?
     var manageObjectContext : NSManagedObjectContext?
-    
     
     init() {
         connect()
     }
+    
     
     func connect() {
         if manageObjectContext == nil {
@@ -25,6 +23,7 @@ class CDFlowchart {
             manageObjectContext = appDelegate?.persistentContainer.viewContext
         }
     }
+    
     
     func getAllFlowchartFile() -> [CDFlowchartFile] {
         //return all flowchartfile (untuk table isi semua file)
@@ -36,13 +35,12 @@ class CDFlowchart {
         
         do {
             data = try (manageObjectContext?.fetch(arrData))!
-//
-//            print(data.count)
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
         return data
     }
+    
     
     func appendFlowchartFile(pFlowchartID: UUID, pFlowchartName: String, pfilePath: String ) {
         // add new flowchart file
@@ -62,10 +60,48 @@ class CDFlowchart {
         
     }
     
+    
     func deleteFlowchartFile(pID: String) {
         //delete flowchart file based on id
+        connect()
         
+        //delete flowchart detail
+        var data = [CDFlowchartDetail] ()
+        let arrData = NSFetchRequest<CDFlowchartDetail>(entityName: "CDFlowchartDetail")
+        arrData.predicate = NSPredicate.init(format: "flowchartId == %@", pID)
+        
+        do {
+            data = try (manageObjectContext?.fetch(arrData))!
+            
+            for obj in data {
+                manageObjectContext?.delete(obj)
+            }
+            
+            try manageObjectContext?.save()
+            
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        
+        //delete flowchart file
+        var dataFl = [CDFlowchartFile] ()
+        let arrDataFl = NSFetchRequest<CDFlowchartFile>(entityName: "CDFlowchartFile")
+        arrData.predicate = NSPredicate.init(format: "flowchartId == %@", pID)
+        
+        do {
+            dataFl = try (manageObjectContext?.fetch(arrDataFl))!
+            
+            for obj in dataFl {
+                manageObjectContext?.delete(obj)
+            }
+            
+            try manageObjectContext?.save()
+            
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
+    
     
     func getAllFlowchartDetail(pFlowchartID : UUID) -> [CDFlowchartDetail] {
         //return all flowchart detail // array of struck , flowchartid: uuid
@@ -87,6 +123,7 @@ class CDFlowchart {
         return data
     }
     
+    
     func appendFlowchartDetails(pFlowchartID: UUID, pFlowchartDetails : [FlowchartDetail]) {
         // add array of flowchartDetail. Tidak simpan satu2 tetapi langsung 1 skenario
         connect()
@@ -106,7 +143,6 @@ class CDFlowchart {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
-        
     }
     
 }

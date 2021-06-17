@@ -10,13 +10,14 @@ import UIKit
 class DetailFlowchartView: UIView {
     let navbarItem = UINavigationItem()
     
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var idLabel: UILabel!
     
-    func setId(_ id: String) {
-        idLabel.text = id
+    func setId(_ id: UUID) {
+        idLabel.text = "\(id)"
     }
     
-    func setTitle(_ title: String) {
-        navbarItem.title = title
+    func setImage(_ image: UIImage) {
+        imageView.image = image
     }
 }

@@ -51,7 +51,7 @@ class CDFlowchart {
         
         let data = CDFlowchartFile(context: manageObjectContext!)
         data.flowchartID = pFlowchartID
-        data.filePath = pFlowchartName
+        data.filePath = pfilePath
         data.tanggal = Date()
         data.flowchartName = pFlowchartName
         
@@ -63,8 +63,48 @@ class CDFlowchart {
         
     }
     
-    func deleteFlowchartFile(pID: String) {
+    func deleteFlowchartFile(pID: UUID) {
+        print(pID)
         //delete flowchart file based on id
+        connect()
+        
+        //delete flowchart detail
+        var data = [CDFlowchartDetail] ()
+        let arrData = NSFetchRequest<CDFlowchartDetail>(entityName: "CDFlowchartDetail")
+        arrData.predicate = NSPredicate.init(format: "flowchartID == %@", pID.uuidString)
+        
+        do {
+            data = try (manageObjectContext?.fetch(arrData))!
+
+            for obj in data {
+                manageObjectContext?.delete(obj)
+            }
+
+            try manageObjectContext?.save()
+
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        
+        //delete flowchart file
+        var dataFl = [CDFlowchartFile] ()
+        let arrDataFl = NSFetchRequest<CDFlowchartFile>(entityName: "CDFlowchartFile")
+        arrData.predicate = NSPredicate.init(format: "flowchartID = %@", pID.uuidString)
+        
+        do {
+            dataFl = try (manageObjectContext?.fetch(arrDataFl))!
+            
+            for obj in dataFl {
+                if obj.flowchartID == pID {
+                    manageObjectContext?.delete(obj)
+                }
+            }
+            
+            try manageObjectContext?.save()
+            
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
     
     func getAllFlowchartDetail(pFlowchartID : UUID) -> [CDFlowchartDetail] {
@@ -74,17 +114,30 @@ class CDFlowchart {
         let arrData = NSFetchRequest<CDFlowchartDetail>(entityName: "CDFlowchartDetail")
         let sortBy = NSSortDescriptor.init(key: "id", ascending: true)
         arrData.sortDescriptors = [sortBy]
-        arrData.predicate = NSPredicate.init(format: "flowchartId == %@", pFlowchartID.uuidString)
+        arrData.predicate = NSPredicate.init(format: "flowchartID == %@", pFlowchartID.uuidString)
         
         do {
             data = try (manageObjectContext?.fetch(arrData))!
-            
-            print(data.count)
             
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
         return data
+    }
+    
+    func getFlowchartFile(pFlowchartID: UUID) -> CDFlowchartFile {
+        connect()
+        var results = [CDFlowchartFile]()
+        let data = NSFetchRequest<CDFlowchartFile>(entityName: "CDFlowchartFile")
+        data.predicate = NSPredicate.init(format: "flowchartID = %@", pFlowchartID.uuidString)
+        
+        do {
+            results = try (manageObjectContext?.fetch(data))!
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        
+        return results[0]
     }
     
     func appendFlowchartDetails(pFlowchartID: UUID, pFlowchartDetails : [FlowchartDetail]) {

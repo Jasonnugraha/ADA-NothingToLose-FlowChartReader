@@ -11,6 +11,7 @@
         <!--Camera View Controller-->
         <scene sceneID="Qt0-B2-k8I">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b2O-tI-yDM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="jxl-BW-VdJ" customClass="CameraViewController" customModule="FlowchartReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qcT-uU-1H4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -47,7 +48,6 @@
                         <outlet property="pireviewView" destination="ENk-fH-lYd" id="Qqz-ki-vIf"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b2O-tI-yDM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-377" y="-90"/>
         </scene>

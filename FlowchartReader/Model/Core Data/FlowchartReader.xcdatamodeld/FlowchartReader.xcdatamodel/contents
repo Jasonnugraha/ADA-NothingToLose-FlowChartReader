@@ -1,24 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="CDFlowchartDetail" representedClassName="CDFlowchartDetail" syncable="YES" codeGenerationType="class">
-        <attribute name="down" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="flowchartID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="left" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="right" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="shape" optional="YES" attributeType="String"/>
-        <attribute name="text" optional="YES" attributeType="String"/>
-        <relationship name="flowchartFile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFlowchartFile" inverseName="flowchartDetails" inverseEntity="CDFlowchartFile"/>
-    </entity>
-    <entity name="CDFlowchartFile" representedClassName="CDFlowchartFile" syncable="YES" codeGenerationType="class">
-        <attribute name="filePath" optional="YES" attributeType="String"/>
-        <attribute name="flowchartID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="flowchartName" optional="YES" attributeType="String"/>
-        <attribute name="tanggal" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="flowchartDetails" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDFlowchartDetail" inverseName="flowchartFile" inverseEntity="CDFlowchartDetail"/>
-    </entity>
-    <elements>
-        <element name="CDFlowchartDetail" positionX="-63" positionY="-18" width="128" height="149"/>
-        <element name="CDFlowchartFile" positionX="-54" positionY="45" width="128" height="104"/>
-    </elements>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <elements/>
 </model>

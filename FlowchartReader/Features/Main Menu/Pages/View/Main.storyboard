@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Diagram Reader-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="FlowchartReader" customModuleProvider="target" sceneMemberID="viewController">
@@ -185,7 +185,7 @@
                             <constraint firstItem="E4x-ex-iCX" firstAttribute="top" secondItem="z78-K6-U1h" secondAttribute="bottom" constant="15" id="xbB-UD-yZg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Diagram Reader" id="Gzq-SK-rb4"/>
+                    <navigationItem key="navigationItem" title="Main" id="Gzq-SK-rb4"/>
                     <connections>
                         <outlet property="menu1Description" destination="aFa-Dg-M1o" id="Y33-VX-iSa"/>
                         <outlet property="menu1Image" destination="W0u-Ae-qlH" id="xgn-pe-Zxr"/>
@@ -250,7 +250,7 @@
         <!--Navigation Controller-->
         <scene sceneID="5Xz-Ro-mOc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0zU-gI-ciP" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainViewController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="0zU-gI-ciP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hdm-gT-Qw9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -275,7 +275,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="scan" width="500" height="539"/>
+        <image name="scan" width="250" height="269.5"/>
         <namedColor name="clYellow">
             <color red="1" green="0.74099999666213989" blue="0.071000002324581146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

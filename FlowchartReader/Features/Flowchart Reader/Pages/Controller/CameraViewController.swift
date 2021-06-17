@@ -80,8 +80,9 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         let monochormedImage = getMonochromeImage(inputImage: scannedImage!)
         resultImage = monochormedImage
         
-        flowchartComponents = FlowchartComponentReader().detect(image: CIImage(image: scannedImage!)!)
-        textComponents = TextComponentReader().createVisionRequest(image: scannedImage!)
+        //NOT USED YA GUYS
+        flowchartComponents = FlowchartComponentReader().detect(image: CIImage(image: scannedImage!)!, bufferSize: .zero)
+        textComponents = TextComponentReader().createVisionRequest(image: scannedImage!, bufferSizeLocal: .zero)
         
         performSegue(withIdentifier: "CameraToResult", sender: self)
     }
@@ -89,9 +90,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CameraToResult" {
             if let destinationVC = segue.destination as? ResultViewController {
-                destinationVC.flowchartComponents = flowchartComponents
                 destinationVC.resultImage = resultImage
-                destinationVC.textComponents = textComponents
             }
         }
     }
@@ -137,25 +136,3 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     
 }
 
-extension UIImage {
-    func rotate(radians: CGFloat) -> UIImage {
-        let rotatedSize = CGRect(origin: .zero, size: size)
-            .applying(CGAffineTransform(rotationAngle: CGFloat(radians)))
-            .integral.size
-        UIGraphicsBeginImageContext(rotatedSize)
-        if let context = UIGraphicsGetCurrentContext() {
-            let origin = CGPoint(x: rotatedSize.width / 2.0,
-                                 y: rotatedSize.height / 2.0)
-            context.translateBy(x: origin.x, y: origin.y)
-            context.rotate(by: radians)
-            draw(in: CGRect(x: -origin.y, y: -origin.x,
-                            width: size.width, height: size.height))
-            let rotatedImage = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-
-            return rotatedImage ?? self
-        }
-
-        return self
-    }
-}

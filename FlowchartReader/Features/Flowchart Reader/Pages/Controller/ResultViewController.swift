@@ -15,6 +15,8 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var resultImageView: UIImageView!
     var resultImage : UIImage?
     
+    var detectionOverlay : CALayer! = nil
+    
     var flowchartComponents : [FlowchartComponent]?
     var textComponents: [TextComponent]?
     
@@ -50,6 +52,7 @@ class ResultViewController: UIViewController {
             return
         }
         
+      
         lineComponents = flowchartComponents.filter({line.contains($0.shape)})
         shapeComponents = flowchartComponents.filter({shape.contains($0.shape)})
         arrowComponents = flowchartComponents.filter({arrow.contains($0.shape)})
@@ -67,13 +70,13 @@ class ResultViewController: UIViewController {
         let maxX = flowchartComponents.max(by: {$0.maxX < $1.maxX})?.maxX
         let maxY = flowchartComponents.max(by: {$0.maxY < $1.maxY})?.maxY
         
-        let intervalX = (Float(maxX!) - Float(minX!)) / 10.0
-        let intervalY = (Float(maxY!) - Float(minY!)) / 8.0
+        let intervalX = (Float(maxX!) - Float(minX!)) / 15.0
+        let intervalY = (Float(maxY!) - Float(minY!)) / 10.0
         
         constantLOAX = intervalX
         constantLOAY = intervalY
-        constantTextX = constantLOAX / 3.0
-        constantTextY = constantLOAY / 3.0
+        constantTextX = constantLOAX / 5.0
+        constantTextY = constantLOAY / 5.0
         
         print("\nCONSTANT LOAx \(constantLOAX) CONSTANT LOA y \(constantLOAY) constant text x \(constantTextX) constant text y \(constantTextY)")
         print("\nSMALLES OBJECT -> min x - \(minX) min y - \(minY) max X - \(maxX) max Y - \(maxY) ")
@@ -89,10 +92,37 @@ class ResultViewController: UIViewController {
         
         for i in 0..<sortedFlowchartComponents.count{
             print("\n\n")
-            traceFlowchartShape(component: sortedFlowchartComponents[i], id: i)
+            let flowchart = sortedFlowchartComponents[i]
+//            let layer = createRoundedRectLayerWithBounds(CGRect(x: CGFloat(flowchart.minX), y: CGFloat(flowchart.minY), width: CGFloat(flowchart.maxX - flowchart.minX), height: CGFloat(flowchart.maxY - flowchart.minY)))
+//
+//            self.view.layer.addSublayer(layer)
+            traceFlowchartShape(component: flowchart, id: i)
         }
         
-        print(flowchartDetails)
+    }
+    
+//    func setupLayers() {
+//        detectionOverlay = CALayer()
+//        detectionOverlay.name = "DetectionOverlay"
+//        detectionOverlay.bounds = CGRect(x: 0,
+//                                         y: 0,
+//                                         width: 1920,
+//                                         height: 1080)
+//        self.view.layer
+//    }
+//
+    
+    func createRoundedRectLayerWithBounds(_ bounds: CGRect) -> CALayer {
+        print("ADD LAYERRRR")
+        
+        let shapeLayer = CALayer()
+        shapeLayer.bounds = bounds
+        shapeLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
+
+        shapeLayer.borderWidth = 50
+        shapeLayer.borderColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [0.2, 1.0, 0.5, 0.8])
+        shapeLayer.cornerRadius = 7
+        return shapeLayer
     }
     
     func traceFlowchartShape(component : FlowchartComponent, id : Int){
@@ -261,6 +291,7 @@ class ResultViewController: UIViewController {
     
     func loopUntilArrowFound(component : FlowchartComponent) -> FlowchartComponent {
         var result : FlowchartComponent = component
+        var visited : [FlowchartComponent] = []
         
         for _ in 0...5{
             if (arrow.contains(result.shape)){
@@ -268,8 +299,13 @@ class ResultViewController: UIViewController {
                 break
             }
             
-            if let temp = closestNextComponentFromLineOrArrow(component: component).filter({!(shape.contains($0.shape))}).first {
-                result = temp
+            if let temp = closestNextComponentFromLineOrArrow(component: result).filter({!(shape.contains($0.shape))}).first {
+                if visited.contains(temp){
+                    break
+                } else {
+                    visited.append(temp)
+                    result = temp
+                }
                 print("tempLineOrArrow : ")
                 printFlowchart(flowchart: result)
             } else {

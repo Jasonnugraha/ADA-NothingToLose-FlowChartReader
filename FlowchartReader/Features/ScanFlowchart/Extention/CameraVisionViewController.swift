@@ -24,6 +24,7 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
     var flowchartComponents : [FlowchartComponent]?
     var textComponents: [TextComponent]?
     var resultImage : UIImage?
+    var flowchartDetails : [FlowchartDetail]?
 
     private let videoDataOutputQueue = DispatchQueue(label: "VideoDataOutput", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
     
@@ -127,7 +128,12 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
         flowchartComponents = FlowchartComponentReader().detect(image: CIImage(image: scannedImage!)!, bufferSize: bufferSize)
         textComponents = TextComponentReader().createVisionRequest(image: scannedImage!, bufferSizeLocal: bufferSize)
         
+        if let fc = flowchartComponents, let tc = textComponents {
+            flowchartDetails = FlowchartDetailService().getFlowchartDetails(flowchartComponents: fc, textComponents: tc)
+        }
+        
         performSegue(withIdentifier: "CameraToResult", sender: self)
+        
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
@@ -137,9 +143,8 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CameraToResult" {
             if let destinationVC = segue.destination as? ResultViewController {
-                destinationVC.flowchartComponents = flowchartComponents
                 destinationVC.resultImage = resultImage
-                destinationVC.textComponents = textComponents
+                destinationVC.flowchartDetails = flowchartDetails
             }
         }
     }

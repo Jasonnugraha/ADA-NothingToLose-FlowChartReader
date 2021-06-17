@@ -90,9 +90,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CameraToResult" {
             if let destinationVC = segue.destination as? ResultViewController {
-                destinationVC.flowchartComponents = flowchartComponents
                 destinationVC.resultImage = resultImage
-                destinationVC.textComponents = textComponents
             }
         }
     }

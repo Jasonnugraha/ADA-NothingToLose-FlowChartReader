@@ -33,6 +33,7 @@
 		5B2BBB482679070D00774DA3 /* MenuListStaticSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDFCD02674D3B600D17197 /* MenuListStaticSeeder.swift */; };
 		5B2BBB492679071400774DA3 /* ListFlowchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A532674972F00570B0B /* ListFlowchartView.swift */; };
 		5B2BBB4B2679CD5900774DA3 /* FlowchartComponentDetectorRev 1 Iteration 5300.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BBB4A2679CD5900774DA3 /* FlowchartComponentDetectorRev 1 Iteration 5300.mlmodel */; };
+		5B60A411267B41E50079335B /* FlowchartDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60A410267B41E50079335B /* FlowchartDetailService.swift */; };
 		B416B80226773B8A00BD226B /* TextComponentReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416B80126773B8A00BD226B /* TextComponentReader.swift */; };
 		B416B80726774CD500BD226B /* TextComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416B80626774CD500BD226B /* TextComponent.swift */; };
 		B4F76BC1266F7A4300F6FAD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */; };
@@ -87,6 +88,7 @@
 		5B2A13382677211B008AB41F /* FlowchartComponentDetectorRev 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FlowchartComponentDetectorRev 1.mlmodel"; sourceTree = "<group>"; };
 		5B2BBB452679055400774DA3 /* FlowchartComponentReaderRevisiLagi 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FlowchartComponentReaderRevisiLagi 1.mlmodel"; sourceTree = "<group>"; };
 		5B2BBB4A2679CD5900774DA3 /* FlowchartComponentDetectorRev 1 Iteration 5300.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FlowchartComponentDetectorRev 1 Iteration 5300.mlmodel"; sourceTree = "<group>"; };
+		5B60A410267B41E50079335B /* FlowchartDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartDetailService.swift; sourceTree = "<group>"; };
 		B416B80126773B8A00BD226B /* TextComponentReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextComponentReader.swift; sourceTree = "<group>"; };
 		B416B80626774CD500BD226B /* TextComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextComponent.swift; sourceTree = "<group>"; };
 		B4F76BBD266F7A4200F6FAD9 /* FlowchartReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowchartReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -359,6 +361,7 @@
 				5B10B9382673061E00DC721B /* FlowchartComponentReader.swift */,
 				B416B80126773B8A00BD226B /* TextComponentReader.swift */,
 				035DCEE9267710D60026B542 /* LockScreenOrientation.swift */,
+				5B60A410267B41E50079335B /* FlowchartDetailService.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -699,6 +702,7 @@
 				B4F76BCB266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld in Sources */,
 				B4F76BC1266F7A4300F6FAD9 /* AppDelegate.swift in Sources */,
 				B4FE9D422675ECFC0027128A /* PlaceholderUI.swift in Sources */,
+				5B60A411267B41E50079335B /* FlowchartDetailService.swift in Sources */,
 				5B10B94126731A7500DC721B /* FlowchartComponent.swift in Sources */,
 				5B10B9352672E76700DC721B /* CameraViewController.swift in Sources */,
 				C0E25293267745EC0023C3AE /* GuidanceTableViewCell.swift in Sources */,

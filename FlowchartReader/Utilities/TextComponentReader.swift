@@ -60,15 +60,7 @@ class TextComponentReader {
 //                                                      minY: Float(1 - boundingBox.minY),
 //                                                      maxX: Float(boundingBox.maxX),
 //                                                      maxY: Float(1 -  boundingBox.minY + boundingBox.maxY - boundingBox.minY))
-
-                    let boundingBox = observation.boundingBox
-                    let textComponent = TextComponent(text: unwrapped,
-                                                      minX: Float(boundingBox.minX),
-                                                      minY: Float(1 - boundingBox.minY),
-                                                      maxX: Float(boundingBox.maxX),
-                                                      maxY: Float(1 -  boundingBox.minY + boundingBox.maxY - boundingBox.minY))
                     self.textComponents.append(textComponent)
-                    print(textComponent)
                     
                 }
             }

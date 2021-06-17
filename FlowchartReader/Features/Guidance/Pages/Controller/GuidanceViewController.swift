@@ -22,7 +22,6 @@ class GuidanceViewController: UIViewController {
         guidanceView.setup(pDelegate: self)
         
         guidanceView.setupAccessbility()
-        
     }   
     
     @IBAction func unwindToGuidance(_ unwindSegue: UIStoryboardSegue) {

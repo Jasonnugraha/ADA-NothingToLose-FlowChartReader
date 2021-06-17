@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="75P-HX-8BF">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -11,39 +11,171 @@
         <!--Flowchart Gesture-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="FlowchartGestureViewController" customModule="FlowchartReader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDK-Lj-5ag">
-                                <rect key="frame" x="16" y="392" width="358" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AQ4-LE-m4Y">
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hDK-Lj-5ag" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="HB4-mK-QGD"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hDK-Lj-5ag" secondAttribute="trailing" constant="16" id="ZZv-M9-Llf"/>
-                            <constraint firstItem="hDK-Lj-5ag" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="348" id="e4d-wl-laC"/>
+                            <constraint firstItem="AQ4-LE-m4Y" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="BPa-Cb-rVl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AQ4-LE-m4Y" secondAttribute="trailing" id="Gun-Gp-89C"/>
+                            <constraint firstItem="AQ4-LE-m4Y" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Kz3-ec-kvH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="AQ4-LE-m4Y" secondAttribute="bottom" id="f08-w0-lSX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Flowchart Gesture" id="cAL-8J-Dt3"/>
+                    <navigationItem key="navigationItem" title="Flowchart Gesture" id="cAL-8J-Dt3">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.down" catalog="system" id="HQv-Yd-nJO"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="actionListLabel" destination="hDK-Lj-5ag" id="JaD-Gg-ogW"/>
+                        <outlet property="imageView" destination="AQ4-LE-m4Y" id="coR-8S-GB3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1598" y="131"/>
+        </scene>
+        <!--Flowchart Gesture-->
+        <scene sceneID="FoY-XJ-AbS">
+            <objects>
+                <viewController id="j2B-3h-sWR" customClass="FlowchartGestureViewController" customModule="FlowchartReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jtz-8i-SuY">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gSM-ga-haJ">
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgZ-bx-Zsk">
+                                <rect key="frame" x="1" y="88" width="389" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <color key="tintColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="0.71515980515955435" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Up">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="upBtn:" destination="j2B-3h-sWR" eventType="touchUpInside" id="Lf5-9x-Rlr"/>
+                                    <action selector="upBtnTouchDown:" destination="j2B-3h-sWR" eventType="touchDown" id="Akl-5E-Tvd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ry5-f5-Twp">
+                                <rect key="frame" x="0.0" y="312" width="192" height="274"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Left">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtn:" destination="j2B-3h-sWR" eventType="touchUpInside" id="uPC-co-ljz"/>
+                                    <action selector="leftBtnTouchDown:" destination="j2B-3h-sWR" eventType="touchDown" id="SjX-eZ-oPZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DL6-sL-1Ra">
+                                <rect key="frame" x="200" y="312" width="192" height="274"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Right">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightBtn:" destination="j2B-3h-sWR" eventType="touchUpInside" id="tXP-FM-eYx"/>
+                                    <action selector="rightBtnTouchDown:" destination="j2B-3h-sWR" eventType="touchDown" id="3xT-dr-GTy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxg-W1-4A1">
+                                <rect key="frame" x="0.0" y="594" width="389" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Down">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="downBtn:" destination="j2B-3h-sWR" eventType="touchUpInside" id="r2y-mr-O6T"/>
+                                    <action selector="downBtnTouchDown:" destination="j2B-3h-sWR" eventType="touchDown" id="mPI-Rp-6zn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="znx-Ui-UsA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="znx-Ui-UsA" firstAttribute="bottom" secondItem="gSM-ga-haJ" secondAttribute="bottom" id="8gE-7a-GMp"/>
+                            <constraint firstItem="gSM-ga-haJ" firstAttribute="top" secondItem="znx-Ui-UsA" secondAttribute="top" id="GeR-zU-1Hg"/>
+                            <constraint firstItem="gSM-ga-haJ" firstAttribute="leading" secondItem="znx-Ui-UsA" secondAttribute="leading" id="oVH-8k-2td"/>
+                            <constraint firstItem="znx-Ui-UsA" firstAttribute="trailing" secondItem="gSM-ga-haJ" secondAttribute="trailing" id="sx1-N3-9YL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Flowchart Gesture" id="Obx-GJ-VIm">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.down" catalog="system" id="xxy-Q7-daK">
+                            <connections>
+                                <action selector="saveOnTap:" destination="j2B-3h-sWR" id="VGC-wL-JzR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="downBtn" destination="Mxg-W1-4A1" id="vBJ-wF-OYx"/>
+                        <outlet property="imageView" destination="gSM-ga-haJ" id="cFP-rL-UHZ"/>
+                        <outlet property="leftBtn" destination="ry5-f5-Twp" id="7yO-2W-UF6"/>
+                        <outlet property="rightBtn" destination="DL6-sL-1Ra" id="6lo-2w-mrw"/>
+                        <outlet property="upBtn" destination="YgZ-bx-Zsk" id="yF4-sB-X7d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z9K-Xu-a8V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596.9230769230769" y="856.6350710900474"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="enZ-Ex-3ma">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9oB-R9-Q5V" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pd8-f1-hfK">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="QDy-3Y-XEL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="88s-Ct-R59" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="853.84615384615381" y="130.80568720379145"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qs7-ey-tMq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="75P-HX-8BF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EXF-LK-vTu">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="j2B-3h-sWR" kind="relationship" relationship="rootViewController" id="0VJ-5R-ccL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2O-Ul-tkd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853.84615384615381" y="857.34597156398104"/>
         </scene>
     </scenes>
     <resources>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

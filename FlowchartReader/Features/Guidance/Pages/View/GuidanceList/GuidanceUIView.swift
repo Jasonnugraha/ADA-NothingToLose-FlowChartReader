@@ -46,10 +46,7 @@ extension GuidanceUIView : UITableViewDataSource {
         cell.journalTitle.isAccessibilityElement = true
         cell.journalTitle.accessibilityTraits = .link
         cell.journalTitle.accessibilityLabel = cell.journalTitle.text
-        
-        //kedengaran ke tunet tp tidak ke normal. normal ke screen berikutnya
-        //cell.journalTitle.accessibilityHint = guidanceList[indexPath.row].description
-        
+ 
         return cell
     }
     

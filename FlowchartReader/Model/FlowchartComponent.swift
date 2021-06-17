@@ -34,14 +34,20 @@ class FlowchartComponent : Equatable {
 }
 
 struct FlowchartDetail {
-    let id : Int
-    let shape : String
-    let text : String
-    let down : Int
-    let right : Int
-    let left : Int
+    var id : Int
+    var shape : String
+    var text : String
+    var down : Int
+    var right : Int
+    var left : Int
 }
 
-
-
-
+struct FlowchartDetailwithID {
+    var id : Int?
+    var flowchartID: UUID?
+    var shape : String?
+    var text : String?
+    var down : Int?
+    var right : Int?
+    var left : Int?
+}

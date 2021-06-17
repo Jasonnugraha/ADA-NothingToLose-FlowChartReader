@@ -8,13 +8,13 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMenu()
         setupAccessbility()
     }
-
+    
     let cornerMenu = CGFloat(8)  //besar corner radius
     
     @IBOutlet weak var navigationTitle: UINavigationItem!
@@ -55,40 +55,40 @@ class MainViewController: UIViewController {
         menu2Image.image = menuList[1].getImage()
         menu2View.backgroundColor = menuList[1].getColor()
         menu2View.layer.cornerRadius = cornerMenu
-
+        
         menu3Title1.text = menuList[2].title1
         menu3Title2.text = menuList[2].title2
         menu3Description.text = menuList[2].description
         menu3Image.image = menuList[2].getImage()
         menu3View.backgroundColor = menuList[2].getColor()
         menu3View.layer.cornerRadius = cornerMenu
-
+        
     }
     
     func setupAccessbility() {
         navigationTitle.accessibilityLabel = "Main Page. There are 3 button you can choose."
-
+        
         menu1View.isAccessibilityElement = true
         menu1View.accessibilityElements = [menu1Title1!, menu1Title2!, menu1Description!, menu1Image!]
         menu1View.accessibilityTraits = .button
         menu1View.accessibilityLabel = menu1Title1.text!  + " " + menu1Title2.text!
         menu1View.accessibilityHint = menu1Description.text!
-
+        
         //menu 2
         menu2View.isAccessibilityElement = true
         menu2View.accessibilityElements = [menu2Title1!, menu2Title2!, menu2Description!, menu2Image!]
         menu2View.accessibilityTraits = .button
         menu2View.accessibilityLabel = menu2Title1.text!  + " " + menu2Title2.text!
         menu2View.accessibilityHint = menu2Description.text!
-
-
+        
+        
         //menu 3
         menu3View.isAccessibilityElement = true
         menu3View.accessibilityElements = [menu3Title1!, menu3Title2!, menu3Description!, menu3Image!]
         menu3View.accessibilityTraits = .button
         menu3View.accessibilityLabel = menu3Title1.text!  + " " + menu3Title2.text!
         menu3View.accessibilityHint = menu3Description.text!
-
+        
     }
     
     @IBAction func didTabMenu1(_ sender: Any) {
@@ -100,7 +100,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func didTabMenu3(_ sender: Any) {
-       performSegue(withIdentifier: "segueToGuidance", sender: self)
+        performSegue(withIdentifier: "segueToGuidance", sender: self)
     }
     
     @IBAction func unwindToMain(_ unwindSegue: UIStoryboardSegue) {

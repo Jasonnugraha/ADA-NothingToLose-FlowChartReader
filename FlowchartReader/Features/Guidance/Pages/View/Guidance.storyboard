@@ -82,7 +82,7 @@
                     </view>
                     <connections>
                         <outlet property="guidanceView" destination="Acr-EY-Qns" id="EV5-8t-DAP"/>
-                        <segue destination="2Ss-ke-9x2" kind="show" identifier="segueToDetail" id="Zvm-Jo-9g3"/>
+                        <segue destination="2Ss-ke-9x2" kind="presentation" identifier="segueToDetail" modalPresentationStyle="fullScreen" id="Zvm-Jo-9g3"/>
                         <segue destination="fJE-NU-TYy" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMain:" id="B2F-bg-pwq"/>
                     </connections>
                 </viewController>
@@ -96,16 +96,16 @@
             <objects>
                 <viewController id="2Ss-ke-9x2" customClass="GuidanceDetailViewController" customModule="FlowchartReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qCc-5S-qyo" customClass="GuidanceDetailUIView" customModule="FlowchartReader" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEp-bq-zX6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="cys-5I-yER">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="HUf-R2-x8e">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="1pj-5E-THU">
-                                                <rect key="frame" x="20" y="17" width="89.5" height="22"/>
+                                                <rect key="frame" x="20" y="11" width="89.5" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Guidance" image="chevron.left" catalog="system"/>
                                                 <connections>
@@ -117,7 +117,7 @@
                                 </items>
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KcR-ar-b9j">
-                                <rect key="frame" x="10" y="66" width="394" height="732"/>
+                                <rect key="frame" x="10" y="98" width="394" height="754"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>

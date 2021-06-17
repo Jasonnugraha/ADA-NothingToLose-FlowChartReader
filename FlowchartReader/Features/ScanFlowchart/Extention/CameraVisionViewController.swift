@@ -130,6 +130,19 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
         
         if let fc = flowchartComponents, let tc = textComponents {
             flowchartDetails = FlowchartDetailService().getFlowchartDetails(flowchartComponents: fc, textComponents: tc)
+        if let dataImage = photo.fileDataRepresentation() {
+            print(UIImage(data: dataImage)?.size as Any)
+            
+            let dataProvider = CGDataProvider(data: dataImage as CFData)
+            let cgImageRef: CGImage! = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: .defaultIntent)
+            let imageOrientation = UIImage.Orientation.right
+            let image = UIImage.init(cgImage: cgImageRef, scale: 1.0, orientation: imageOrientation)
+            
+            // Do whatever you need to do with the image
+            performSegue(withIdentifier: "toGesturePage", sender: image)
+        } else {
+            print("Error")
+            return
         }
         
         performSegue(withIdentifier: "CameraToResult", sender: self)

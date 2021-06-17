@@ -11,10 +11,14 @@ import AVFoundation
 class FlowchartGestureViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
+    var imageData: UIImage?
+    
     @IBOutlet weak var upBtn: UIButton!
     @IBOutlet weak var leftBtn: UIButton!
     @IBOutlet weak var rightBtn: UIButton!
     @IBOutlet weak var downBtn: UIButton!
+    
+    var saved = false
     
     var flowchartDetails = [
         FlowchartDetail(id: 0, shape: "Teriminator", text: "Start", down: 1, right: -1, left: -1),
@@ -29,13 +33,16 @@ class FlowchartGestureViewController: UIViewController {
     
     let service = FlowchartStructureService()
     
+    let modelService = CDFlowchart()
+    
     var stepId: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Navigation With Button
-        imageView.image = UIImage(named: "favbook")
+        imageView.image = imageData
+//        imageView.image = service.load(fileName: a!)
         stepId = 0
         service.initStepSound(flowStep: stepId!, flowchartDetails: flowchartDetails)
         accessibilityElInit()
@@ -155,14 +162,27 @@ class FlowchartGestureViewController: UIViewController {
         }
     }
     @IBAction func saveOnTap(_ sender: Any) {
-        let alert = UIAlertController(title: "Save Flowchart", message: "Enter your flowchart name", preferredStyle: .alert)
-        alert.addTextField { (textField) in
-            textField.placeholder = "Some Text Here"
+        var alert = UIAlertController()
+        if !saved {
+            alert = UIAlertController(title: "Save Flowchart", message: "Enter your flowchart name", preferredStyle: .alert)
+            alert.addTextField { (textField) in
+                textField.placeholder = "Some Text Here"
+            }
+            
+            var id = UUID()
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+                let textField = alert?.textFields![0].text
+                var fileName = self.service.save(image: UIImage(named: "FavBook")!, fileName: textField!) // For Dev
+                self.modelService.appendFlowchartFile(pFlowchartID: id, pFlowchartName: textField!, pfilePath: fileName!)
+                self.modelService.appendFlowchartDetails(pFlowchartID: id, pFlowchartDetails: self.flowchartDetails)
+            }))
+            
+            saved = true
+        } else {
+            alert = UIAlertController(title: "Flowchart Saved!", message: "This Flowchart Has Saved!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         }
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
-            let textField = alert?.textFields![0].text
-        }))
         
         self.present(alert, animated: true, completion: nil)
     }

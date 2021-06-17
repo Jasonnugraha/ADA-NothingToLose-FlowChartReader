@@ -10,21 +10,18 @@ import UIKit
 class ListFlowchartViewController: UIViewController {
     @IBOutlet var listFlowchartsView: ListFlowchartView!
     
-    var flowcharts: [Flowchart] = [
-        Flowchart(flowchartName: "Flowchart For Login", date: "07/06/21"),
-        Flowchart(flowchartName: "Flowchart Auth", date: "06/06/21"),
-        Flowchart(flowchartName: "Project Sync Data", date: "05/06/21"),
-        Flowchart(flowchartName: "Project D", date: "04/06/21"),
-        Flowchart(flowchartName: "Project E", date: "03/06/21"),
-        Flowchart(flowchartName: "Project F", date: "02/06/21"),
-        Flowchart(flowchartName: "Project G", date: "01/06/21"),
-    ]
+    var flowcharts = [CDFlowchartFile]()
     
+    var helper = Helper()
+    
+    let modelService = CDFlowchart()
     let searchController = UISearchController(searchResultsController: nil)
-    var searchResult: [(Flowchart)] = []
+    var searchResult: [(CDFlowchartFile)] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        flowcharts = modelService.getAllFlowchartFile()
+        
         listFlowchartsView.tableView.delegate = self
         listFlowchartsView.tableView.dataSource = self
         listFlowchartsView.tableView.tableFooterView = UIView()
@@ -40,7 +37,7 @@ class ListFlowchartViewController: UIViewController {
         let alertController = UIAlertController(title: "Action Sheet", message: "Are you sure want to delete this project?", preferredStyle: .actionSheet)
         
         let deleteButton = UIAlertAction(title: "Delete", style: .destructive) { (action) -> Void in
-            print("\(self.flowcharts[indexData]) Deleted!")
+//            print("\(self.flowcharts[indexData]) Deleted!")
         }
         
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
@@ -65,12 +62,13 @@ extension ListFlowchartViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let flowchart = searchController.isActive ?  searchResult[indexPath.row] : flowcharts[indexPath.row]
+        
+        let flowchart = searchController.isActive ? searchResult[indexPath.row] : flowcharts[indexPath.row]
         
         let cell = listFlowchartsView.tableView.dequeueReusableCell(withIdentifier: "flowchartCell", for: indexPath)
         cell.textLabel?.text = flowchart.flowchartName
         cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 15)
-        cell.detailTextLabel?.text = flowchart.date
+        cell.detailTextLabel?.text = "\(helper.dateFormater(dateData: flowchart.tanggal!))"
         return cell
     }
     
@@ -112,7 +110,7 @@ extension ListFlowchartViewController: UISearchResultsUpdating {
     
     func filterContent(for searchText: String) {
         searchResult = flowcharts.filter({ data -> Bool in
-            let match = data.flowchartName.range(of: searchText, options: .caseInsensitive)
+            let match = data.flowchartName!.range(of: searchText, options: .caseInsensitive)
             
             return match != nil
         })

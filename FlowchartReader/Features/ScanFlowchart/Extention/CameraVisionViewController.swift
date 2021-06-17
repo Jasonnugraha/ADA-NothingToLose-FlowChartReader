@@ -126,7 +126,7 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
             let image = UIImage.init(cgImage: cgImageRef, scale: 1.0, orientation: imageOrientation)
             
             // Do whatever you need to do with the image
-            performSegue(withIdentifier: "capturePage", sender: image)
+            performSegue(withIdentifier: "toGesturePage", sender: image)
         } else {
             print("Error")
             return
@@ -135,7 +135,7 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! SecondViewController
+        let destinationVC = segue.destination as! FlowchartGestureViewController
         guard let originalImage = sender as? UIImage else {
             return
         }

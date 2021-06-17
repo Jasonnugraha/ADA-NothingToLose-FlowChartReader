@@ -35,12 +35,12 @@
 		5B2BBB492679071400774DA3 /* ListFlowchartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F0A532674972F00570B0B /* ListFlowchartView.swift */; };
 		5B2BBB4B2679CD5900774DA3 /* FlowchartComponentDetectorRev 1 Iteration 5300.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5B2BBB4A2679CD5900774DA3 /* FlowchartComponentDetectorRev 1 Iteration 5300.mlmodel */; };
 		5B60A411267B41E50079335B /* FlowchartDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60A410267B41E50079335B /* FlowchartDetailService.swift */; };
+		5B60A417267B503F0079335B /* FlowchartReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B60A415267B503F0079335B /* FlowchartReader.xcdatamodeld */; };
 		B416B80226773B8A00BD226B /* TextComponentReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416B80126773B8A00BD226B /* TextComponentReader.swift */; };
 		B416B80726774CD500BD226B /* TextComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B416B80626774CD500BD226B /* TextComponent.swift */; };
 		B4F76BC1266F7A4300F6FAD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */; };
 		B4F76BC3266F7A4300F6FAD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */; };
 		B4F76BC5266F7A4300F6FAD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC4266F7A4300F6FAD9 /* ViewController.swift */; };
-		B4F76BCB266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4F76BC9266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld */; };
 		B4F76BCD266F7A4600F6FAD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */; };
 		B4F76BD0266F7A4600F6FAD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76BCE266F7A4600F6FAD9 /* LaunchScreen.storyboard */; };
 		B4F76C1126709E2200F6FAD9 /* FlowchartReader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F76C1026709E2200F6FAD9 /* FlowchartReader.storyboard */; };
@@ -92,13 +92,13 @@
 		5B2BBB452679055400774DA3 /* FlowchartComponentReaderRevisiLagi 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FlowchartComponentReaderRevisiLagi 1.mlmodel"; sourceTree = "<group>"; };
 		5B2BBB4A2679CD5900774DA3 /* FlowchartComponentDetectorRev 1 Iteration 5300.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FlowchartComponentDetectorRev 1 Iteration 5300.mlmodel"; sourceTree = "<group>"; };
 		5B60A410267B41E50079335B /* FlowchartDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowchartDetailService.swift; sourceTree = "<group>"; };
+		5B60A416267B503F0079335B /* FlowchartReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlowchartReader.xcdatamodel; sourceTree = "<group>"; };
 		B416B80126773B8A00BD226B /* TextComponentReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextComponentReader.swift; sourceTree = "<group>"; };
 		B416B80626774CD500BD226B /* TextComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextComponent.swift; sourceTree = "<group>"; };
 		B4F76BBD266F7A4200F6FAD9 /* FlowchartReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowchartReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F76BC0266F7A4300F6FAD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4F76BC2266F7A4300F6FAD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B4F76BC4266F7A4300F6FAD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B4F76BCA266F7A4300F6FAD9 /* FlowchartReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlowchartReader.xcdatamodel; sourceTree = "<group>"; };
 		B4F76BCC266F7A4600F6FAD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4F76BCF266F7A4600F6FAD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4F76BD1266F7A4600F6FAD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -375,8 +375,6 @@
 			isa = PBXGroup;
 			children = (
 				C0CD2E642679E05800620D52 /* Core Data */,
-				5B10B93C2673087D00DC721B /* FlowchartComponentDetector 1.mlmodel */,
-				B4F76BC9266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld */,
 				5B2BBB452679055400774DA3 /* FlowchartComponentReaderRevisiLagi 1.mlmodel */,
 				5B2A13382677211B008AB41F /* FlowchartComponentDetectorRev 1.mlmodel */,
 				5B2BBB4A2679CD5900774DA3 /* FlowchartComponentDetectorRev 1 Iteration 5300.mlmodel */,
@@ -583,8 +581,8 @@
 		C0CD2E642679E05800620D52 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				B4F76BC9266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld */,
 				C02C4FC7267A06AB00FD95F9 /* CDFlowchart.swift */,
+				5B60A415267B503F0079335B /* FlowchartReader.xcdatamodeld */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -716,7 +714,6 @@
 				C02C4FC8267A06AB00FD95F9 /* CDFlowchart.swift in Sources */,
 				B4FDFCC92674D33400D17197 /* Menu.swift in Sources */,
 				B416B80226773B8A00BD226B /* TextComponentReader.swift in Sources */,
-				B4F76BCB266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld in Sources */,
 				B4F76BC1266F7A4300F6FAD9 /* AppDelegate.swift in Sources */,
 				B4FE9D422675ECFC0027128A /* PlaceholderUI.swift in Sources */,
 				5B60A411267B41E50079335B /* FlowchartDetailService.swift in Sources */,
@@ -729,6 +726,7 @@
 				033707602677AEFB0016DADC /* FlowchartGestureViewController.swift in Sources */,
 				035DCEED267714F20026B542 /* FlowchartObjectsBeta.mlmodel in Sources */,
 				035DCEE6267710170026B542 /* SecondViewController.swift in Sources */,
+				5B60A417267B503F0079335B /* FlowchartReader.xcdatamodeld in Sources */,
 				033C587D26774A13000189E3 /* ScanFlowchartView.swift in Sources */,
 				B4F76BC3266F7A4300F6FAD9 /* SceneDelegate.swift in Sources */,
 				B4FE9D352675ECA50027128A /* PlaceholderHelper.swift in Sources */,
@@ -938,13 +936,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B4F76BC9266F7A4300F6FAD9 /* FlowchartReader.xcdatamodeld */ = {
+		5B60A415267B503F0079335B /* FlowchartReader.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B4F76BCA266F7A4300F6FAD9 /* FlowchartReader.xcdatamodel */,
+				5B60A416267B503F0079335B /* FlowchartReader.xcdatamodel */,
 			);
-			currentVersion = B4F76BCA266F7A4300F6FAD9 /* FlowchartReader.xcdatamodel */;
-			path = FlowchartReader.xcdatamodeld;
+			currentVersion = 5B60A416267B503F0079335B /* FlowchartReader.xcdatamodel */;
+			name = FlowchartReader.xcdatamodeld;
+			path = ../../FlowchartReader.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

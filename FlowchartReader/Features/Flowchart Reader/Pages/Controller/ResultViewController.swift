@@ -15,6 +15,8 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var resultImageView: UIImageView!
     var resultImage : UIImage?
     
+    var flowchartDetails : [FlowchartDetail]?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

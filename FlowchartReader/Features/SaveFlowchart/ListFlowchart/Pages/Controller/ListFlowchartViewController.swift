@@ -8,6 +8,16 @@
 import UIKit
 
 class ListFlowchartViewController: UIViewController {
+//    var flowchartDetails = [
+//        FlowchartDetail(id: 0, shape: "Teriminator", text: "Start", down: 1, right: -1, left: -1),
+//        FlowchartDetail(id: 1, shape: "Process", text: "Open a Book", down: 2, right: -1, left: -1),
+//        FlowchartDetail(id: 2, shape: "Decision", text: "Favourite Book", down: -1, right: 4, left: 3),
+//        FlowchartDetail(id: 3, shape: "Process", text: "Close The Book", down: 5, right: -1, left: -1),
+//        FlowchartDetail(id: 4, shape: "Process", text: "Read The Book", down: 3, right: -1, left: -1),
+//        FlowchartDetail(id: 5, shape: "Teriminator", text: "End", down: -2, right: -1, left: -1),
+//    ]
+//    let service = FlowchartStructureService()
+    //-------
     @IBOutlet var listFlowchartsView: ListFlowchartView!
     
     var flowcharts = [CDFlowchartFile]()
@@ -20,6 +30,13 @@ class ListFlowchartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        var id = UUID()
+//////
+//        var fileName = self.service.save(image: UIImage(named: "FavBook")!, fileName: "G_\(id)") // For Dev
+//        self.modelService.appendFlowchartFile(pFlowchartID: id, pFlowchartName: "G", pfilePath: "G_\(id)")
+//        self.modelService.appendFlowchartDetails(pFlowchartID: id, pFlowchartDetails: flowchartDetails)
+
+        // ----
         flowcharts = modelService.getAllFlowchartFile()
         
         listFlowchartsView.tableView.delegate = self
@@ -34,10 +51,14 @@ class ListFlowchartViewController: UIViewController {
     }
     
     @objc func deleteTapped(indexData: Int){
-        let alertController = UIAlertController(title: "Action Sheet", message: "Are you sure want to delete this project?", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Action Sheet", message: "Are you sure want to delete this flowchart?", preferredStyle: .actionSheet)
         
         let deleteButton = UIAlertAction(title: "Delete", style: .destructive) { (action) -> Void in
-//            print("\(self.flowcharts[indexData]) Deleted!")
+            self.modelService.deleteFlowchartFile(pID: self.flowcharts[indexData].flowchartID!)
+            DispatchQueue.main.async {
+                self.flowcharts.remove(at: indexData)
+                self.listFlowchartsView.tableView.reloadData()
+            }
         }
         
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
@@ -62,13 +83,17 @@ extension ListFlowchartViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let flowchart = searchController.isActive ? searchResult[indexPath.row] : flowcharts[indexPath.row]
         
         let cell = listFlowchartsView.tableView.dequeueReusableCell(withIdentifier: "flowchartCell", for: indexPath)
         cell.textLabel?.text = flowchart.flowchartName
         cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 15)
-        cell.detailTextLabel?.text = "\(helper.dateFormater(dateData: flowchart.tanggal!))"
+        if let date = flowchart.tanggal {
+            cell.detailTextLabel?.text = "\(helper.dateFormater(dateData: date))"
+        }
+        
+//        print("\(cell.textLabel?.text) - \(cell.detailTextLabel?.text)")
+        
         return cell
     }
     
@@ -86,12 +111,10 @@ extension ListFlowchartViewController: UITableViewDelegate, UITableViewDataSourc
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? DetailFlowchartViewController {
-            guard let flowchart = sender as? Flowchart else {
+            guard let flowchart = sender as? CDFlowchartFile else {
                 return
             }
-            
-            destinationVC.idFlowchart = flowchart.id
-            destinationVC.titleFlowchart = flowchart.flowchartName
+            destinationVC.idFlowchart = flowchart.flowchartID
             
         }
     }

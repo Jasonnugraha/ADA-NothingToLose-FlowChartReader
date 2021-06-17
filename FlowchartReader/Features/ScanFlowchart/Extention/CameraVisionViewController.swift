@@ -4,47 +4,47 @@
 //
 //  Created by Reza Harris on 14/06/21.
 //
-
+ 
 import UIKit
 import AVFoundation
 import Vision
-
+ 
 class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, AVCapturePhotoCaptureDelegate {
-    
+ 
     var bufferSize: CGSize = .zero
     var rootLayer: CALayer! = nil
-    
+ 
     @IBOutlet weak private var previewView: ScanFlowchartView!
     private let session = AVCaptureSession()
     private var previewLayer: AVCaptureVideoPreviewLayer! = nil
     private let videoDataOutput = AVCaptureVideoDataOutput()
-    
+ 
     private let photoOutput = AVCapturePhotoOutput()
-    
+ 
     var flowchartComponents : [FlowchartComponent]?
     var textComponents: [TextComponent]?
     var resultImage : UIImage?
     var flowchartDetails : [FlowchartDetail]?
-
+ 
     private let videoDataOutputQueue = DispatchQueue(label: "VideoDataOutput", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
-    
+ 
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
     }
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAVCapture()
     }
-    
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+ 
     func setupAVCapture() {
         setTransparantNavBar()
         var deviceInput: AVCaptureDeviceInput!
-        
+ 
         // Select a video device, make an input
         let videoDevice = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .back).devices.first
         do {
@@ -53,10 +53,10 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
             print("Could not create video device input: \(error)")
             return
         }
-        
+ 
         session.beginConfiguration()
         session.sessionPreset = .high// Model image size is smaller.
-        
+ 
         // Add a video input
         guard session.canAddInput(deviceInput) else {
             print("Could not add video device input to the session")
@@ -64,14 +64,14 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
             return
         }
         session.addInput(deviceInput)
-        
-        
+ 
+ 
         //Photo Output
         if session.canAddOutput(self.photoOutput) {
             self.session.addOutput(self.photoOutput)
             self.photoOutput.isHighResolutionCaptureEnabled = true
         }
-        
+ 
         if session.canAddOutput(videoDataOutput) {
             session.addOutput(videoDataOutput)
             // Add a video data output
@@ -103,7 +103,7 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
         previewLayer.frame = rootLayer.bounds
         rootLayer.addSublayer(previewLayer)
     }
-    
+ 
     func capturePhoto() {
         let settings = AVCapturePhotoSettings()
         let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
@@ -115,110 +115,97 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
         settings.previewPhotoFormat = previewFormat
         photoOutput.capturePhoto(with: settings, delegate: self)
     }
-    
+ 
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard let imageData = photo.fileDataRepresentation() else { return }
         let previewImage = UIImage(data: imageData)
-        
+ 
 //        session.stopRunning()
         let scannedImage = getScannedImage(inputImage: previewImage!)?.rotate(radians: .pi/2)
         let monochormedImage = getMonochromeImage(inputImage: scannedImage!)
         resultImage = monochormedImage
-        
+ 
         flowchartComponents = FlowchartComponentReader().detect(image: CIImage(image: scannedImage!)!, bufferSize: bufferSize)
         textComponents = TextComponentReader().createVisionRequest(image: scannedImage!, bufferSizeLocal: bufferSize)
-        
+ 
         if let fc = flowchartComponents, let tc = textComponents {
             flowchartDetails = FlowchartDetailService().getFlowchartDetails(flowchartComponents: fc, textComponents: tc)
-        if let dataImage = photo.fileDataRepresentation() {
-            print(UIImage(data: dataImage)?.size as Any)
-            
-            let dataProvider = CGDataProvider(data: dataImage as CFData)
-            let cgImageRef: CGImage! = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: .defaultIntent)
-            let imageOrientation = UIImage.Orientation.right
-            let image = UIImage.init(cgImage: cgImageRef, scale: 1.0, orientation: imageOrientation)
-            
-            // Do whatever you need to do with the image
-            performSegue(withIdentifier: "toGesturePage", sender: image)
-        } else {
-            print("Error")
-            return
         }
-        
+ 
         performSegue(withIdentifier: "CameraToResult", sender: self)
-        
+ 
     }
-    
+ 
 //    override func viewWillAppear(_ animated: Bool) {
 //        session.startRunning()
 //    }
-    
+ 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CameraToResult" {
-            if let destinationVC = segue.destination as? ResultViewController {
-                destinationVC.resultImage = resultImage
+            if let destinationVC = segue.destination as? FlowchartGestureViewController {
+                destinationVC.imageData = resultImage
                 destinationVC.flowchartDetails = flowchartDetails
             }
         }
     }
-    
+ 
     func getScannedImage(inputImage: UIImage) -> UIImage? {
-
+ 
         let context = CIContext()
-
+ 
         let filter = CIFilter(name: "CIColorControls")
         let coreImage = CIImage(image: inputImage)
-
+ 
         filter?.setValue(coreImage, forKey: kCIInputImageKey)
         //Key value are changable according to your need.
         filter?.setValue(7, forKey: kCIInputContrastKey)
         filter?.setValue(0, forKey: kCIInputSaturationKey)
         filter?.setValue(1.2, forKey: kCIInputBrightnessKey)
-
+ 
         if let outputImage = filter?.value(forKey: kCIOutputImageKey) as? CIImage {
         let output = context.createCGImage(outputImage, from: outputImage.extent)
             return UIImage(cgImage: output!)
         }
         return nil
     }
-    
+ 
     func getMonochromeImage(inputImage : UIImage) -> UIImage? {
         let filterMonochrome = CIFilter(name: "CIColorMonochrome")
         let coreImage = CIImage(image: inputImage)
-        
+ 
         filterMonochrome?.setValue(coreImage, forKey: "inputImage")
         filterMonochrome?.setValue(CIColor(red: 1.0, green: 1.0, blue: 1.0), forKey: "inputColor")
         filterMonochrome?.setValue(1.0, forKey: "inputIntensity")
-        
+ 
         guard let outputImage = filterMonochrome?.outputImage else { return nil }
-
+ 
         let context = CIContext()
-
+ 
         if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
             return UIImage(cgImage: cgimg)
         }
-        
+ 
         return nil
     }
-    
+ 
     func startCaptureSession() {
         session.startRunning()
     }
-    
+ 
     // Clean up capture setup
     func teardownAVCapture() {
         previewLayer.removeFromSuperlayer()
         previewLayer = nil
     }
-    
+ 
     func captureOutput(_ captureOutput: AVCaptureOutput, didDrop didDropSampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         // print("frame dropped")
     }
-    
+ 
     public func exifOrientationFromDeviceOrientation() -> CGImagePropertyOrientation {
         let curDeviceOrientation = UIDevice.current.orientation
         let exifOrientation: CGImagePropertyOrientation
-        
+ 
         switch curDeviceOrientation {
         case UIDeviceOrientation.portraitUpsideDown:  // Device oriented vertically, home button on the top
             exifOrientation = .left
@@ -233,7 +220,7 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
         }
         return exifOrientation
     }
-    
+ 
     func setTransparantNavBar() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default) //UIImage.init(named: "transparent.png")
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -241,10 +228,10 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
         self.navigationController?.view.backgroundColor = .clear
     }
 }
-
-
+ 
+ 
 extension UIImage {
-    
+ 
     func rotate(radians: CGFloat) -> UIImage {
         let rotatedSize = CGRect(origin: .zero, size: size)
             .applying(CGAffineTransform(rotationAngle: CGFloat(radians)))
@@ -259,10 +246,10 @@ extension UIImage {
                             width: size.width, height: size.height))
             let rotatedImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-
+ 
             return rotatedImage ?? self
         }
-
+ 
         return self
     }
 }

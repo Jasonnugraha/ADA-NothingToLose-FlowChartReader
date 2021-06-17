@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
         </scene>
-        <!--FlowchartReader-->
+        <!--FlowchartGesture-->
         <scene sceneID="9B5-Hc-z3P">
             <objects>
-                <viewControllerPlaceholder storyboardName="FlowchartReader" id="pTn-Ww-053" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="FlowchartGesture" id="pTn-Ww-053" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="crG-f4-Ysc"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQe-g3-IWz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

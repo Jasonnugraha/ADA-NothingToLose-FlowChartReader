@@ -9,6 +9,4 @@ import UIKit
 
 class ListFlowchartView: UIView {
     @IBOutlet weak var tableView: UITableView!
-    
-
 }

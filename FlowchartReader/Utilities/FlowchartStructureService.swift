@@ -116,7 +116,7 @@ class FlowchartStructureService {
     }
     
     func save(image: UIImage, fileName: String) -> String? {
-        let fileName = "\(fileName)_\(UUID().uuidString)"
+        let fileName = "\(fileName)"
         let fileURL = documentsUrl.appendingPathComponent(fileName)
         if let imageData = image.jpegData(compressionQuality: 1.0) {
            try? imageData.write(to: fileURL, options: .atomic)
@@ -139,6 +139,16 @@ class FlowchartStructureService {
     
     func checkVoiceOverIsOn() -> Bool {
         return UIAccessibility.isVoiceOverRunning
+    }
+    
+    func convertFlowchartDetails(flowchartDetails: [CDFlowchartDetail]) -> [FlowchartDetail] {
+        var allDetails = [FlowchartDetail]()
+        for i in 0...flowchartDetails.count - 1 {
+            let detail = FlowchartDetail(id: Int(flowchartDetails[i].id), shape: flowchartDetails[i].shape!, text: flowchartDetails[i].text!, down: Int(flowchartDetails[i].down), right: Int(flowchartDetails[i].right), left: Int(flowchartDetails[i].left))
+            allDetails.append(detail)
+        }
+        
+        return allDetails
     }
     
 }

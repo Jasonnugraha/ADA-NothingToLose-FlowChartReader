@@ -17,6 +17,9 @@ enum Direction: String {
 
 class FlowchartStructureService {
     
+    lazy var utterance = AVSpeechUtterance(string: "")
+    lazy var synthesizer = AVSpeechSynthesizer()
+    
     func increaseBtnOpacity(direction: Direction, btn: UIButton) {
         btn.alpha = 0.1
         btn.setTitleColor(UIColor.white, for: .normal)
@@ -41,11 +44,10 @@ class FlowchartStructureService {
     }
     
     func initStepSound(flowStep: Int, flowchartDetails: [FlowchartDetail]) {
-        var utterance = AVSpeechUtterance(string: "\(flowchartDetails[flowStep].shape), \(flowchartDetails[flowStep].text)")
+        utterance = AVSpeechUtterance(string: "\(flowchartDetails[flowStep].shape), \(flowchartDetails[flowStep].text)")
         utterance.rate = 0.55
         utterance.volume = 0.8
-
-        let synthesizer = AVSpeechSynthesizer()
+        
         synthesizer.speak(utterance)
     }
     
@@ -71,7 +73,6 @@ class FlowchartStructureService {
     }
     
     func currentStepSound(direction: Direction, flowchartDetails: [FlowchartDetail], flowStep: Int, stepId: Int) {
-        var utterance: AVSpeechUtterance!
         
         if flowStep > -1 {
             
@@ -100,10 +101,9 @@ class FlowchartStructureService {
         utterance.rate = 0.5
         utterance.volume = 1
 
-        let synthesizer = AVSpeechSynthesizer()
         if checkVoiceOverIsOn() {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.7, execute: {
-                synthesizer.speak(utterance)
+                self.synthesizer.speak(self.utterance)
             })
         } else {
             synthesizer.speak(utterance)

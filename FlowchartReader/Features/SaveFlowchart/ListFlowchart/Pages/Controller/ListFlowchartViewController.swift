@@ -87,9 +87,10 @@ extension ListFlowchartViewController: UITableViewDelegate, UITableViewDataSourc
         
         let cell = listFlowchartsView.tableView.dequeueReusableCell(withIdentifier: "flowchartCell", for: indexPath)
         cell.textLabel?.text = flowchart.flowchartName
-        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         if let date = flowchart.tanggal {
             cell.detailTextLabel?.text = "\(helper.dateFormater(dateData: date))"
+            cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 15)
         }
         
 //        print("\(cell.textLabel?.text) - \(cell.detailTextLabel?.text)")

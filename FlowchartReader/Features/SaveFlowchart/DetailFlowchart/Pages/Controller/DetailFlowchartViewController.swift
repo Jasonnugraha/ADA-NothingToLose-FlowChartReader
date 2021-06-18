@@ -18,14 +18,14 @@ class DetailFlowchartViewController: UIViewController {
     
     var idFlowchart: UUID?
     
-    let modelService = CDFlowchart()
-    let service = FlowchartStructureService()
+    lazy var modelService = CDFlowchart()
+    lazy var service = FlowchartStructureService()
     
     var flowchart: CDFlowchartFile!
-    var flowchartDetails = [FlowchartDetail]()
+    lazy var flowchartDetails = [FlowchartDetail]()
     
     var stepId: Int?
-    var histories = [FlowchartDetail]()
+    lazy var histories = [FlowchartDetail]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

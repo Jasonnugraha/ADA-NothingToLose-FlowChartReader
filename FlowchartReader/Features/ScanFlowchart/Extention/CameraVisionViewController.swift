@@ -129,7 +129,7 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
         textComponents = TextComponentReader().createVisionRequest(image: scannedImage!, bufferSizeLocal: bufferSize)
  
         if let fc = flowchartComponents, let tc = textComponents {
-            flowchartDetails = FlowchartDetailService().getFlowchartDetails(flowchartComponents: fc, textComponents: tc)
+            flowchartDetails = FlowchartDetailService().getFlowchartDetails(flowchartComponentsParam: fc, textComponentsParam: tc)
         }
  
         performSegue(withIdentifier: "CameraToResult", sender: self)

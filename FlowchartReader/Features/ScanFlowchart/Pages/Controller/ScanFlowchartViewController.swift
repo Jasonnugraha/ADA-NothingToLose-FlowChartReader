@@ -20,13 +20,13 @@ enum DetectionStatus: String {
 
 class ScanFlowchartViewController: CameraVisionViewController {
     
-    private var detectionOverlay: CALayer! = nil
+    lazy private var detectionOverlay: CALayer! = nil
     
     // Vision parts
-    private var requests = [VNRequest]()
+    lazy private var requests = [VNRequest]()
     
     // Time Interval for Speech
-    var timer = Timer()
+    lazy var timer = Timer()
     var objectDetected = DetectionStatus.NoDetected.rawValue
     var countingHoldTime = 0
     
@@ -277,6 +277,7 @@ class ScanFlowchartViewController: CameraVisionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
 //        navigationController?.setNavigationBarHidden(true, animated: false)
+        startCaptureSession()
         AppUtility.lockOrientation(.portrait)
         scheduledTimerWithTimeInterval()
     }

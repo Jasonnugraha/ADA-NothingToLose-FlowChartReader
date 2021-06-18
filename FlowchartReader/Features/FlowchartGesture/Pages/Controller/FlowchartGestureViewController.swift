@@ -18,7 +18,7 @@ class FlowchartGestureViewController: UIViewController {
     @IBOutlet weak var rightBtn: UIButton!
     @IBOutlet weak var downBtn: UIButton!
     
-    var saved = false
+    lazy var saved = false
     
 //    var flowchartDetails = [
 //        FlowchartDetail(id: 0, shape: "Teriminator", text: "Start", down: 1, right: -1, left: -1),
@@ -31,11 +31,11 @@ class FlowchartGestureViewController: UIViewController {
     
     var flowchartDetails: [FlowchartDetail]?
     
-    var histories = [FlowchartDetail]()
+    lazy var histories = [FlowchartDetail]()
     
-    let service = FlowchartStructureService()
+    lazy var service = FlowchartStructureService()
     
-    let modelService = CDFlowchart()
+    lazy var modelService = CDFlowchart()
     
     var stepId: Int?
     

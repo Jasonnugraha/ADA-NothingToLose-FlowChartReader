@@ -15,11 +15,11 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
     var rootLayer: CALayer! = nil
  
     @IBOutlet weak private var previewView: ScanFlowchartView!
-    private let session = AVCaptureSession()
-    private var previewLayer: AVCaptureVideoPreviewLayer! = nil
-    private let videoDataOutput = AVCaptureVideoDataOutput()
+    lazy private var session = AVCaptureSession()
+    lazy private var previewLayer: AVCaptureVideoPreviewLayer! = nil
+    lazy private var videoDataOutput = AVCaptureVideoDataOutput()
  
-    private let photoOutput = AVCapturePhotoOutput()
+    lazy private var photoOutput = AVCapturePhotoOutput()
  
     var flowchartComponents : [FlowchartComponent]?
     var textComponents: [TextComponent]?
@@ -131,9 +131,8 @@ class CameraVisionViewController: UIViewController, AVCaptureVideoDataOutputSamp
         if let fc = flowchartComponents, let tc = textComponents {
             flowchartDetails = FlowchartDetailService().getFlowchartDetails(flowchartComponentsParam: fc, textComponentsParam: tc)
         }
- 
+        session.stopRunning()
         performSegue(withIdentifier: "CameraToResult", sender: self)
- 
     }
  
 //    override func viewWillAppear(_ animated: Bool) {

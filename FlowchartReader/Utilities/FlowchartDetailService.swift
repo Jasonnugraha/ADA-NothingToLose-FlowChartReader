@@ -62,11 +62,11 @@ class FlowchartDetailService {
         
         if let maxX = maxX, let maxY = maxY, let minX = minX, let minY = minY{
             let intervalX = (Float(maxX) - Float(minX)) / 15.0
-            let intervalY = (Float(maxY) - Float(minY)) / 10.0
+            let intervalY = (Float(maxY) - Float(minY)) / 8.0
             constantLOAX = intervalX
             constantLOAY = intervalY
             constantTextX = constantLOAX / 5.0
-            constantTextY = constantLOAY / 5.0
+            constantTextY = constantLOAY / 2.0
         }
         
         
@@ -303,32 +303,13 @@ class FlowchartDetailService {
         
         let minX = component.minX
         let minY = component.minY
-        //        let maxY = component.maxY
-        //        let maxX = component.maxX
         
         var shortestDistance : [Float] = []
         
         for textComponent in textComponentsContainYesOrNo {
             
-            //            var tempDistance : [Float] = []
-            
-            //            let upDiff = minY - textComponent.maxY
-            //            let bottomDiff = textComponent.minY - maxY
-            //            let rightDiff = textComponent.minX - maxX
-            //            let leftDiff = minX - textComponent.maxX
-            //
-            //            tempDistance.append(upDiff)
-            //            tempDistance.append(bottomDiff)
-            //            tempDistance.append(rightDiff)
-            //            tempDistance.append(leftDiff)
-            //
-            //            tempDistance = tempDistance.filter({$0 > 0})
-            //
-            //            if tempDistance.count > 0 {
-            //                shortestDistance.append(tempDistance.max()!)
-            //            }
-            let diffX = minX - textComponent.minX
-            let diffY = minY - textComponent.minY
+            let diffX = minX - textComponent.minX 
+            let diffY = minY - textComponent.minY - constantLOAY
             
             let distance = ((diffX * diffX) + (diffY * diffY)).squareRoot()
             shortestDistance.append(distance)
@@ -366,7 +347,7 @@ class FlowchartDetailService {
             for i in 0..<textComponents.count{
                 //                print(i, textComponents!.count)
                 let text = textComponents[i]
-                if ((text.minX + constantTextX > component.minX) && (text.maxX - constantTextX < component.maxX) && (text.minY + constantTextY > component.minY) && (text.maxY - constantTextY < component.maxY)) {
+                if ((text.minX  > component.minX) && (text.maxX < component.maxX) && (text.minY + constantTextY > component.minY) && (text.maxY < component.maxY)) {
                     tempTextResult.append(text)
                     indexRemoved.append(i)
                 }

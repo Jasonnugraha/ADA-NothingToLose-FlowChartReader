@@ -33,7 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        window?.rootViewController = initialViewController
 //        window!.makeKeyAndVisible()
         
-        if (isFirstOpen != false) {
+        if (isFirstOpen == false) {
             defaults.setValue(true, forKey: "isFirstOpen")
             guard let windowScene = (scene as? UIWindowScene) else { return }
 

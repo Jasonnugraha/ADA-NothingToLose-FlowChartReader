@@ -44,14 +44,23 @@ class FlowchartGestureViewController: UIViewController {
         
         // Navigation With Button
         imageView.image = imageData
+        UIAccessibility.post(notification: .screenChanged, argument: imageView)
 //        imageView.image = service.load(fileName: a!)
+        imageView.accessibilityHint = ""
+        imageView.accessibilityLabel = ""
+        imageView.accessibilityTraits = .staticText
         stepId = 0
         service.initStepSound(flowStep: stepId!, flowchartDetails: flowchartDetails!)
         accessibilityElInit()
         setupBtnAlpha()
         
+//        flowchartDetails  = [FlowchartDetail(id: 0, shape: "terminator", text: "start", down: 1ß
         // Navigation With VC & Swipe Gesture
 //        addGesture()
+    }
+    
+    override func viewDidAppear (_ animated: Bool) {
+        UIAccessibility.post(notification: .screenChanged, argument: imageView)
     }
     
     func accessibilityElInit() {
